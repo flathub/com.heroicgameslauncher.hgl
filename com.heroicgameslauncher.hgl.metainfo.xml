@@ -40,21 +40,15 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.2.2" date="2022-03-07">
+    <release version="v2.2.5" date="2022-03-10">
         <description>
             <p>General</p>
             <ul>
-                <li>Flatpak Preparations.</li>
-                <li>Improvements and fixes for GOG.</li>
-                <li>UI improvements.</li>
-                <li>Added Ukranian Language.</li>
                 <li>Translations Update.</li>
             </ul>
             <p>BugFixes</p>
             <ul>
-                <li>Fixed Protocol Handling when Heroic is opened.</li>
-                <li>Improved compatibility with Wine-GE-Proton.</li>
-                <li>Other small fixes and improvements.</li>
+                <li>Fix Some issues with Epic Login and Library.</li>
             </ul>
         </description>
       </release>
