@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>com.heroicgameslauncher.hgl</id>
-  
+
   <name>Heroic Games Launcher</name>
   <summary>An Open Source GOG and Epic Games Launcher.</summary>
   <url type="homepage">https://heroicgameslauncher.com</url>
@@ -11,11 +11,26 @@
   <url type="help">https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/wiki</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
-  
+
   <description>
     <p>
       Heroic is an Open Source Games Launcher. Right now it supports launching games from the Epic Games Store using Legendary and GOG Games using our custom implementation with gogdl.
     </p>
+    <p>Current Limitations on the Flatpak:</p>
+    <ul>
+      <li>
+        Heroic will not find or use Wine and Proton Flatpak versions. At least for now.
+      </li>
+      <li>
+        For now would be better to use the Built-in Wine Manager to download and install Wine and Proton Versions.
+      </li>
+      <li>
+        It should find Proton from the Steam folder for both Steam Flatpak and non-Flatpak if they are on installed on the library inside your $HOME folder 
+      </li>
+      <li>
+        Heroic cannot access /usr/bin so it won't be able to find any wine or proton isntalled there for now.
+      </li>
+    </ul>
   </description>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">moderate</content_attribute>
@@ -41,16 +56,16 @@
   </screenshots>
   <releases>
     <release version="v2.2.6" date="2022-03-11">
-        <description>
-            <p>General</p>
-            <ul>
-                <li>Stability improvements.</li>
-            </ul>
-            <p>BugFixes</p>
-            <ul>
-                <li>Fix a few more login issues.</li>
-            </ul>
-        </description>
-      </release>
+      <description>
+        <p>General</p>
+        <ul>
+          <li>Stability improvements.</li>
+        </ul>
+        <p>BugFixes</p>
+        <ul>
+          <li>Fix a few more login issues.</li>
+        </ul>
+      </description>
+    </release>
   </releases>
 </component>
