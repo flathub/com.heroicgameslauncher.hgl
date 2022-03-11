@@ -35,6 +35,29 @@
 			Heroic is an Open Source Games Launcher. Right now it supports launching games from the Epic Games Store using Legendary and GOG Games using our custom implementation with gogdl.
 		</p>
 		<p>
+			Main Features:
+		</p>
+		<ul>
+			<li>
+				Have access to your Epic and GOG games in a intuitive interface.
+			</li>
+			<li>
+				Install and launch your Windows Games using Wine or Proton. Or Launch your Native GOG Games.
+			</li>
+			<li>
+				Cloud Saves support for the Epic Games.
+			</li>
+			<li>
+				Import Games installed through the Epic Store or GOG Galaxy.
+			</li>
+			<li>
+				Verify and Repair corrupted installations or even move your installation to different folders.
+			</li>
+			<li>
+				Access the Epic and GOG store and also Heroic Wiki directly from the App.
+			</li>
+		</ul>
+		<p>
 			Current Limitations on the Flatpak:
 		</p>
 		<ul>
