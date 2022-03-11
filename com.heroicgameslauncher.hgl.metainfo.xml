@@ -40,15 +40,15 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.2.5" date="2022-03-10">
+    <release version="v2.2.6" date="2022-03-11">
         <description>
             <p>General</p>
             <ul>
-                <li>Translations Update.</li>
+                <li>Stability improvements.</li>
             </ul>
             <p>BugFixes</p>
             <ul>
-                <li>Fix Some issues with Epic Login and Library.</li>
+                <li>Fix a few more login issues.</li>
             </ul>
         </description>
       </release>
