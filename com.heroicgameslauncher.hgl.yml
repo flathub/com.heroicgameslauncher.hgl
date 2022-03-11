@@ -22,6 +22,7 @@ finish-args:
   - --filesystem=~/.steam:rw
   - --filesystem=~/Games/Heroic:create
   - --filesystem=~/.var/app/com.valvesoftware.Steam:rw
+  - --filesystem=xdg-documents
   - --share=ipc
   - --share=network
   - --socket=x11
