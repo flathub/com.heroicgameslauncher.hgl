@@ -1,71 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.heroicgameslauncher.hgl</id>
-
-  <name>Heroic Games Launcher</name>
-  <summary>An Open Source GOG and Epic Games Launcher.</summary>
-  <url type="homepage">https://heroicgameslauncher.com</url>
-  <url type="bugtracker">https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/issues</url>
-  <url type="donation">https://ko-fi.com/heroicgames</url>
-  <url type="translate">https://hosted.weblate.org/projects/heroic-games-launcher</url>
-  <url type="help">https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/wiki</url>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0</project_license>
-
-  <description>
-    <p>
-      Heroic is an Open Source Games Launcher. Right now it supports launching games from the Epic Games Store using Legendary and GOG Games using our custom implementation with gogdl.
-    </p>
-    <p>Current Limitations on the Flatpak:</p>
-    <ul>
-      <li>
-        Heroic will not find or use Wine and Proton Flatpak versions. At least for now.
-      </li>
-      <li>
-        For now would be better to use the Built-in Wine Manager to download and install Wine and Proton Versions.
-      </li>
-      <li>
-        It should find Proton from the Steam folder for both Steam Flatpak and non-Flatpak if they are on installed on the library inside your $HOME folder 
-      </li>
-      <li>
-        Heroic cannot access /usr/bin so it won't be able to find any wine or proton isntalled there for now.
-      </li>
-    </ul>
-  </description>
-  <content_rating type="oars-1.1">
-    <content_attribute id="violence-cartoon">moderate</content_attribute>
-    <content_attribute id="violence-fantasy">moderate</content_attribute>
-    <content_attribute id="violence-realistic">moderate</content_attribute>
-    <content_attribute id="violence-bloodshed">moderate</content_attribute>
-    <content_attribute id="money-purchasing">intense</content_attribute>
-  </content_rating>
-  <launchable type="desktop-id">com.heroicgameslauncher.hgl.desktop</launchable>
-  <screenshots>
-    <screenshot type="default">
-      <caption>Library Screen</caption>
-      <image>https://user-images.githubusercontent.com/26871415/147581846-2a059a3b-9880-42fc-88b6-b850514f3c42.png</image>
-    </screenshot>
-    <screenshot>
-      <caption>Login Screen</caption>
-      <image>https://user-images.githubusercontent.com/26871415/147582001-df640925-2536-4fe0-8885-a5be5c7af3d4.png</image>
-    </screenshot>
-    <screenshot>
-      <caption>Play Control page</caption>
-      <image>https://user-images.githubusercontent.com/26871415/147581885-7bd7a0f9-4bf7-4cbf-9dca-b00f247e9111.png</image>
-    </screenshot>
-  </screenshots>
-  <releases>
-    <release version="v2.2.6" date="2022-03-11">
-      <description>
-        <p>General</p>
-        <ul>
-          <li>Stability improvements.</li>
-        </ul>
-        <p>BugFixes</p>
-        <ul>
-          <li>Fix a few more login issues.</li>
-        </ul>
-      </description>
-    </release>
-  </releases>
+	<id>
+		com.heroicgameslauncher.hgl
+	</id>
+	<name>
+		Heroic Games Launcher
+	</name>
+	<summary>
+		An Open Source GOG and Epic Games Launcher.
+	</summary>
+	<url type="homepage">
+		https://heroicgameslauncher.com
+	</url>
+	<url type="bugtracker">
+		https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/issues
+	</url>
+	<url type="donation">
+		https://ko-fi.com/heroicgames
+	</url>
+	<url type="translate">
+		https://hosted.weblate.org/projects/heroic-games-launcher
+	</url>
+	<url type="help">
+		https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/wiki
+	</url>
+	<metadata_license>
+		CC0-1.0
+	</metadata_license>
+	<project_license>
+		GPL-3.0
+	</project_license>
+	<description>
+		<p>
+			Heroic is an Open Source Games Launcher. Right now it supports launching games from the Epic Games Store using Legendary and GOG Games using our custom implementation with gogdl.
+		</p>
+		<p>
+			Current Limitations on the Flatpak:
+		</p>
+		<ul>
+			<li>
+				Heroic will not find or use Wine and Proton Flatpak versions. At least for now.
+			</li>
+			<li>
+				For now would be better to use the Built-in Wine Manager to download and install Wine and Proton Versions.
+			</li>
+			<li>
+				It should find Proton from the Steam folder for both Steam Flatpak and non-Flatpak if they are on installed on the library inside your $HOME folder
+			</li>
+			<li>
+				Heroic cannot access /usr/bin so it won't be able to find any wine or proton isntalled there for now.
+			</li>
+		</ul>
+	</description>
+	<content_rating type="oars-1.1">
+		<content_attribute id="violence-cartoon">
+			moderate
+		</content_attribute>
+		<content_attribute id="violence-fantasy">
+			moderate
+		</content_attribute>
+		<content_attribute id="violence-realistic">
+			moderate
+		</content_attribute>
+		<content_attribute id="violence-bloodshed">
+			moderate
+		</content_attribute>
+		<content_attribute id="money-purchasing">
+			intense
+		</content_attribute>
+	</content_rating>
+	<launchable type="desktop-id">
+		com.heroicgameslauncher.hgl.desktop
+	</launchable>
+	<screenshots>
+		<screenshot type="default">
+			<caption>
+				Epic Games Library
+			</caption>
+			<image>
+				https://user-images.githubusercontent.com/26871415/157914736-469d3f69-ddfc-4b63-af0b-4d8600f5744d.png
+			</image>
+		</screenshot>
+		<screenshot>
+			<caption>
+				GOG Library
+			</caption>
+			<image>
+				https://user-images.githubusercontent.com/26871415/157914739-06adfe07-f20e-4902-8dac-9b655b872a86.png
+			</image>
+		</screenshot>
+		<screenshot>
+			<caption>
+				Game Screen
+			</caption>
+			<image>
+				https://user-images.githubusercontent.com/26871415/157915094-2d07dca1-bbca-4cd8-8be5-62bd91c87d16.png
+			</image>
+		</screenshot>
+		<screenshot>
+			<caption>
+				Login Screen
+			</caption>
+			<image>
+				https://user-images.githubusercontent.com/26871415/157914743-7281713a-069f-4035-885e-412e3d4e49ec.png
+			</image>
+		</screenshot>
+		<screenshot>
+			<caption>
+				Stores
+			</caption>
+			<image>
+				https://user-images.githubusercontent.com/26871415/157914747-a37c9d35-7aae-413e-9aaa-0f8823046c5a.png
+			</image>
+		</screenshot>
+		<screenshot>
+			<caption>
+				Wine Manager
+			</caption>
+			<image>
+				https://user-images.githubusercontent.com/26871415/157914748-5f6648b8-0bb3-4f2a-ba6d-44d035e5c1fb.png
+			</image>
+		</screenshot>
+	</screenshots>
+	<releases>
+		<release version="v2.2.6" date="2022-03-11">
+			<description>
+				<p>
+					General
+				</p>
+				<ul>
+					<li>
+						Stability improvements.
+					</li>
+				</ul>
+				<p>
+					BugFixes
+				</p>
+				<ul>
+					<li>
+						Fix a few more login issues.
+					</li>
+				</ul>
+			</description>
+		</release>
+	</releases>
 </component>
