@@ -17,12 +17,11 @@ finish-args:
   - --allow=multiarch
   - --device=all
   - --env=PATH=/app/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
-  - --filesystem=xdg-data/lutris:ro
-  - --filesystem=xdg-data/Steam:ro
-  - --filesystem=~/.steam:ro
+  - --filesystem=xdg-data/lutris:rw
+  - --filesystem=xdg-data/Steam:rw
+  - --filesystem=~/.steam:rw
   - --filesystem=~/Games/Heroic:create
-  - --filesystem=~/.var/app/com.valvesoftware.Steam:ro
-  - --require-version=1.1.2
+  - --filesystem=~/.var/app/com.valvesoftware.Steam:rw
   - --share=ipc
   - --share=network
   - --socket=x11
