@@ -6,5 +6,6 @@ Type=Application
 Icon=com.heroicgameslauncher.hgl
 StartupWMClass=Heroic
 Comment=An Open Source GOG and Epic Games launcher
+Comment[de]=Ein Open Source Spielelauncher for GOG und Epic Games
 MimeType=x-scheme-handler/heroic;
 Categories=Game;
