@@ -146,14 +146,29 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.2.6" date="2022-03-11">
+		<release version="v2.3.0-beta.1" date="2022-04-25">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Stability improvements.
+						Added ability to hide games
+					</li>
+					<li>
+						Order games by status and remove header Filter
+					</li>
+					<li>
+						Add 'report a problem' action in game screen
+					</li>
+					<li>
+						Open game store page in webview
+					</li>
+					<li>
+						Improvements in install dialog
+					</li>
+					<li>
+						Several other quality of life improvements
 					</li>
 				</ul>
 				<p>
@@ -161,7 +176,10 @@
 				</p>
 				<ul>
 					<li>
-						Fix a few more login issues.
+						Fix Winetricks not working
+					</li>
+					<li>
+						Fix issues with several native GOG games.
 					</li>
 				</ul>
 			</description>
