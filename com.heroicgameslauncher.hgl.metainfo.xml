@@ -153,22 +153,22 @@
 				</p>
 				<ul>
 					<li>
-						Added ability to hide games
+						Theming. Now its possible to change the default Heroic theme.
 					</li>
 					<li>
-						Order games by status and remove header Filter
+						Platform Selection. This means installing a Windows version of a native game.
 					</li>
 					<li>
-						Add 'report a problem' action in game screen
+						Added the ability to favorite a game.
 					</li>
 					<li>
-						Open game store page in webview
+						Now it is possible to choose to hide or replace the Recently Played row with the favorites one.
 					</li>
 					<li>
-						Improvements in install dialog
+						Ability to sort installed games by title and Installing status
 					</li>
 					<li>
-						Several other quality of life improvements
+						Several refactors, UI fixes and performance improvements.
 					</li>
 				</ul>
 				<p>
@@ -176,10 +176,10 @@
 				</p>
 				<ul>
 					<li>
-						Fix Winetricks not working
+						Epic library empty after coming from a Linux Native GOG filte
 					</li>
 					<li>
-						Fix issues with several native GOG games.
+						Use vertical_image value only if present
 					</li>
 				</ul>
 			</description>
