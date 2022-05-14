@@ -6,8 +6,9 @@
 	<name>
 		Heroic Games Launcher
 	</name>
-	<summary>An Open Source GOG and Epic Games Launcher.</summary>
-	<summary xml:lang="de">Ein Open Source Spielelauncher for GOG und Epic Games</summary>
+	<summary>
+		An Open Source GOG and Epic Games Launcher.
+	</summary>
 	<url type="homepage">
 		https://heroicgameslauncher.com
 	</url>
@@ -23,9 +24,6 @@
 	<url type="help">
 		https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/wiki
 	</url>
-	<url type="vcs-browser">
-		https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher
-	</url>
 	<metadata_license>
 		CC0-1.0
 	</metadata_license>
@@ -36,44 +34,45 @@
 		<p>
 			Heroic is an Open Source Games Launcher. Right now it supports launching games from the Epic Games Store using Legendary and GOG Games using our custom implementation with gogdl.
 		</p>
-		<p xml:lang="de">
-			Heroic ist ein Open Source Spielelauncher. Aktuell wird das Starten von Spielen aus dem Epic Games Store durch legendary und das starten von Spielen von GOG durch unsere Eigenentwicklung gogdl unterstützt.
-		</p>
 		<p>
 			Main Features:
 		</p>
-		<p xml:lang="de">
-			Hauptfeatures:
-		</p>
 		<ul>
-			<li>Have access to your Epic and GOG games in a intuitive interface.</li>
-			<li xml:lang="de">Zugriff auf deine Spielebibliothek von Epic Games und GOG durch eine intuitive Benutzeroberfläche.</li>
-			<li>Install and launch your Windows Games using Wine or Proton. Or Launch your Native GOG Games.</li>
-			<li xml:lang="de">Windows Spiele könne mithilfe von Wine oder Proton gestartet werden. Native Spiele von GOG können direkt gestartet werden.</li>
-			<li>Cloud Saves support for the Epic Games.</li>
-			<li xml:lang="de">Spielstände von Epic Games können in der Cloud gespeichert werden.</li>
-			<li>Import Games installed through the Epic Store or GOG Galaxy.</li>
-			<li xml:lang="de">Installierte Spiele können aus dem Epic Games Sore oder aus GOG Galaxy importiert werden.</li>
-			<li>Verify and Repair corrupted installations or even move your installation to different folders.</li>
-			<li xml:lang="de">Installationen können auf Beschädigungen überprüft und repariert werden, sowie in andere Ordner verschoben werden.</li>
-			<li>Access the Epic and GOG store and also Heroic Wiki directly from the App.</li>
-			<li xml:lang="de">Der Epic Games Store sowie der GOG Store können direkt aus der App aufgerufen werden.</li>
+			<li>
+				Have access to your Epic and GOG games in a intuitive interface.
+			</li>
+			<li>
+				Install and launch your Windows Games using Wine or Proton. Or Launch your Native GOG Games.
+			</li>
+			<li>
+				Cloud Saves support for the Epic Games.
+			</li>
+			<li>
+				Import Games installed through the Epic Store or GOG Galaxy.
+			</li>
+			<li>
+				Verify and Repair corrupted installations or even move your installation to different folders.
+			</li>
+			<li>
+				Access the Epic and GOG store and also Heroic Wiki directly from the App.
+			</li>
 		</ul>
 		<p>
 			Current Limitations on the Flatpak:
 		</p>
-		<p xml:lang="de">
-			Aktuelle Einschränkungen des Flatpaks:
-		</p>
 		<ul>
-			<li>Heroic will not find or use Wine and Proton Flatpak versions. At least for now.</li>
-			<li xml:lang="de">Heroic findet aktuell keine Wine oder Proton Versionen, die per Flatpak installiert sind</li>
-			<li>For now would be better to use the Built-in Wine Manager to download and install Wine and Proton Versions.</li>
-			<li xml:lang="de">Momentan ist es am besten, den eingebauten Wine Manager zu benutzen, um Wine und Proton Versionen zu downloaden und zu installieren.</li>
-			<li>It should find Proton from the Steam folder for both Steam Flatpak and non-Flatpak if they are on installed on the library inside your $HOME folder</li>
-			<li xml:lang="de">Heroic sollte Proton Versionen von Steam (Nativ und Flatpak) finden, sofern sie innerhalb der Bibliothek des Benutzerordners installiert sind.</li>
-			<li>Heroic cannot access /usr/bin so it won't be able to find any wine or proton isntalled there for now.</li>
-			<li xml:lang="de">Heroic hat keinen Zugriff auf /usr/bin, weshalb es dort installierte Wine oder Proton Versionen nicht finden kann.</li>
+			<li>
+				Heroic will not find or use Wine and Proton Flatpak versions. At least for now.
+			</li>
+			<li>
+				For now would be better to use the Built-in Wine Manager to download and install Wine and Proton Versions.
+			</li>
+			<li>
+				It should find Proton from the Steam folder for both Steam Flatpak and non-Flatpak if they are on installed on the library inside your $HOME folder
+			</li>
+			<li>
+				Heroic cannot access /usr/bin so it won't be able to find any wine or proton isntalled there for now.
+			</li>
 		</ul>
 	</description>
 	<content_rating type="oars-1.1">
@@ -147,15 +146,29 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="2.2.6" date="2022-03-11"/>
-		<release version="v2.2.6" date="2022-03-11">
+		<release version="v2.3.0" date="2022-05-14">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Stability improvements.
+						Theming. Now its possible to change the default Heroic theme.
+					</li>
+					<li>
+						Platform Selection. This means installing a Windows version of a native game.
+					</li>
+					<li>
+						Added the ability to favorite or hide a game.
+					</li>
+					<li>
+						Now it is possible to choose to hide or replace the Recently Played row with the favorites one.
+					</li>
+					<li>
+						Ability to sort installed games by title and Installing status
+					</li>
+					<li>
+						Several refactors, UI fixes and performance improvements.
 					</li>
 				</ul>
 				<p>
@@ -163,7 +176,13 @@
 				</p>
 				<ul>
 					<li>
-						Fix a few more login issues.
+						Winetricks was not working
+					</li>
+					<li>
+						Epic library empty after coming from a Linux Native GOG filte
+					</li>
+					<li>
+						Use vertical_image value only if present
 					</li>
 				</ul>
 			</description>
