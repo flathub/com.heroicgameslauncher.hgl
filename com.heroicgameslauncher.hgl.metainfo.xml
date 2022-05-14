@@ -146,7 +146,7 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.3.0-beta.1" date="2022-04-25">
+		<release version="v2.3.0" date="2022-05-14">
 			<description>
 				<p>
 					General
@@ -159,7 +159,7 @@
 						Platform Selection. This means installing a Windows version of a native game.
 					</li>
 					<li>
-						Added the ability to favorite a game.
+						Added the ability to favorite or hide a game.
 					</li>
 					<li>
 						Now it is possible to choose to hide or replace the Recently Played row with the favorites one.
@@ -175,6 +175,9 @@
 					BugFixes
 				</p>
 				<ul>
+					<li>
+						Winetricks was not working
+					</li>
 					<li>
 						Epic library empty after coming from a Linux Native GOG filte
 					</li>
