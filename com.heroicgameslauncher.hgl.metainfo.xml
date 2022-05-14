@@ -23,6 +23,9 @@
 	<url type="help">
 		https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/wiki
 	</url>
+	<url type="vcs-browser">
+		https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher
+	</url>
 	<metadata_license>
 		CC0-1.0
 	</metadata_license>
