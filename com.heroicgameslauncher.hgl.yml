@@ -128,9 +128,9 @@ modules:
       - type: file
         x-checker-data:
           type: electron-updater
-          url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.0/latest-linux.yml
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.0/Heroic-2.3.0.AppImage
-        sha512: e6bd21b4791fcb58aa96b24b9e9f986bcce75d4989ebe2348251788c06e9e35e4deba54457c03c2ed7bc40973983d50e030a2e5eac652311b92252e1e1b5e2b4
+          url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.1/latest-linux.yml
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.1/Heroic-2.3.1.AppImage
+        sha512: af077c490ed65e6873cacd8dee22ec4c12efe9df7067ab924c2bacdc33b60b8109132efdfea445b8005b7b1db7d3e949016695e22f258d0996d231e92f224a36
 
   - name: platform-bootstrap
     buildsystem: simple
