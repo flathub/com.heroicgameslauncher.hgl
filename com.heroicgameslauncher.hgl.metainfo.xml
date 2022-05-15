@@ -101,7 +101,7 @@
 				Epic Games Library
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/157914736-469d3f69-ddfc-4b63-af0b-4d8600f5744d.png
+				https://user-images.githubusercontent.com/26871415/168448807-768a2ffc-7c6b-4010-bc48-b2f6acec9a32.png
 			</image>
 		</screenshot>
 		<screenshot>
@@ -109,7 +109,7 @@
 				GOG Library
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/157914739-06adfe07-f20e-4902-8dac-9b655b872a86.png
+				https://user-images.githubusercontent.com/26871415/168448826-3fab90d7-7fba-4774-96d9-064f53fe718a.png
 			</image>
 		</screenshot>
 		<screenshot>
@@ -117,15 +117,15 @@
 				Game Screen
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/157915094-2d07dca1-bbca-4cd8-8be5-62bd91c87d16.png
+				https://user-images.githubusercontent.com/26871415/168449021-222673fd-675a-4a17-9e5b-907d99919e11.png
 			</image>
 		</screenshot>
 		<screenshot>
 			<caption>
-				Login Screen
+				Dracula Theme
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/157914743-7281713a-069f-4035-885e-412e3d4e49ec.png
+				https://user-images.githubusercontent.com/26871415/168475988-15ebe6cd-5282-464c-8706-52dfcc6f807f.png
 			</image>
 		</screenshot>
 		<screenshot>
@@ -133,7 +133,7 @@
 				Stores
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/157914747-a37c9d35-7aae-413e-9aaa-0f8823046c5a.png
+				https://user-images.githubusercontent.com/26871415/168449037-62ccfa8b-6e91-4cbf-bd37-48087f2ce998.png
 			</image>
 		</screenshot>
 		<screenshot>
@@ -141,12 +141,12 @@
 				Wine Manager
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/157914748-5f6648b8-0bb3-4f2a-ba6d-44d035e5c1fb.png
+				https://user-images.githubusercontent.com/26871415/168475926-40c7cd7f-7b38-44be-bfa9-57b58ef6d5f3.png
 			</image>
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.3.0" date="2022-05-14">
+		<release version="v2.3.1" date="2022-05-15">
 			<description>
 				<p>
 					General
