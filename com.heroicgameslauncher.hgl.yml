@@ -61,6 +61,16 @@ add-extensions:
       CXX: i686-unknown-linux-gnu-g++
     libdir: /app/lib32
 
+  org.freedesktop.Platform.VAAPI.Intel.i386:
+    directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
+    version: '21.08'
+    versions: '21.08'
+    autodelete: false
+    no-autodownload: true
+    add-ld-path: lib
+    download-if: have-intel-gpu
+    autoprune-unless: have-intel-gpu
+
 modules:
 
   # --- Tools ---
