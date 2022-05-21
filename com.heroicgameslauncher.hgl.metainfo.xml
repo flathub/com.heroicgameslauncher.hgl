@@ -198,16 +198,7 @@
 				</p>
 				<ul>
 					<li>
-						Improvements on the Install Dialog with more information about the space available on the disk before and after install.
-					</li>
-					<li>
-						There is a new option in the Accessibility screen to show all game cards in colors instead of black and white when uninstalled.
-					</li>
-					<li>
-						Heroic now will check for updates before launching the game and show a warning about it.
-					</li>
-					<li>
-						After finishing downloading the files, while the files are being processed, Heroic will change the installing message to show this information instead of being stuck at 100% until it finishes.
+						Added an option to use Steam Runtime with Proton, it is enabled by default since this will increase compatibility with some games.
 					</li>
 					<li>
 						Other UI fixes and refactors.
@@ -218,10 +209,13 @@
 				</p>
 				<ul>
 					<li>
-						Fixed a bug introduced on v2.3.0 where if the path to wine or proton has quotes around it was making the launch to fail.
+						Fix Proton Prefixes not being created - introduced on 2.3.2
 					</li>
 					<li>
-						Fix skiping update was leading to the game now being launched.
+						Fix Winetricks with Proton when using proton from wine manager
+					</li>
+					<li>
+						Enable install button even for invalid paths, in case of false positive. This will still make the install fail if the path is not writable.
 					</li>
 					<li>
 						Other small fixes
