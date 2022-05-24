@@ -25,6 +25,7 @@ finish-args:
   - --filesystem=~/.var/app/com.valvesoftware.Steam:rw
   - --filesystem=xdg-documents
   - --filesystem=xdg-desktop
+  - --filesystem=/run/media
   - --share=ipc
   - --share=network
   - --socket=x11
