@@ -25,6 +25,7 @@ finish-args:
   - --filesystem=~/.var/app/com.valvesoftware.Steam:rw
   - --filesystem=xdg-documents
   - --filesystem=xdg-desktop
+  - --filesystem=/run/media
   - --share=ipc
   - --share=network
   - --socket=x11
@@ -140,9 +141,9 @@ modules:
       - type: file
         x-checker-data:
           type: electron-updater
-          url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.3/latest-linux.yml
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.3/Heroic-2.3.3.AppImage
-        sha512: ce7d7adb9b64db93f6ca5af90e3bcd508ce68df57b57f540acf6e43720a7d34f43551edd301d2bcd9a271161b6ba24f4fb2556cbabee4deedbebdbdc171bb171
+          url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.4/latest-linux.yml
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.4/Heroic-2.3.4.AppImage
+        sha512: bef777cada8b8e85b87679f229de261a0ea2d3c466ef0f77ce32798aab844fc3be6b95dad2d80530856ed7c0d23c13705174788301ab59535e257d24de9199f4
 
   - name: platform-bootstrap
     buildsystem: simple
