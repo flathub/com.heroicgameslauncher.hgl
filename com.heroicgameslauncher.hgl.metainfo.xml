@@ -191,17 +191,23 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.3.3" date="2022-05-21">
+		<release version="v2.3.4" date="2022-05-29">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Added an option to use Steam Runtime with Proton, it is enabled by default since this will increase compatibility with some games.
+						Added a  CLI parameter `--no-gui` that opens Heroic with no user interface.
 					</li>
 					<li>
-						Other UI fixes and refactors.
+						Added more feedback on errors and fixed some error messages that were not exactly clear.
+					</li>
+					<li>
+						Now it's possible to pass any wrappers on the Environmental Variable sections.
+					</li>
+					<li>
+						Heroic now will search for Proton versions and Runtimes outside the main library.
 					</li>
 				</ul>
 				<p>
@@ -209,13 +215,19 @@
 				</p>
 				<ul>
 					<li>
-						Fix Proton Prefixes not being created - introduced on 2.3.2
+						Several fixes related to the Steam runtime and Proton
 					</li>
 					<li>
-						Fix Winetricks with Proton when using proton from wine manager
+						Fixes Force Download and Force Upload of Cloud saves not working properly.
 					</li>
 					<li>
-						Enable install button even for invalid paths, in case of false positive. This will still make the install fail if the path is not writable.
+						Fix Winetricks on Flatpak/SteamDeck for good now
+					</li>
+					<li>
+						Fix GOG games not running the setup correctly
+					</li>
+					<li>
+						Several fixes and optimizations for GOG games
 					</li>
 					<li>
 						Other small fixes
