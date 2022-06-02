@@ -25,7 +25,10 @@ finish-args:
   - --filesystem=~/.var/app/com.valvesoftware.Steam:rw
   - --filesystem=xdg-documents
   - --filesystem=xdg-desktop
+  # should fix access to SD card on the deck
   - --filesystem=/run/media
+  # should fix steamdeck controler navigation
+  - --filesystem=/run/udev:ro
   - --share=ipc
   - --share=network
   - --socket=x11
@@ -141,9 +144,9 @@ modules:
       - type: file
         x-checker-data:
           type: electron-updater
-          url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.6/latest-linux.yml
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.6/Heroic-2.3.6.AppImage
-        sha512: 107601a101d63780cb87567e4ca005b9ba48d7dc28dd73af20a82659a55f72040d549ea77a5f9e4cc548f233f96b4faeb0fa8b756985e5acdcb586ecd1492962
+          url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.7/latest-linux.yml
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.7/Heroic-2.3.7.AppImage
+        sha512: 0270f03e8b9649f2a784149980130851039dfe35e31449d4ffc188157289a28991c3004f785f3dc832848790fbf373d51652d5aab0e11acb312453f64a7b1385
 
   - name: platform-bootstrap
     buildsystem: simple
