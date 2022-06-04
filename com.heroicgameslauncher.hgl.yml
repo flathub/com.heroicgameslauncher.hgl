@@ -16,7 +16,7 @@ finish-args:
   - --allow=devel
   - --allow=multiarch
   - --device=all
-  - --env=PATH=/app/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
+  - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
   - --filesystem=xdg-data/lutris:rw
   - --filesystem=xdg-data/Steam:rw
   - --filesystem=xdg-data/applications:rw
@@ -76,6 +76,16 @@ add-extensions:
     add-ld-path: lib
     download-if: have-intel-gpu
     autoprune-unless: have-intel-gpu
+
+  com.valvesoftware.Steam.Utility:
+    subdirectories: true 
+    directory: utils
+    version: stable
+    versions: stable;beta;test
+    add-ld-path: lib
+    merge-dirs: bin
+    no-autodownload: true
+    autodelete: true
 
 modules:
 
@@ -154,6 +164,7 @@ modules:
       - |
         set -e
         mkdir -p /app/bin
+        mkdir -p /app/utils
         mkdir -p /app/lib/i386-linux-gnu
         mkdir -p /app/lib/debug/lib/i386-linux-gnu
         mkdir -p /app/lib/i386-linux-gnu/GL
