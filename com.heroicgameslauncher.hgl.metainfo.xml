@@ -191,23 +191,14 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.3.7" date="2022-06-02">
+		<release version="v2.3.8" date="2022-06-12">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Added a  CLI parameter `--no-gui` that opens Heroic with no user interface.
-					</li>
-					<li>
-						Added more feedback on errors and fixed some error messages that were not exactly clear.
-					</li>
-					<li>
-						Now it's possible to pass any wrappers on the Environmental Variable sections.
-					</li>
-					<li>
-						Heroic now will search for Proton versions and Runtimes outside the main library.
+						Translations Updates
 					</li>
 				</ul>
 				<p>
@@ -215,16 +206,16 @@
 				</p>
 				<ul>
 					<li>
-						Fix an issue with Heroic becoming blank when trying to continuing download.
+						Fix toggle switch ids in install dialog
 					</li>
 					<li>
-						Fix download progress starting from zero instead of continuing.
+						Fix Disable controller on boot setting
 					</li>
 					<li>
-						Fix Run wine prefix not working when the path had spaces.
+						Fix detection of search bar focus to open virtual keyboard
 					</li>
 					<li>
-						Other small fixes
+						Fix installation of game with selective downloads
 					</li>
 				</ul>
 			</description>
