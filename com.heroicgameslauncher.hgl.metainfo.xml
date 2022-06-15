@@ -191,14 +191,14 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.3.8" date="2022-06-12">
+		<release version="v2.3.9" date="2022-06-15">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Translations Updates
+						Improve the compatibility with DOSBOX and ScummVM games on GOG
 					</li>
 				</ul>
 				<p>
@@ -206,16 +206,7 @@
 				</p>
 				<ul>
 					<li>
-						Fix toggle switch ids in install dialog
-					</li>
-					<li>
-						Fix Disable controller on boot setting
-					</li>
-					<li>
-						Fix detection of search bar focus to open virtual keyboard
-					</li>
-					<li>
-						Fix installation of game with selective downloads
+						Several fixes for Gog and Scummvm games
 					</li>
 				</ul>
 			</description>
