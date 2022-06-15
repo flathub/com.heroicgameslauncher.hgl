@@ -191,14 +191,26 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.3.8" date="2022-06-12">
+		<release version="v2.4.0-beta" date="2022-06-15">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Translations Updates
+						Add a Favorites button to show only the favorites;
+					</li>
+					<li>
+						Add the current Download/Update(s) on the sidebar;
+					</li>
+					<li>
+						Add the ability to collapse the sidebar.
+					</li>
+					<li>
+						Simplify Game List for a cleaner look;
+					</li>
+					<li>
+						Add option to change Game Language
 					</li>
 				</ul>
 				<p>
@@ -206,16 +218,13 @@
 				</p>
 				<ul>
 					<li>
-						Fix toggle switch ids in install dialog
+						Fix DOSBOX Windows Games
 					</li>
 					<li>
-						Fix Disable controller on boot setting
+						Fix Setup GOG games with Proton + ScummVM
 					</li>
 					<li>
-						Fix detection of search bar focus to open virtual keyboard
-					</li>
-					<li>
-						Fix installation of game with selective downloads
+						Several other fixes and improvements
 					</li>
 				</ul>
 			</description>
