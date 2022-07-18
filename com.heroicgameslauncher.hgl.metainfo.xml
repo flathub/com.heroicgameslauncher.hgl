@@ -191,26 +191,32 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.4.0-beta" date="2022-06-15">
+		<release version="v2.4.0-beta.2" date="2022-07-18">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Add a Favorites button to show only the favorites;
+						Add suport for GOG cloud saves
 					</li>
 					<li>
-						Add the current Download/Update(s) on the sidebar;
+						Add support for EAC and BattleEye anti-cheats runtimes
 					</li>
 					<li>
-						Add the ability to collapse the sidebar.
+						Add Anti-cheat information on game page
 					</li>
 					<li>
-						Simplify Game List for a cleaner look;
+						Add Epic overlay support
 					</li>
 					<li>
-						Add option to change Game Language
+						Add new table to add environment options and wrappers
+					</li>
+					<li>
+						Add helper icon buttons on some settings with help text
+					</li>
+					<li>
+						Update electron to v19 and Legendary to v0.20.27
 					</li>
 				</ul>
 				<p>
@@ -218,10 +224,10 @@
 				</p>
 				<ul>
 					<li>
-						Fix DOSBOX Windows Games
+						Fix some Epic login issues
 					</li>
 					<li>
-						Fix Setup GOG games with Proton + ScummVM
+						Fix fullscreen on Steam Deck Gaming mode
 					</li>
 					<li>
 						Several other fixes and improvements
