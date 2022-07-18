@@ -191,22 +191,20 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.3.9" date="2022-06-15">
+		<release version="v2.3.10" date="2022-07-18">
 			<description>
-				<p>
-					General
-				</p>
-				<ul>
-					<li>
-						Improve the compatibility with DOSBOX and ScummVM games on GOG
-					</li>
-				</ul>
 				<p>
 					BugFixes
 				</p>
 				<ul>
 					<li>
-						Several fixes for Gog and Scummvm games
+						Fix Some Epic login issues
+					</li>
+					<li>
+						Fix Some issues when downloading games with selective download
+					</li>
+					<li>
+						Other Small Fixes
 					</li>
 				</ul>
 			</description>
