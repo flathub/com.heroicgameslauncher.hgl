@@ -10,7 +10,7 @@ separate-locales: false
 sdk-extensions:
   - org.freedesktop.Sdk.Compat.i386
   - org.freedesktop.Sdk.Extension.toolchain-i386
-  
+
 
 finish-args:
   - --allow=devel
@@ -57,7 +57,7 @@ add-extensions:
     merge-dirs: vulkan/icd.d;glvnd/egl_vendor.d;OpenCL/vendors;lib/dri;lib/d3d;vulkan/explicit_layer.d;vulkan/implicit_layer.d
     download-if: active-gl-driver
     enable-if: active-gl-driver
-  
+
   x-compat-i386-opts: &compat_i386_opts
     prepend-pkg-config-path: /app/lib32/pkgconfig:/usr/lib/i386-linux-gnu/pkgconfig
     ldflags: -L/app/lib32
@@ -84,7 +84,7 @@ modules:
     buildsystem: simple
     build-commands:
       - make -C squashfs-tools -j ${FLATPAK_BUILDER_N_JOBS} install INSTALL_DIR=/app/bin
-    cleanup: ["*"]
+    cleanup: ['*']
     sources:
       - type: git
         url: https://github.com/refi64/unappimage
@@ -146,7 +146,7 @@ modules:
           type: electron-updater
           url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.10/latest-linux.yml
         url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.3.10/Heroic-2.3.10.AppImage
-        sha512: de3564d382bbb831f84fa61ad17cef806d6052bf79fee8c4afaf267cd7e8d176f2a9bafc1c9632bbb3b73069d248d9b5c6a1a5901cfca78531f5f038b207c6ab
+        sha512: 82faa7807df25b57a70a6fa5e1361b679f6c4671414298b1553e706a123d57be9f339bf91cf1063adb9c16f12339246c17265f3b748e0dd3b7fa2036882136d0
 
   - name: platform-bootstrap
     buildsystem: simple
