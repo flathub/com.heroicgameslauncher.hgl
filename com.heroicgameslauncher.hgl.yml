@@ -120,9 +120,12 @@ modules:
       - -Dwith-util=false
       - -Dwith-sd-bus-provider=no-daemon
     sources: &gamemode_sources
-      - type: archive
-        url: https://github.com/FeralInteractive/gamemode/releases/download/1.6.1/gamemode-1.6.1.tar.xz
-        sha256: 10c2a3f142eae472f5a09e42616e38c666c05b25ca3e61e562a543bb3fda66c5
+      - type: git
+        url: https://github.com/FeralInteractive/gamemode.git
+        tag: '1.7'
+        commit: 4dc99dff76218718763a6b07fc1900fa6d1dafd9
+        x-checker-data:
+            type: git
 
   - name: gamemode-32bit
     build-options:

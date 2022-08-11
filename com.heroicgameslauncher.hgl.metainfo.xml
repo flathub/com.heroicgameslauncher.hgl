@@ -191,46 +191,20 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.4.0-beta.2" date="2022-07-18">
+		<release version="v2.3.10" date="2022-07-18">
 			<description>
-				<p>
-					General
-				</p>
-				<ul>
-					<li>
-						Add suport for GOG cloud saves
-					</li>
-					<li>
-						Add support for EAC and BattleEye anti-cheats runtimes
-					</li>
-					<li>
-						Add Anti-cheat information on game page
-					</li>
-					<li>
-						Add Epic overlay support
-					</li>
-					<li>
-						Add new table to add environment options and wrappers
-					</li>
-					<li>
-						Add helper icon buttons on some settings with help text
-					</li>
-					<li>
-						Update electron to v19 and Legendary to v0.20.27
-					</li>
-				</ul>
 				<p>
 					BugFixes
 				</p>
 				<ul>
 					<li>
-						Fix some Epic login issues
+						Fix Some Epic login issues
 					</li>
 					<li>
-						Fix fullscreen on Steam Deck Gaming mode
+						Fix Some issues when downloading games with selective download
 					</li>
 					<li>
-						Several other fixes and improvements
+						Other Small Fixes
 					</li>
 				</ul>
 			</description>
