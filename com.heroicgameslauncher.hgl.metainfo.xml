@@ -63,7 +63,7 @@
 				Windows Spiele könne mithilfe von Wine oder Proton gestartet werden. Native Spiele von GOG können direkt gestartet werden.
 			</li>
 			<li>
-				Cloud Saves support for the Epic Games.
+				Cloud Saves support for the both GOG and Epic Games.
 			</li>
 			<li xml:lang="de">
 				Spielstände von Epic Games können in der Cloud gespeichert werden.
@@ -143,18 +143,18 @@
 	<screenshots>
 		<screenshot type="default">
 			<caption>
-				Epic Games Library
+				Library Grid
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/168448807-768a2ffc-7c6b-4010-bc48-b2f6acec9a32.png
+				https://user-images.githubusercontent.com/26871415/184140182-0b0b92b0-e388-401f-910b-ff95b22db059.png
 			</image>
 		</screenshot>
 		<screenshot>
 			<caption>
-				GOG Library
+				Library List
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/168448826-3fab90d7-7fba-4774-96d9-064f53fe718a.png
+				https://user-images.githubusercontent.com/26871415/184139791-8666bc1d-a54f-467c-8c30-ea1eb6d24458.png)
 			</image>
 		</screenshot>
 		<screenshot>
@@ -162,15 +162,15 @@
 				Game Screen
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/168449021-222673fd-675a-4a17-9e5b-907d99919e11.png
+				https://user-images.githubusercontent.com/26871415/184139827-ff8ae4ef-f5c3-42f4-b789-1b30595ec0b0.png
 			</image>
 		</screenshot>
 		<screenshot>
 			<caption>
-				Dracula Theme
+				Install Screen
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/168475988-15ebe6cd-5282-464c-8706-52dfcc6f807f.png
+				https://user-images.githubusercontent.com/26871415/184140036-28ee0d8b-a263-4ed8-a30a-1cd19436f90a.png
 			</image>
 		</screenshot>
 		<screenshot>
@@ -178,7 +178,7 @@
 				Stores
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/168449037-62ccfa8b-6e91-4cbf-bd37-48087f2ce998.png
+				https://user-images.githubusercontent.com/26871415/184144277-699e1108-52d9-4558-b113-84db5c90922c.png
 			</image>
 		</screenshot>
 		<screenshot>
@@ -186,25 +186,54 @@
 				Wine Manager
 			</caption>
 			<image>
-				https://user-images.githubusercontent.com/26871415/168475926-40c7cd7f-7b38-44be-bfa9-57b58ef6d5f3.png
+				https://user-images.githubusercontent.com/26871415/184144417-b3eb0ea5-5433-4273-ad35-15317f22588b.png
 			</image>
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.3.10" date="2022-07-18">
+		<release version="v2.4.0" date="2022-08-11">
 			<description>
+				<p>
+					General
+				</p>
+				<ul>
+					<li>
+						Library UI improvements
+					</li>
+					<li>
+						GOG Cloud Save support
+					</li>
+					<li>
+						Added a Joystick overlay
+					</li>
+					<li>
+						Add Game Shortcut to Steam
+					</li>
+					<li>
+						Add Epic Overlay support
+					</li>
+					<li>
+						Add EAC/BattleEYE Anticheats runtimes
+					</li>
+					<li>
+						Add Anti-cheat information on the game page
+					</li>
+				</ul>
 				<p>
 					BugFixes
 				</p>
 				<ul>
 					<li>
-						Fix Some Epic login issues
+						Heroic will prevent the display from sleep while playing a game
 					</li>
 					<li>
-						Fix Some issues when downloading games with selective download
+						On-screen keyboard now should follow Heroic Theme
 					</li>
 					<li>
-						Other Small Fixes
+						Fix showing game as installed on recently played and favorites
+					</li>
+					<li>
+						Several Other fixes and improvements
 					</li>
 				</ul>
 			</description>
