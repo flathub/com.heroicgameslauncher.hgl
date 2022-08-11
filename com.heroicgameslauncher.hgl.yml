@@ -155,11 +155,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        x-checker-data:
-          type: electron-updater
-          url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.4.0-beta.2/latest-linux.yml
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.4.0-beta.2/Heroic-2.4.0-beta.2.AppImage
-        sha512: 54ba669855f564d2b4b4cd15820d52470f31112cca53d5cacb6b6785add20b932337b4e4f0dcbf7c6f47a1e9f3f2cb36e83d0998cb1403c8967923fa9312492e
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.4.0/Heroic-2.4.0.AppImage
+        sha512: 4330e792c7727fd17dcd4b9653ca6082109e2441349ed5963dc2c7572da312c05fba78e37db9a451ec3a632d85f07958bb4abeec93dfe19dd078085e9f53e68c
 
   - name: platform-bootstrap
     buildsystem: simple
