@@ -191,32 +191,17 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.4.0" date="2022-08-11">
+		<release version="v2.4.1" date="2022-08-30">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Library UI improvements
+						Heroic now will show the output for Winetricks
 					</li>
 					<li>
-						GOG Cloud Save support
-					</li>
-					<li>
-						Added a Joystick overlay
-					</li>
-					<li>
-						Add Game Shortcut to Steam
-					</li>
-					<li>
-						Add Epic Overlay support
-					</li>
-					<li>
-						Add EAC/BattleEYE Anticheats runtimes
-					</li>
-					<li>
-						Add Anti-cheat information on the game page
+						Heroic will show the supported status of cloud saves for all games
 					</li>
 				</ul>
 				<p>
@@ -224,13 +209,7 @@
 				</p>
 				<ul>
 					<li>
-						Heroic will prevent the display from sleep while playing a game
-					</li>
-					<li>
-						On-screen keyboard now should follow Heroic Theme
-					</li>
-					<li>
-						Fix showing game as installed on recently played and favorites
+						Fix an issue where Heroic was only showing a blank screen on startup
 					</li>
 					<li>
 						Several Other fixes and improvements
