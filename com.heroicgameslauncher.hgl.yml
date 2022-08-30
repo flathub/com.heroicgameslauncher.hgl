@@ -16,7 +16,7 @@ finish-args:
   - --allow=devel
   - --allow=multiarch
   - --device=all
-  - --env=PATH=/app/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
+  - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
   - --filesystem=xdg-data/lutris:rw
   - --filesystem=xdg-data/Steam:rw
   - --filesystem=xdg-data/applications:rw
@@ -76,6 +76,16 @@ add-extensions:
     add-ld-path: lib
     download-if: have-intel-gpu
     autoprune-unless: have-intel-gpu
+
+  com.valvesoftware.Steam.Utility:
+    subdirectories: true 
+    directory: utils
+    version: stable
+    versions: stable;beta;test
+    add-ld-path: lib
+    merge-dirs: bin
+    no-autodownload: true
+    autodelete: true
 
 modules:
 
@@ -145,8 +155,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.4.0/Heroic-2.4.0.AppImage
-        sha512: 4330e792c7727fd17dcd4b9653ca6082109e2441349ed5963dc2c7572da312c05fba78e37db9a451ec3a632d85f07958bb4abeec93dfe19dd078085e9f53e68c
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.4.1/Heroic-2.4.1.AppImage
+        sha512: bb8a672ea1738ab732b45ef6666297a197b19fb6b08f353f8b01241243fa0b7f68281bb9096845300ccf8541bd34e653404092b83ccce356e9752bbc0d67efaa
 
   - name: platform-bootstrap
     buildsystem: simple
@@ -154,6 +164,7 @@ modules:
       - |
         set -e
         mkdir -p /app/bin
+        mkdir -p /app/utils
         mkdir -p /app/lib/i386-linux-gnu
         mkdir -p /app/lib/debug/lib/i386-linux-gnu
         mkdir -p /app/lib/i386-linux-gnu/GL
