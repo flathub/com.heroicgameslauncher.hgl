@@ -156,7 +156,7 @@ modules:
 
       - type: file
         url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.4.1/Heroic-2.4.1.AppImage
-        sha512: 4330e792c7727fd17dcd4b9653ca6082109e2441349ed5963dc2c7572da312c05fba78e37db9a451ec3a632d85f07958bb4abeec93dfe19dd078085e9f53e68c
+        sha512: bb8a672ea1738ab732b45ef6666297a197b19fb6b08f353f8b01241243fa0b7f68281bb9096845300ccf8541bd34e653404092b83ccce356e9752bbc0d67efaa
 
   - name: platform-bootstrap
     buildsystem: simple
