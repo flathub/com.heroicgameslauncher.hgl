@@ -191,17 +191,14 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.4.1" date="2022-08-30">
+		<release version="v2.4.2" date="2022-09-01">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Heroic now will show the output for Winetricks
-					</li>
-					<li>
-						Heroic will show the supported status of cloud saves for all games
+						Updated Legendary to v0.20.28
 					</li>
 				</ul>
 				<p>
@@ -209,10 +206,7 @@
 				</p>
 				<ul>
 					<li>
-						Fix an issue where Heroic was only showing a blank screen on startup
-					</li>
-					<li>
-						Several Other fixes and improvements
+						Fix Epic Login
 					</li>
 				</ul>
 			</description>
