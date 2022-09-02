@@ -94,8 +94,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.3.226.zip
-        sha256: 3792fedb47e35e74c55debdb1df516d147982405d544b0cb64238d0762097dc8
+        url: https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.2.186.tar.gz
+        sha256: 8ba0e21e8de0b70d31985d251d11150efee71266875262798784e9d1ec9b717b
 
   - name: gamemode
     buildsystem: meson
