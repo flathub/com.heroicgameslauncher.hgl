@@ -1,9 +1,7 @@
 id: com.heroicgameslauncher.hgl
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
-base: org.electronjs.Electron2.BaseApp
-base-version: '21.08'
+runtime-version: '22.08'
 command: heroic-run
 separate-locales: false
 
@@ -11,7 +9,6 @@ sdk-extensions:
   - org.freedesktop.Sdk.Compat.i386
   - org.freedesktop.Sdk.Extension.toolchain-i386
   
-
 finish-args:
   - --allow=devel
   - --allow=multiarch
@@ -39,17 +36,17 @@ finish-args:
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: '21.08'
+    version: '22.08'
 
   org.freedesktop.Platform.Compat.i386.Debug:
     directory: lib/debug/lib/i386-linux-gnu
-    version: '21.08'
+    version: '22.08'
     no-autodownload: true
 
   org.freedesktop.Platform.GL32:
     directory: lib/i386-linux-gnu/GL
     version: '1.4'
-    versions: 21.08;1.4
+    versions: 22.08;1.4
     subdirectories: true
     no-autodownload: true
     autodelete: false
@@ -69,8 +66,8 @@ add-extensions:
 
   org.freedesktop.Platform.VAAPI.Intel.i386:
     directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
-    version: '21.08'
-    versions: '21.08'
+    version: '22.08'
+    versions: '22.08'
     autodelete: false
     no-autodownload: true
     add-ld-path: lib
@@ -88,18 +85,7 @@ add-extensions:
     autodelete: true
 
 modules:
-
   # --- Tools ---
-  - name: unappimage
-    buildsystem: simple
-    build-commands:
-      - make -C squashfs-tools -j ${FLATPAK_BUILDER_N_JOBS} install INSTALL_DIR=/app/bin
-    cleanup: ["*"]
-    sources:
-      - type: git
-        url: https://github.com/refi64/unappimage
-        commit: d7f86f2a0d7ec3a69211125207d5f127386b849a
-
   - name: vulkan-tools
     buildsystem: cmake-ninja
     config-opts:
@@ -108,8 +94,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.2.186.tar.gz
-        sha256: 8ba0e21e8de0b70d31985d251d11150efee71266875262798784e9d1ec9b717b
+        url: https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.3.226.zip
+        sha256: 3792fedb47e35e74c55debdb1df516d147982405d544b0cb64238d0762097dc8
 
   - name: gamemode
     buildsystem: meson
@@ -145,7 +131,8 @@ modules:
   - name: heroic
     buildsystem: simple
     build-commands:
-      - unappimage Heroic-*.AppImage
+      - chmod +x Heroic-*.AppImage
+      - ./Heroic-*.AppImage --appimage-extract
       - mv squashfs-root /app/bin/heroic
       - install -D heroic-run -t /app/bin
     sources:
