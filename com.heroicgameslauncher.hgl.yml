@@ -1,17 +1,20 @@
 id: com.heroicgameslauncher.hgl
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '22.08'
 base: org.electronjs.Electron2.BaseApp
-base-version: '21.08'
+base-version: '22.08'
 command: heroic-run
 separate-locales: false
+
+cleanup:
+  - /share/docs
+  - /share/man
 
 sdk-extensions:
   - org.freedesktop.Sdk.Compat.i386
   - org.freedesktop.Sdk.Extension.toolchain-i386
   
-
 finish-args:
   - --allow=devel
   - --allow=multiarch
@@ -39,17 +42,17 @@ finish-args:
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: '21.08'
+    version: '22.08'
 
   org.freedesktop.Platform.Compat.i386.Debug:
     directory: lib/debug/lib/i386-linux-gnu
-    version: '21.08'
+    version: '22.08'
     no-autodownload: true
 
   org.freedesktop.Platform.GL32:
     directory: lib/i386-linux-gnu/GL
     version: '1.4'
-    versions: 21.08;1.4
+    versions: 22.08;1.4
     subdirectories: true
     no-autodownload: true
     autodelete: false
@@ -69,8 +72,8 @@ add-extensions:
 
   org.freedesktop.Platform.VAAPI.Intel.i386:
     directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
-    version: '21.08'
-    versions: '21.08'
+    version: '22.08'
+    versions: '22.08'
     autodelete: false
     no-autodownload: true
     add-ld-path: lib
@@ -88,18 +91,7 @@ add-extensions:
     autodelete: true
 
 modules:
-
   # --- Tools ---
-  - name: unappimage
-    buildsystem: simple
-    build-commands:
-      - make -C squashfs-tools -j ${FLATPAK_BUILDER_N_JOBS} install INSTALL_DIR=/app/bin
-    cleanup: ["*"]
-    sources:
-      - type: git
-        url: https://github.com/refi64/unappimage
-        commit: d7f86f2a0d7ec3a69211125207d5f127386b849a
-
   - name: vulkan-tools
     buildsystem: cmake-ninja
     config-opts:
@@ -107,15 +99,13 @@ modules:
       - -DVULKAN_HEADERS_INSTALL_DIR=/app
       - -DCMAKE_BUILD_TYPE=Release
     sources:
-      - type: archive
-        url: https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.2.186.tar.gz
-        sha256: 8ba0e21e8de0b70d31985d251d11150efee71266875262798784e9d1ec9b717b
+      - type: git
+        url: https://github.com/KhronosGroup/Vulkan-Tools.git
+        tag: sdk-1.3.224.1
 
   - name: gamemode
     buildsystem: meson
     config-opts: &gamemode_opts
-      - -Dwith-systemd=false
-      - -Dwith-daemon=false
       - -Dwith-examples=false
       - -Dwith-util=false
       - -Dwith-sd-bus-provider=no-daemon
@@ -145,7 +135,8 @@ modules:
   - name: heroic
     buildsystem: simple
     build-commands:
-      - unappimage Heroic-*.AppImage
+      - chmod +x Heroic-*.AppImage
+      - ./Heroic-*.AppImage --appimage-extract
       - mv squashfs-root /app/bin/heroic
       - install -D heroic-run -t /app/bin
     sources:
@@ -155,8 +146,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.4.2/Heroic-2.4.2.AppImage
-        sha512: 2393834affe37bc99f93c95e62e6b8adef2800cf0174461ac9ec2ca552e4369f7aa533df781aa19990c3989b7b5944b474e8000677b9fc92f1633c28fde3b15f
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.4.3/Heroic-2.4.3.AppImage
+        sha512: d74d9a27b454115743c23932446d52b45b5cc8858698d3a080833ae234f276d69274d1c3f2f82a5a154641a4fd3d643abb5e096b80e72d67a64320b7f46da2ea
 
   - name: platform-bootstrap
     buildsystem: simple
@@ -237,6 +228,10 @@ modules:
       - type: archive
         url: "https://www.cabextract.org.uk/cabextract-1.9.1.tar.gz"
         sha256: afc253673c8ef316b4d5c29cc4aa8445844bee14afffbe092ee9469405851ca7
+        x-checker-data:
+          type: anitya
+          project-id: 245
+          url-template: https://www.cabextract.org.uk/cabextract-$version.tar.gz
 
   - name: unrar
     no-autogen: true
@@ -246,8 +241,12 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: "https://www.rarlab.com/rar/unrarsrc-5.8.3.tar.gz"
-        sha256: 3591685c8f5bbcb0be09de3d0a0544adb88966b9cccb80986f6cd2b534fd91a6
+        url: "https://www.rarlab.com/rar/unrarsrc-6.1.7.tar.gz"
+        sha256: de75b6136958173fdfc530d38a0145b72342cf0d3842bf7bb120d336602d88ed
+        x-checker-data:
+          type: anitya
+          project-id: 13306
+          url-template: https://www.rarlab.com/rar/unrarsrc-$version.tar.gz
 
   - name: binutils-ar
     buildsystem: simple
@@ -306,5 +305,6 @@ modules:
       - type: archive
         sha256: 58d1e7608c12404f0229a3d9a4953d0d00c18040504498b483305bcb3de907a5
         url: "https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.xz"
-  #END --- Winetricks Deps ---
-
+      - type: patch
+        path: patches/aria2/working-build.patch
+  #END --- Winetricks Deps --

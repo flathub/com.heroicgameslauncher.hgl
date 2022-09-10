@@ -191,14 +191,17 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.4.2" date="2022-09-01">
+		<release version="v2.4.3" date="2022-09-10">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Updated Legendary to v0.20.28
+						Added new Languages and updated translations
+					</li>
+					<li>
+						Improved Wine help
 					</li>
 				</ul>
 				<p>
@@ -206,7 +209,16 @@
 				</p>
 				<ul>
 					<li>
-						Fix Epic Login
+						Fix games from Epic not installing
+					</li>
+					<li>
+						Fix progress for GOG games get stuck
+					</li>
+					<li>
+						Fix HTTPS option not being saved
+					</li>
+					<li>
+						Fix empty screen when no recent games
 					</li>
 				</ul>
 			</description>
