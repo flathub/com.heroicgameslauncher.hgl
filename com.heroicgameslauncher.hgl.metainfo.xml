@@ -191,17 +191,29 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.4.3" date="2022-09-10">
+		<release version="v2.5.0-beta.1" date="2022-10-30">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Added new Languages and updated translations
+						Adds a Download Manager with real time chart
 					</li>
 					<li>
-						Improved Wine help
+						Adds Ability to add Games/Apps outside Epic/GOG
+					</li>
+					<li>
+						Support for Custom Themes
+					</li>
+					<li>
+						Better Online Checking system
+					</li>
+					<li>
+						Updates Legendary to v0.20.30
+					</li>
+					<li>
+						Adds Ability to add Games/Apps outside Epic/GOG
 					</li>
 				</ul>
 				<p>
@@ -209,16 +221,7 @@
 				</p>
 				<ul>
 					<li>
-						Fix games from Epic not installing
-					</li>
-					<li>
-						Fix progress for GOG games get stuck
-					</li>
-					<li>
-						Fix HTTPS option not being saved
-					</li>
-					<li>
-						Fix empty screen when no recent games
+						Several bug fixes and performance improvements
 					</li>
 				</ul>
 			</description>

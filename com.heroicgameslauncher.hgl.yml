@@ -146,8 +146,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.4.3/Heroic-2.4.3.AppImage
-        sha512: d74d9a27b454115743c23932446d52b45b5cc8858698d3a080833ae234f276d69274d1c3f2f82a5a154641a4fd3d643abb5e096b80e72d67a64320b7f46da2ea
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.5.0-beta.1/Heroic-2.5.0-beta.1.AppImage
+        sha512: 60e6739cd56814b0264525f931080f5f1ab053a342ff66016fea4d08e1df08dfd5f5866a75d0907f5f99c84f588c6f0875138da2ecb7ba616edb9ce2cb33af5b
 
   - name: platform-bootstrap
     buildsystem: simple
@@ -241,8 +241,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: "https://www.rarlab.com/rar/unrarsrc-6.1.7.tar.gz"
-        sha256: de75b6136958173fdfc530d38a0145b72342cf0d3842bf7bb120d336602d88ed
+        url: "https://www.rarlab.com/rar/unrarsrc-6.2.1.tar.gz"
+        sha256: 5cc8f7ded262d27c29d01e7a119d2fd23edda427711820454f2eb667044a8900
         x-checker-data:
           type: anitya
           project-id: 13306
