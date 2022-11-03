@@ -191,29 +191,20 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.5.0-beta.1" date="2022-10-30">
+		<release version="v2.5.0-beta.2" date="2022-03-11">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Adds a Download Manager with real time chart
+						Adds Two new Themes: Nord Light and Nord Dark
 					</li>
 					<li>
-						Adds Ability to add Games/Apps outside Epic/GOG
+						Improvements and fixes to UI when using Joystick
 					</li>
 					<li>
-						Support for Custom Themes
-					</li>
-					<li>
-						Better Online Checking system
-					</li>
-					<li>
-						Updates Legendary to v0.20.30
-					</li>
-					<li>
-						Adds Ability to add Games/Apps outside Epic/GOG
+						New Settings interface
 					</li>
 				</ul>
 				<p>
