@@ -191,20 +191,26 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.5.0-beta.2" date="2022-03-11">
+		<release version="v2.5.0-beta.3" date="2022-11-25">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Adds Two new Themes: Nord Light and Nord Dark
+						Integrated How Long to Beat data on GamePage
 					</li>
 					<li>
-						Improvements and fixes to UI when using Joystick
+						The interface when using a joystick should be more seamless and follow the same controls as the SteamDeck UI.
 					</li>
 					<li>
-						New Settings interface
+						The Downloads Manager now supports Updates and got several fixes and improvements on the UI.
+					</li>
+					<li>
+						Heroic will detect if the game folder installed on an External Drive/SDCard is available or not and change it is status to not installed, just like Steam Deck behaves after removing the SDCard, for instance.
+					</li>
+					<li>
+						Several other improvements and fixes.
 					</li>
 				</ul>
 				<p>
@@ -212,7 +218,10 @@
 				</p>
 				<ul>
 					<li>
-						Several bug fixes and performance improvements
+						Fixed a bug where Heroic could not install VKD3D correctly
+					</li>
+					<li>
+						Several other bug fixes and performance improvements
 					</li>
 				</ul>
 			</description>
