@@ -54,6 +54,21 @@
 				Have access to your Epic and GOG games in a intuitive interface.
 			</li>
 			<li xml:lang="de">
+				Haben Sie Zugriff auf Ihre Epic und GOG-Spiele in einer intuitiven Benutzeroberfläche.
+			</li>
+			<li>
+				Add Games outside GOG or Epic Games Store native or not.
+			</li>
+			<li xml:lang="de">
+				Fügen Sie Spiele außerhalb des GOG- oder Epic Games Store hinzu, egal ob sie nativ sind oder nicht.
+			</li>
+			<li>
+				A Download queue to download multiple games at once.
+			</li>
+			<li xml:lang="de">
+				Eine Download-Warteschlange, um mehrere Spiele gleichzeitig herunterzuladen.
+			</li>
+			<li xml:lang="de">
 				Zugriff auf deine Spielebibliothek von Epic Games und GOG durch eine intuitive Benutzeroberfläche.
 			</li>
 			<li>
@@ -85,6 +100,18 @@
 			</li>
 			<li xml:lang="de">
 				Der Epic Games Store sowie der GOG Store können direkt aus der App aufgerufen werden.
+			</li>
+			<li>
+				Check HowLongtoBeat database to see how long it will take to finish a game.
+			</li>
+			<li xml:lang="de">
+				Die HowLongtoBeat Datenbank kann genutzt werden, um zu sehen, wie lange ein Spiel dauert.
+			</li>
+			<li>
+				And many more features
+			</li>
+			<li xml:lang="de">
+				Und viele weitere Features
 			</li>
 		</ul>
 		<p>
@@ -198,10 +225,28 @@
 				</p>
 				<ul>
 					<li>
-						Added new Languages and updated translations
+						Heroic now has a Downloads Manager so you can enqueue and download multiple games at once.
 					</li>
 					<li>
-						Improved Wine help
+						It is now possible to sideload any games that are not on the stores, native or not.
+					</li>
+					<li>
+						It is now possible to add custom themes to Heroic.
+					</li>
+					<li>
+						Better GamePad navigation similar to SteamOS
+					</li>
+					<li>
+						Added HowLongtoBeat Data on the GamePage
+					</li>
+					<li>
+						Added new Themes and redesigned the Login Screen and the Settings Page
+					</li>
+					<li>
+						Added setting to add games to Steam automatically.
+					</li>
+					<li>
+						Many other new features and improvements
 					</li>
 				</ul>
 				<p>
@@ -209,16 +254,7 @@
 				</p>
 				<ul>
 					<li>
-						Fix games from Epic not installing
-					</li>
-					<li>
-						Fix progress for GOG games get stuck
-					</li>
-					<li>
-						Fix HTTPS option not being saved
-					</li>
-					<li>
-						Fix empty screen when no recent games
+						Several bug fixes and improvements.
 					</li>
 				</ul>
 			</description>
