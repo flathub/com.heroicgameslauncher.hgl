@@ -218,7 +218,7 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.5.0" date="2022-11-29">
+		<release version="v2.5.1" date="2022-11-29">
 			<description>
 				<p>
 					General
@@ -254,7 +254,28 @@
 				</p>
 				<ul>
 					<li>
-						Several bug fixes and improvements.
+						Fix the issue with the download's progress going nuts
+					</li>
+					<li>
+						Fix a crash on the Install dialog on some games
+					</li>
+					<li>
+						Fix sideload games not being added to steam automatically.
+					</li>
+					<li>
+						Fix Games failing to start when launched from Steam because they have an update
+					</li>
+					<li>
+						Fix Auto detect saves path going on forever. Now it will have a timeout of 15s.
+					</li>
+					<li>
+						Fix the windows version of a game version being recognized as native and not showing Wine settings and others.
+					</li>
+					<li>
+						Fix connectivity check issues at startup and it is also possible to ignore the status check now.
+					</li>
+					<li>
+						Several other fixes and improvements
 					</li>
 				</ul>
 			</description>
