@@ -34,7 +34,7 @@ finish-args:
   - --filesystem=/run/udev:ro
   - --share=ipc
   - --share=network
-  - --socket=fallback-x11
+  - --socket=x11
   - --socket=wayland
   - --socket=pulseaudio
   - --talk-name=org.freedesktop.Notifications
