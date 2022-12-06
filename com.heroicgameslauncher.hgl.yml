@@ -34,7 +34,7 @@ finish-args:
   - --filesystem=/run/udev:ro
   - --share=ipc
   - --share=network
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=wayland
   - --socket=pulseaudio
   - --talk-name=org.freedesktop.Notifications
@@ -146,8 +146,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.5.0/Heroic-2.5.0.AppImage
-        sha512: 8af256dcd33eabd141202be24950b0792814244e58ee228810909fbebcee614f0b0d830221216ba3e0fe973a13755aaf4c1d174b434767ec675bc25429dbc468
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.5.1/Heroic-2.5.1.AppImage
+        sha512: a8544dd02add3afd4ec004703a84860ed568422879360fcc09610666ba81b976231900a872cb1d339d50de944cd81b7236c898a1d70cbdb71d7c3335710ddec0
 
   - name: platform-bootstrap
     buildsystem: simple
@@ -241,8 +241,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: "https://www.rarlab.com/rar/unrarsrc-6.1.7.tar.gz"
-        sha256: de75b6136958173fdfc530d38a0145b72342cf0d3842bf7bb120d336602d88ed
+        url: "https://www.rarlab.com/rar/unrarsrc-6.2.2.tar.gz"
+        sha256: 477d6ca7e246caec5412cc83b36c15a4ac837726a892df022919800129107cd5
         x-checker-data:
           type: anitya
           project-id: 13306
