@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Heroic Games Launcher
-Exec=heroic-run
+Exec=heroic-run %u
 Terminal=false
 Type=Application
 Icon=com.heroicgameslauncher.hgl
