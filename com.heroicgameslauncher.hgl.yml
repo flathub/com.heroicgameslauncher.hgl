@@ -153,6 +153,7 @@ modules:
   - name: heroic
     buildsystem: simple
     build-commands:
+      - unzip linux-appimage
       - chmod +x Heroic-*.AppImage
       - ./Heroic-*.AppImage --appimage-extract
       - mv squashfs-root /app/bin/heroic
@@ -164,8 +165,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.5.2/Heroic-2.5.2.AppImage
-        sha512: 218710fc969bafb34c8a54ae2d04afdad7982edd88a50293bd7385e8d80abe8f0a5dc9ae11bba10f9d19d4682d14f6a5669def9e0406fdd26a6ee16d3d8a9bfa
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/suites/10512912949/artifacts/521996637
+        sha512: 6dc19c83a3a498709bafff5409fda69541975f33011a99d554bbcc1173e48317a12fb01427738a2e33cf6e37c6d0b1a34711e8972e64109fb4b3819ad29ba04a
 
   - name: platform-bootstrap
     buildsystem: simple
