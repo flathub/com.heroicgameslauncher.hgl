@@ -218,35 +218,35 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.5.2" date="2022-12-14">
+		<release version="v2.6.0" date="2022-02-02">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Heroic now has a Downloads Manager so you can enqueue and download multiple games at once.
+						New Default Theme called Midnight Mirage
 					</li>
 					<li>
-						It is now possible to sideload any games that are not on the stores, native or not.
+						Game Settings will open on a dialog now instead of a new page
 					</li>
 					<li>
-						It is now possible to add custom themes to Heroic.
+						New item on game submenu will show extra information like HowLongToBeat and Game Score
 					</li>
 					<li>
-						Better GamePad navigation similar to SteamOS
+						Heroic will show progress for individual files when moving a game
 					</li>
 					<li>
-						Added HowLongtoBeat Data on the GamePage
+						Better caching for GOG games information
 					</li>
 					<li>
-						Added new Themes and redesigned the Login Screen and the Settings Page
+						When selected wine version was not found Heroic will search and suggest for another one.
 					</li>
 					<li>
-						Added setting to add games to Steam automatically.
+						Added setting to auto-update games and also to skip updates for a specific game
 					</li>
 					<li>
-						Many other new features and improvements
+						Sidebar now will resize on drag event
 					</li>
 				</ul>
 				<p>
@@ -254,16 +254,16 @@
 				</p>
 				<ul>
 					<li>
-						Fix some sideloaded and GOG games not launching from SteamDeck because of a `--skip-version-check` flag being passed.
+						Heroic will block the installation when changing the platform on the install dialog to avoid corrupting the game
 					</li>
 					<li>
-						Fixed DXVK Installation
+						Fixes and improvements on GOG games setup and installation
 					</li>
 					<li>
-						Fix Wine status not updating on Wine Manager after install/uninstall
+						Fix game status not working properly sometimes
 					</li>
 					<li>
-						Fix some sideloaded and GOG games not launching from SteamDeck because of a `--skip-version-check` flag being passed.
+						Ui fixes and improvements
 					</li>
 					<li>
 						Several other fixes and improvements
