@@ -19,7 +19,7 @@ finish-args:
   - --allow=devel
   - --allow=multiarch
   - --device=all
-  - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
+  - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/usr/lib/extensions/vulkan/OBSVkCapture/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
   - --filesystem=xdg-data/lutris:rw
   - --filesystem=xdg-data/Steam:rw
   - --filesystem=xdg-data/applications:rw
@@ -131,6 +131,24 @@ modules:
       - install -Dm755 data/gamemoderun -t /app/bin
     sources: *gamemode_sources
 
+  - name: rsync
+    config-opts:
+      - --prefix=${FLATPAK_DEST}
+      - --with-included-popt
+      - --with-included-zlib
+      - --host=x86
+      - --disable-xxhash
+      - --disable-md2man
+    sources:
+      - type: archive
+        url: https://download.samba.org/pub/rsync/src/rsync-3.2.7.tar.gz
+        sha256: 4e7d9d3f6ed10878c58c5fb724a67dacf4b6aac7340b13e488fb2dc41346f2bb
+        x-checker-data:
+          type: anitya
+          project-id: 4217
+          stable-only: true
+          url-template: https://download.samba.org/pub/rsync/src/rsync-$version.tar.gz
+
   # --- Heroic ---
   - name: heroic
     buildsystem: simple
@@ -146,8 +164,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.5.2/Heroic-2.5.2.AppImage
-        sha512: 218710fc969bafb34c8a54ae2d04afdad7982edd88a50293bd7385e8d80abe8f0a5dc9ae11bba10f9d19d4682d14f6a5669def9e0406fdd26a6ee16d3d8a9bfa
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.6.1/Heroic-2.6.1.AppImage
+        sha512: 1eeec021f7d681336f8a590665dfbe0895ed69983b17e0bb3ad954a9816f7d626f0cbee7ca789a1be8613e6e76c61af83850452850e496a9756bb35804297c80
 
   - name: platform-bootstrap
     buildsystem: simple
