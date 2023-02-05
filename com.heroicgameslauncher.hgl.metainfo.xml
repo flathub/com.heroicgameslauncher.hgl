@@ -262,18 +262,6 @@
 				</p>
 				<ul>
 					<li>
-						<<<<<<< HEAD
-						Heroic will block the installation when changing the platform on the install dialog to avoid corrupting the game
-					</li>
-					<li>
-						Fixes and improvements on GOG games setup and installation
-					</li>
-					<li>
-						Fix game status not working properly sometimes
-					</li>
-					<li>
-						Ui fixes and improvements
-						=======
 						Fix not being able to download native GOG games
 					</li>
 					<li>
@@ -284,7 +272,6 @@
 					</li>
 					<li>
 						Improved accessibility of the default theme and others Style fixes
-						>>>>>>> 32f99d2fd1ee9b6a422c5af72fbb7e3d70529ad7
 					</li>
 					<li>
 						Several other fixes and improvements
