@@ -226,7 +226,7 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.6.1" date="2022-02-02">
+		<release version="v2.6.2" date="2022-02-05">
 			<description>
 				<p>
 					General
@@ -262,6 +262,7 @@
 				</p>
 				<ul>
 					<li>
+						<<<<<<< HEAD
 						Heroic will block the installation when changing the platform on the install dialog to avoid corrupting the game
 					</li>
 					<li>
@@ -272,6 +273,18 @@
 					</li>
 					<li>
 						Ui fixes and improvements
+						=======
+						Fix not being able to download native GOG games
+					</li>
+					<li>
+						Cloud Sync saves settings not being shown for Windows GOG games that have Linux counterpart
+					</li>
+					<li>
+						Install dialog was not pre-selecting the default Wine and WinePrefix
+					</li>
+					<li>
+						Improved accessibility of the default theme and others Style fixes
+						>>>>>>> 32f99d2fd1ee9b6a422c5af72fbb7e3d70529ad7
 					</li>
 					<li>
 						Several other fixes and improvements
