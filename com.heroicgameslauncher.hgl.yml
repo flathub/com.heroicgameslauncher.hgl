@@ -2,8 +2,6 @@ id: com.heroicgameslauncher.hgl
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
 runtime-version: '22.08'
-base: org.electronjs.Electron2.BaseApp
-base-version: '22.08'
 command: heroic-run
 separate-locales: false
 
@@ -91,6 +89,16 @@ add-extensions:
     autodelete: true
 
 modules:
+  - name: zypak
+    sources:
+      - type: git
+        url: https://github.com/refi64/zypak
+        tag: v2022.04
+        commit: 55a60d110301e8dd37b631503c3524ab7baaf7aa
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+
   # --- Tools ---
   - name: vulkan-tools
     buildsystem: cmake-ninja
