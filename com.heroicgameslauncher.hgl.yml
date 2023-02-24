@@ -94,16 +94,6 @@ add-extensions:
     autodelete: true
 
 modules:
-  - name: zypak
-    sources:
-      - type: git
-        url: https://github.com/refi64/zypak
-        tag: v2022.04
-        commit: 55a60d110301e8dd37b631503c3524ab7baaf7aa
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
-
   # --- Tools ---
   - name: vulkan-tools
     buildsystem: cmake-ninja
