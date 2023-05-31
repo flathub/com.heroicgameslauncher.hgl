@@ -226,20 +226,23 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.7.1" date="2023-05-03">
+		<release version="v2.8.0" date="2023-05-31">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Provide Wine-ge/Proton-ge latest version via wine manager
+						Added a DLC manager for Epic Games on the game page Submenu and the ability to install individual DLCs when installing a game
 					</li>
 					<li>
-						When selecting item from search bar, it will take you directly to item's game page
+						Added support for Sideloading Browser Apps and Games (DRM content like Netflix won't work for now though)
 					</li>
 					<li>
-						Add Keyboard global shortcuts
+						Auto Download Wine if no version was found in the system. Defaults to Wine-GE.
+					</li>
+					<li>
+						Made login screen more responsive
 					</li>
 				</ul>
 				<p>
@@ -247,19 +250,22 @@
 				</p>
 				<ul>
 					<li>
-						Fix Blank screen on startup
+						Fixed installation/update progress reports to the frontend
 					</li>
 					<li>
-						Fix playing status
+						Numerous UI fixes in the Nord Light theme
 					</li>
 					<li>
-						Fix winemenubuilder not being disabled
+						Added missing Sideload game cover when no URL provided
 					</li>
 					<li>
-						Fix Captcha not working on epic games page
+						Fixed Linux native games failing to add to the launcher
 					</li>
 					<li>
-						Fix Image search on Add Game Screen blocking finish button
+						Missing GOG download size in the download manager
+					</li>
+					<li>
+						Fixed installation of games that have Selective downloads (Fortnite, Fallout NV, and others)
 					</li>
 					<li>
 						Several other fixes and improvements
