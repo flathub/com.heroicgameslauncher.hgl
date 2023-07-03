@@ -292,3 +292,6 @@ modules:
       - type: patch
         path: patches/aria2/working-build.patch
   #END --- Winetricks Deps --
+  #START --- Native games libs -- 
+  - shared-modules/glu/glu-9.json
+  #END --- Native games libs --
