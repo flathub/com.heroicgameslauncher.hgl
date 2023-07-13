@@ -292,3 +292,25 @@ modules:
       - type: patch
         path: patches/aria2/working-build.patch
   #END --- Winetricks Deps --
+  #START --- Native games libs -- 
+  - shared-modules/glu/glu-9.json
+
+  - name: libcaca
+    config-opts: &libcaca_config_opts
+      --disable-doc
+      --disable-python
+      --disable-ruby
+      --disable-static
+    sources: &libcaca_sources
+      - type: archive
+        url: http://caca.zoy.org/files/libcaca/libcaca-0.99.beta19.tar.gz
+        sha256: 128b467c4ed03264c187405172a4e83049342cc8cc2f655f53a2d0ee9d3772f4
+
+  - name: libcaca_32bit
+    build-options:
+      arch:
+        x86_64: *compat_i386_opts
+    config-opts: *libcaca_config_opts
+    sources: *libcaca_sources
+
+  #END --- Native games libs --
