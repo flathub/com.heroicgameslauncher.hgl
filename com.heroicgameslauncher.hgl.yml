@@ -165,13 +165,13 @@ modules:
         dest-filename: heroic-run
         commands:
           - for i in {0..9}; do
-          -   test -S $XDG_RUNTIME_DIR/discord-ipc-$i || ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
+          - test -S $XDG_RUNTIME_DIR/discord-ipc-$i || ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
           - done
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.8.0/Heroic-2.8.0.AppImage
-        sha512: 2241a070ffd17110b09b1d0b003cb27fe40be539acb19d28c7daddb28ee9e6ea5aca27f675139bc1e3158f750b32241b89eb34785a127b39e6e17b9dd65a0e5d
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.9.0/Heroic-2.9.0.AppImage
+        sha512: 82e7d6a1151b070825ae52fbe9bec33407d3da7c12fd656c29a0dde3aa0c8547cf6039207ad34cd21644f239536c177390f06a1a0500a91a5809f3a2194ee7b6
 
   - name: platform-bootstrap
     buildsystem: simple
