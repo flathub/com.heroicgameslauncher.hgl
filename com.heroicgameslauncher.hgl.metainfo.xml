@@ -38,10 +38,10 @@
 	</project_license>
 	<description>
 		<p>
-			Heroic is an Open Source Games Launcher. Right now it supports launching games from the Epic Games Store using Legendary and GOG Games using our custom implementation with gogdl.
+			Heroic is an Open Source Games Launcher. It supports launching games from the Epic Games Store using Legendary, GOG Games and Amazon Prime games using GOGDL and Nile respectively.
 		</p>
 		<p xml:lang="de">
-			Heroic ist ein Open Source Spielelauncher. Aktuell wird das Starten von Spielen aus dem Epic Games Store durch legendary und das starten von Spielen von GOG durch unsere Eigenentwicklung gogdl unterstützt.
+			Heroic ist ein Open Source Spielelauncher. Er unterstützt das Starten von Spielen aus dem Epic Games Store mit Legendary, GOG Spielen und Amazon Prime Spielen mit GOGDL und Nile.
 		</p>
 		<p>
 			Main Features:
@@ -51,16 +51,16 @@
 		</p>
 		<ul>
 			<li>
-				Have access to your Epic and GOG games in a intuitive interface.
+				Have access to your Epic, Amazon and GOG games in a intuitive interface.
 			</li>
 			<li xml:lang="de">
-				Haben Sie Zugriff auf Ihre Epic und GOG-Spiele in einer intuitiven Benutzeroberfläche.
+				Zugriff auf deine Spielebibliothek von Epic Games, Amazon und GOG durch eine intuitive Benutzeroberfläche.
 			</li>
 			<li>
-				Add Games outside GOG or Epic Games Store native or not.
+				Add Games your own games native or not.
 			</li>
 			<li xml:lang="de">
-				Fügen Sie Spiele außerhalb des GOG- oder Epic Games Store hinzu, egal ob sie nativ sind oder nicht.
+				Du kannst deine eigenen Spiele hinzufügen, egal ob nativ oder nicht.
 			</li>
 			<li>
 				A Download queue to download multiple games at once.
@@ -96,10 +96,10 @@
 				Installationen können auf Beschädigungen überprüft und repariert werden, sowie in andere Ordner verschoben werden.
 			</li>
 			<li>
-				Access the Epic and GOG store and also Heroic Wiki directly from the App.
+				Access the games stores and also Heroic Wiki directly from the App.
 			</li>
 			<li xml:lang="de">
-				Der Epic Games Store sowie der GOG Store können direkt aus der App aufgerufen werden.
+				Direkter Zugriff auf die Spielestores und das Heroic Wiki.
 			</li>
 			<li>
 				Check HowLongtoBeat database to see how long it will take to finish a game.
@@ -226,23 +226,29 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.8.0" date="2023-05-31">
+		<release version="v2.9.0" date="2023-07-24">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Added a DLC manager for Epic Games on the game page Submenu and the ability to install individual DLCs when installing a game
+						Amazon Prime Gaming support
 					</li>
 					<li>
-						Added support for Sideloading Browser Apps and Games (DRM content like Netflix won't work for now though)
+						Adapt layout properly to RTL languages
 					</li>
 					<li>
-						Auto Download Wine if no version was found in the system. Defaults to Wine-GE.
+						Provide Protondb information on game page
 					</li>
 					<li>
-						Made login screen more responsive
+						Post playtime to gameplay.gog.com
+					</li>
+					<li>
+						Download DXVK 1.10.3 if no Vulkan 1.3 support is detected
+					</li>
+					<li>
+						Fetch steam deck comaptibility
 					</li>
 				</ul>
 				<p>
@@ -250,22 +256,22 @@
 				</p>
 				<ul>
 					<li>
-						Fixed installation/update progress reports to the frontend
+						Update Steam runtime to Sniper
 					</li>
 					<li>
-						Numerous UI fixes in the Nord Light theme
+						Favourites layout
 					</li>
 					<li>
-						Added missing Sideload game cover when no URL provided
+						Show correct number of gamecards in recently played
 					</li>
 					<li>
-						Fixed Linux native games failing to add to the launcher
+						Don't add shortcut for DLCs. Fix adding sideload app shortcuts
 					</li>
 					<li>
-						Missing GOG download size in the download manager
+						Fix not being possible to change the default installation path
 					</li>
 					<li>
-						Fixed installation of games that have Selective downloads (Fortnite, Fallout NV, and others)
+						Speed up the disabling of DXVK and VKD3D
 					</li>
 					<li>
 						Several other fixes and improvements
