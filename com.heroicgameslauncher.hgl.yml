@@ -41,7 +41,7 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --talk-name=org.freedesktop.Notifications
-  - --own-name=org.kde.*
+  - --talk-name=org.kde.StatusNotifierWatcher
 
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
