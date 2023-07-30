@@ -41,7 +41,7 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --talk-name=org.freedesktop.Notifications
-  - --own-name=org.kde.*
+  - --talk-name=org.kde.StatusNotifierWatcher
 
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
@@ -168,6 +168,7 @@ modules:
           - for i in {0..9}; do
           - test -S $XDG_RUNTIME_DIR/discord-ipc-$i || ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
           - done
+          - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
