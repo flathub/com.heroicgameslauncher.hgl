@@ -34,13 +34,14 @@ finish-args:
   - --filesystem=/run/udev:ro
   # should fix discord rich presence
   - --filesystem=xdg-run/app/com.discordapp.Discord:create
+  - --persist=.
   - --share=ipc
   - --share=network
   - --socket=x11
   - --socket=wayland
   - --socket=pulseaudio
   - --talk-name=org.freedesktop.Notifications
-  - --own-name=org.kde.*
+  - --talk-name=org.kde.StatusNotifierWatcher
 
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
@@ -167,11 +168,12 @@ modules:
           - for i in {0..9}; do
           - test -S $XDG_RUNTIME_DIR/discord-ipc-$i || ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
           - done
+          - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.8.0/Heroic-2.8.0.AppImage
-        sha512: 2241a070ffd17110b09b1d0b003cb27fe40be539acb19d28c7daddb28ee9e6ea5aca27f675139bc1e3158f750b32241b89eb34785a127b39e6e17b9dd65a0e5d
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.9.1/Heroic-2.9.1.AppImage
+        sha512: f8a32366a5f6838fc4fffbfcc7c1ca7fb59feb9819be2314a4d22b3825d772465747f1a0e39d897d8ae57ef9ea5abbab85686269d9b114b2434c81f464d03a5c
 
   - name: platform-bootstrap
     buildsystem: simple
@@ -265,8 +267,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: https://www.rarlab.com/rar/unrarsrc-6.2.6.tar.gz
-        sha256: 0c2d4cbc8b34d0e3bec7b474e0f52bbcc6c4320ec089b4141223ee355f63c318
+        url: https://www.rarlab.com/rar/unrarsrc-6.2.9.tar.gz
+        sha256: 477aecdad08062b20eb63e14f60dc70293dcb92ec7b1d80ab3ea8acec33c2cb4
         x-checker-data:
           type: anitya
           project-id: 13306
