@@ -226,23 +226,26 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.8.0" date="2023-05-31">
+		<release version="v2.9.1" date="2023-07-26">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Added a DLC manager for Epic Games on the game page Submenu and the ability to install individual DLCs when installing a game
+						Auto Install UbisoftConnect when running UbisoftConnect games
 					</li>
 					<li>
-						Added support for Sideloading Browser Apps and Games (DRM content like Netflix won't work for now though)
+						UI improvements on the GamePage to make it cleaner and organized
 					</li>
 					<li>
-						Auto Download Wine if no version was found in the system. Defaults to Wine-GE.
+						Library render improvements and download GOG game images in the background
 					</li>
 					<li>
-						Made login screen more responsive
+						Improvements on Epic Login
+					</li>
+					<li>
+						Show game logs from the card's context menu
 					</li>
 				</ul>
 				<p>
@@ -250,22 +253,22 @@
 				</p>
 				<ul>
 					<li>
-						Fixed installation/update progress reports to the frontend
+						Fix Discord RPC for flatpak heroic
 					</li>
 					<li>
-						Numerous UI fixes in the Nord Light theme
+						Fix auto-enabling of anti-cheat runtimes
 					</li>
 					<li>
-						Added missing Sideload game cover when no URL provided
+						Fix non-available status for games just installed
 					</li>
 					<li>
-						Fixed Linux native games failing to add to the launcher
+						Kill leftover wine processes after the stop button is pressed
 					</li>
 					<li>
-						Missing GOG download size in the download manager
+						Fix not being possible to change the default installation path
 					</li>
 					<li>
-						Fixed installation of games that have Selective downloads (Fortnite, Fallout NV, and others)
+						Inaccuracy of disk and down speed
 					</li>
 					<li>
 						Several other fixes and improvements
