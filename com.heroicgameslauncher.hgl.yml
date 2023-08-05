@@ -30,6 +30,8 @@ finish-args:
   - --filesystem=xdg-desktop
   # should fix access to SD card on the deck
   - --filesystem=/run/media
+  # There are still quite a few users using /mnt/ for external drives
+  - --filesystem=/mnt
   # should fix steamdeck controler navigation
   - --filesystem=/run/udev:ro
   # should fix discord rich presence
