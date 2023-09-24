@@ -1,9 +1,9 @@
 id: com.heroicgameslauncher.hgl
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '23.08'
 base: org.electronjs.Electron2.BaseApp
-base-version: '22.08'
+base-version: '23.08'
 command: heroic-run
 separate-locales: false
 
@@ -19,7 +19,7 @@ finish-args:
   - --allow=devel
   - --allow=multiarch
   - --device=all
-  - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/usr/lib/extensions/vulkan/gamescope/bin:/usr/lib/extensions/vulkan/OBSVkCapture/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
+  - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/usr/lib/extensions/vulkan/OBSVkCapture/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
   - --filesystem=xdg-data/lutris:rw
   - --filesystem=xdg-data/Steam:rw
   - --filesystem=xdg-data/applications:rw
@@ -48,17 +48,17 @@ finish-args:
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: '22.08'
+    version: '23.08'
 
   org.freedesktop.Platform.Compat.i386.Debug:
     directory: lib/debug/lib/i386-linux-gnu
-    version: '22.08'
+    version: '23.08'
     no-autodownload: true
 
   org.freedesktop.Platform.GL32:
     directory: lib/i386-linux-gnu/GL
     version: '1.4'
-    versions: 22.08;1.4
+    versions: 23.08;1.4
     subdirectories: true
     no-autodownload: true
     autodelete: false
@@ -78,8 +78,8 @@ add-extensions:
 
   org.freedesktop.Platform.VAAPI.Intel.i386:
     directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
-    version: '22.08'
-    versions: '22.08'
+    version: '23.08'
+    versions: '23.08'
     autodelete: false
     no-autodownload: true
     add-ld-path: lib
@@ -174,8 +174,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.9.2/Heroic-2.9.2.AppImage
-        sha512: 735a92903d2f962cbce5cdd5db34308f7ef5b41e61715a8f50fce22394b43bad3e56879b4ce30d1a88f530ae9603470676da4b1e43682377dc78795db01a4b9b
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.9.1/Heroic-2.9.1.AppImage
+        sha512: f8a32366a5f6838fc4fffbfcc7c1ca7fb59feb9819be2314a4d22b3825d772465747f1a0e39d897d8ae57ef9ea5abbab85686269d9b114b2434c81f464d03a5c
 
   - name: platform-bootstrap
     buildsystem: simple
