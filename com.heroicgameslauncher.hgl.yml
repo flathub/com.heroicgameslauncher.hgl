@@ -300,7 +300,7 @@ modules:
         path: patches/aria2/working-build.patch
   #END --- Winetricks Deps ---
   - name: wine-mono
-  buildsystem: simple
+    buildsystem: simple
     build-commands:
       - mkdir -p ${FLATPAK_DEST}/share/wine/mono/
       - cp -a wine-mono-* ${FLATPAK_DEST}/share/wine/mono/
