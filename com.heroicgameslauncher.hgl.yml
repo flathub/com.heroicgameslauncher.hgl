@@ -122,6 +122,9 @@ modules:
         commit: 4dc99dff76218718763a6b07fc1900fa6d1dafd9
         x-checker-data:
           type: git
+      - type: patch
+        paths:
+          - patches/gamemode/disable-pidfd.patch
 
   - name: gamemode-32bit
     build-options:
