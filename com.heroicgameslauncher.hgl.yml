@@ -302,8 +302,8 @@ modules:
   - name: wine-mono
     buildsystem: simple
     build-commands:
-      - mkdir -p /opt/wine/mono/
-      - cp -a wine-mono-* /opt/wine/mono/
+      - mkdir -p ${FLATPAK_DEST}/share/wine/mono/
+      - cp -a wine-mono-* ${FLATPAK_DEST}/share/wine/mono/
     sources:
       - type: archive
         url: https://dl.winehq.org/wine/wine-mono/8.0.0/wine-mono-8.0.0-x86.tar.xz
