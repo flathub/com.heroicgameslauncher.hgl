@@ -299,13 +299,3 @@ modules:
       - type: patch
         path: patches/aria2/working-build.patch
   #END --- Winetricks Deps ---
-  - name: wine-mono
-    buildsystem: simple
-    build-commands:
-      - mkdir -p ${FLATPAK_DEST}/share/wine/mono/
-      - cp -a wine-mono-* ${FLATPAK_DEST}/share/wine/mono/
-    sources:
-      - type: archive
-        url: https://dl.winehq.org/wine/wine-mono/8.0.0/wine-mono-8.0.0-x86.tar.xz
-        strip-components: 0
-        sha256: 14c7d76780b79dc62d8ed9d1759e7adcfa332bb2406e2e694dee7b2128cc7a77
