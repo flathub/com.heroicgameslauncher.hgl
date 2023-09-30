@@ -1,9 +1,9 @@
 id: com.heroicgameslauncher.hgl
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '23.08'
 base: org.electronjs.Electron2.BaseApp
-base-version: '22.08'
+base-version: '23.08'
 command: heroic-run
 separate-locales: false
 
@@ -42,23 +42,22 @@ finish-args:
   - --socket=x11
   - --socket=wayland
   - --socket=pulseaudio
-  - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.kde.StatusNotifierWatcher
 
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: '22.08'
+    version: '23.08'
 
   org.freedesktop.Platform.Compat.i386.Debug:
     directory: lib/debug/lib/i386-linux-gnu
-    version: '22.08'
+    version: '23.08'
     no-autodownload: true
 
   org.freedesktop.Platform.GL32:
     directory: lib/i386-linux-gnu/GL
     version: '1.4'
-    versions: 22.08;1.4
+    versions: 23.08;1.4
     subdirectories: true
     no-autodownload: true
     autodelete: false
@@ -78,8 +77,8 @@ add-extensions:
 
   org.freedesktop.Platform.VAAPI.Intel.i386:
     directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
-    version: '22.08'
-    versions: '22.08'
+    version: '23.08'
+    versions: '23.08'
     autodelete: false
     no-autodownload: true
     add-ld-path: lib
@@ -107,7 +106,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/KhronosGroup/Vulkan-Tools.git
-        tag: sdk-1.3.224.1
+        tag: sdk-1.3.261.1
 
   - name: gamemode
     buildsystem: meson
@@ -122,6 +121,9 @@ modules:
         commit: 4dc99dff76218718763a6b07fc1900fa6d1dafd9
         x-checker-data:
           type: git
+      - type: patch
+        paths:
+          - patches/gamemode/disable-pidfd.patch
 
   - name: gamemode-32bit
     build-options:
@@ -295,4 +297,4 @@ modules:
         url: https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.xz
       - type: patch
         path: patches/aria2/working-build.patch
-  #END --- Winetricks Deps --
+  #END --- Winetricks Deps ---
