@@ -271,8 +271,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: https://www.rarlab.com/rar/unrarsrc-6.2.10.tar.gz
-        sha256: 55fe6ebd5e48d6655bfda3fd19b55438ca05e13c7e69772420caad9fdb68ef42
+        url: https://www.rarlab.com/rar/unrarsrc-7.0.2.tar.gz
+        sha256: 596a61a66e138b08c68382982eeb5f2a8efa2bbd05969edfb7d0e5d8b4bcf23e
         x-checker-data:
           type: anitya
           project-id: 13306
