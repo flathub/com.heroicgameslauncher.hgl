@@ -1,278 +1,164 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop-application">
-	<id>
+<?xml version="1.0" encoding="UTF-8"?><component type="desktop-application"><id>
 		com.heroicgameslauncher.hgl
-	</id>
-	<name>
+	</id><name>
 		Heroic Games Launcher
-	</name>
-	<summary>
+	</name><summary>
 		An Open Source GOG and Epic Games Launcher.
-	</summary>
-	<summary xml:lang="de">
+	</summary><summary xml:lang="de">
 		Ein Open Source Spielelauncher for GOG und Epic Games
-	</summary>
-	<url type="homepage">
+	</summary><url type="homepage">
 		https://heroicgameslauncher.com
-	</url>
-	<url type="bugtracker">
+	</url><url type="bugtracker">
 		https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/issues
-	</url>
-	<url type="donation">
+	</url><url type="donation">
 		https://ko-fi.com/heroicgames
-	</url>
-	<url type="translate">
+	</url><url type="translate">
 		https://hosted.weblate.org/projects/heroic-games-launcher
-	</url>
-	<url type="help">
+	</url><url type="help">
 		https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/wiki
-	</url>
-	<url type="vcs-browser">
+	</url><url type="vcs-browser">
 		https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher
-	</url>
-	<metadata_license>
+	</url><metadata_license>
 		CC0-1.0
-	</metadata_license>
-	<project_license>
+	</metadata_license><project_license>
 		GPL-3.0
-	</project_license>
-	<description>
-		<p>
+	</project_license><description><p>
 			Heroic is an Open Source Games Launcher. Right now it supports launching games from the Epic Games Store using Legendary and GOG Games using our custom implementation with gogdl.
-		</p>
-		<p xml:lang="de">
+		</p><p xml:lang="de">
 			Heroic ist ein Open Source Spielelauncher. Aktuell wird das Starten von Spielen aus dem Epic Games Store durch legendary und das starten von Spielen von GOG durch unsere Eigenentwicklung gogdl unterstützt.
-		</p>
-		<p>
+		</p><p>
 			Main Features:
-		</p>
-		<p xml:lang="de">
+		</p><p xml:lang="de">
 			Hauptfeatures:
-		</p>
-		<ul>
-			<li>
+		</p><ul><li>
 				Have access to your Epic and GOG games in a intuitive interface.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Haben Sie Zugriff auf Ihre Epic und GOG-Spiele in einer intuitiven Benutzeroberfläche.
-			</li>
-			<li>
+			</li><li>
 				Add Games outside GOG or Epic Games Store native or not.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Fügen Sie Spiele außerhalb des GOG- oder Epic Games Store hinzu, egal ob sie nativ sind oder nicht.
-			</li>
-			<li>
+			</li><li>
 				A Download queue to download multiple games at once.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Eine Download-Warteschlange, um mehrere Spiele gleichzeitig herunterzuladen.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Zugriff auf deine Spielebibliothek von Epic Games und GOG durch eine intuitive Benutzeroberfläche.
-			</li>
-			<li>
+			</li><li>
 				Install and launch your Windows Games using Wine or Proton. Or Launch your Native GOG Games.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Windows Spiele könne mithilfe von Wine oder Proton gestartet werden. Native Spiele von GOG können direkt gestartet werden.
-			</li>
-			<li>
+			</li><li>
 				Cloud Saves support for the both GOG and Epic Games.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Spielstände von Epic Games können in der Cloud gespeichert werden.
-			</li>
-			<li>
+			</li><li>
 				Import Games installed through the Epic Store or GOG Galaxy.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Installierte Spiele können aus dem Epic Games Sore oder aus GOG Galaxy importiert werden.
-			</li>
-			<li>
+			</li><li>
 				Verify and Repair corrupted installations or even move your installation to different folders.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Installationen können auf Beschädigungen überprüft und repariert werden, sowie in andere Ordner verschoben werden.
-			</li>
-			<li>
+			</li><li>
 				Access the Epic and GOG store and also Heroic Wiki directly from the App.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Der Epic Games Store sowie der GOG Store können direkt aus der App aufgerufen werden.
-			</li>
-			<li>
+			</li><li>
 				Check HowLongtoBeat database to see how long it will take to finish a game.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Die HowLongtoBeat Datenbank kann genutzt werden, um zu sehen, wie lange ein Spiel dauert.
-			</li>
-			<li>
+			</li><li>
 				And many more features
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Und viele weitere Features
-			</li>
-		</ul>
-		<p>
+			</li></ul><p>
 			Current Limitations on the Flatpak:
-		</p>
-		<p xml:lang="de">
+		</p><p xml:lang="de">
 			Aktuelle Einschränkungen des Flatpaks:
-		</p>
-		<ul>
-			<li>
+		</p><ul><li>
 				Heroic will not find or use Wine and Proton Flatpak versions. At least for now.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Heroic findet aktuell keine Wine oder Proton Versionen, die per Flatpak installiert sind
-			</li>
-			<li>
+			</li><li>
 				For now would be better to use the Built-in Wine Manager to download and install Wine and Proton Versions.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Momentan ist es am besten, den eingebauten Wine Manager zu benutzen, um Wine und Proton Versionen zu downloaden und zu installieren.
-			</li>
-			<li>
+			</li><li>
 				It should find Proton from the Steam folder for both Steam Flatpak and non-Flatpak if they are on installed on the library inside your $HOME folder
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Heroic sollte Proton Versionen von Steam (Nativ und Flatpak) finden, sofern sie innerhalb der Bibliothek des Benutzerordners installiert sind.
-			</li>
-			<li>
+			</li><li>
 				Heroic cannot access /usr/bin so it won't be able to find any wine or proton isntalled there for now.
-			</li>
-			<li xml:lang="de">
+			</li><li xml:lang="de">
 				Heroic hat keinen Zugriff auf /usr/bin, weshalb es dort installierte Wine oder Proton Versionen nicht finden kann.
-			</li>
-		</ul>
-	</description>
-	<content_rating type="oars-1.1">
-		<content_attribute id="violence-cartoon">
+			</li></ul></description><content_rating type="oars-1.1"><content_attribute id="violence-cartoon">
 			moderate
-		</content_attribute>
-		<content_attribute id="violence-fantasy">
+		</content_attribute><content_attribute id="violence-fantasy">
 			moderate
-		</content_attribute>
-		<content_attribute id="violence-realistic">
+		</content_attribute><content_attribute id="violence-realistic">
 			moderate
-		</content_attribute>
-		<content_attribute id="violence-bloodshed">
+		</content_attribute><content_attribute id="violence-bloodshed">
 			moderate
-		</content_attribute>
-		<content_attribute id="money-purchasing">
+		</content_attribute><content_attribute id="money-purchasing">
 			intense
-		</content_attribute>
-	</content_rating>
-	<launchable type="desktop-id">
+		</content_attribute></content_rating><launchable type="desktop-id">
 		com.heroicgameslauncher.hgl.desktop
-	</launchable>
-	<screenshots>
-		<screenshot type="default">
-			<caption>
+	</launchable><screenshots><screenshot type="default"><caption>
 				Library Grid
-			</caption>
-			<image>
+			</caption><image>
 				https://user-images.githubusercontent.com/26871415/216277678-3e90f432-548c-43b8-8c25-79ecc86ba9d3.png
-			</image>
-		</screenshot>
-		<screenshot>
-			<caption>
+			</image></screenshot><screenshot><caption>
 				Settings
-			</caption>
-			<image>
+			</caption><image>
 				https://user-images.githubusercontent.com/26871415/216277779-16b20fa1-77fe-4560-aabe-d2d6e5cf8554.png
-			</image>
-		</screenshot>
-		<screenshot>
-			<caption>
+			</image></screenshot><screenshot><caption>
 				Game Screen
-			</caption>
-			<image>
+			</caption><image>
 				https://user-images.githubusercontent.com/26871415/216277885-7365d5ee-5a56-4c14-9ff2-12f8243cf5dc.png
-			</image>
-		</screenshot>
-		<screenshot>
-			<caption>
+			</image></screenshot><screenshot><caption>
 				Downloads Screen
-			</caption>
-			<image>
+			</caption><image>
 				https://user-images.githubusercontent.com/26871415/216278264-2cf4b170-f315-443d-98ac-1a34873113fe.png
-			</image>
-		</screenshot>
-		<screenshot>
-			<caption>
+			</image></screenshot><screenshot><caption>
 				Stores
-			</caption>
-			<image>
+			</caption><image>
 				https://user-images.githubusercontent.com/26871415/184144277-699e1108-52d9-4558-b113-84db5c90922c.png
-			</image>
-		</screenshot>
-		<screenshot>
-			<caption>
+			</image></screenshot><screenshot><caption>
 				Library List
-			</caption>
-			<image>
+			</caption><image>
 				https://user-images.githubusercontent.com/26871415/184139791-8666bc1d-a54f-467c-8c30-ea1eb6d24458.png
-			</image>
-		</screenshot>
-		<screenshot>
-			<caption>
+			</image></screenshot><screenshot><caption>
 				Game Page Not Installed
-			</caption>
-			<image>
+			</caption><image>
 				https://user-images.githubusercontent.com/26871415/216278656-05f6e654-7a9b-403c-9aa6-9e020c4c6d90.png
-			</image>
-		</screenshot>
-	</screenshots>
-	<releases>
-		<release version="v2.9.2" date="2023-09-13">
-			<description>
-				<p>
+			</image></screenshot></screenshots><releases><release version="v2.10.0" date="2023-11-04"><description><p>
 					General
-				</p>
-				<ul>
-					<li>
-						Added a new System Information Tab to the Heroic Settings
-					</li>
-					<li>
-						Added support for installing and enabling DXVK-NVAPI
-					</li>
-					<li>
-						Added user feedback when copying log to clipboard
-					</li>
-					<li>
-						Added ExperimentalFeatures feature setting support
-
-					</li>
-					</ul>
-				<p>
+				</p><ul><li> [Linux] Added a new Gamescope Setting to the game settings @Nocccer 
+</li><li> [General] Changed the Game Settings UI to use Tabs instead of collapsible elements. The latest used tab will be remembered as well
+</li><li> [General] It is now possible to use Custom User Agents for Browser apps
+</li><li> [General] Heroic will now remember the last visited URL for all stores, making navigation a lot better
+</li><li> [General] A warning will be shown when using non-supported commands or env variables on their inputs
+</li><li> [General] Fixed How long to beat information
+</li><li> [General] Added a new experimental frameless window option
+</li><li> [General] Added a new experimental feature to use a redesigned GamePage
+</li><li> [Linux] Several fixes and improvements on the DXVK, VKD3D, Anti-Cheat runtimes
+</li><li> [General] Several UI fixes and performance improvements
+</li><li> [General] GOG fixes and other improvements
+</li></ul><p>
 					BugFixes
-				</p>
-				<ul>
-					<li>
+				</p><ul><li>
 						Fixed installation of EOS Overlay
-					</li>
-					<li>
+					</li><li>
 						Fixed some issues for Amazon Games
-					</li>
-					<li>
+					</li><li>
 						Fixed issues with missing games metadata for GOG
-					</li>
-					<li>
+					</li><li>
 						Fixed issue with egl-sync
-					</li>
-					<li>
+					</li><li>
 						Fixed installing all DLCs not adding them to the queue
-					</li>
-					<li>
+					</li><li>
 						Make sure the game is available before auto-updating
-					</li>
-					<li>
+					</li><li>
 						Several other fixes and improvements
-					</li>
-				</ul>
-			</description>
-		</release>
-	</releases>
-</component>
+					</li></ul></description></release></releases></component>
