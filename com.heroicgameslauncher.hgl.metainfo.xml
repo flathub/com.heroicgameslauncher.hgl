@@ -134,7 +134,18 @@
 				https://user-images.githubusercontent.com/26871415/216278656-05f6e654-7a9b-403c-9aa6-9e020c4c6d90.png
 			</image></screenshot></screenshots><releases><release version="v2.10.0" date="2023-11-04"><description><p>
 					General
-				</p><ul><li> [Linux] Added a new Gamescope Setting to the game settings @Nocccer </li><li> [General] Changed the Game Settings UI to use Tabs instead of collapsible elements. The latest used tab will be remembered as well. @flavioislima </li><li> [General] It is now possible to use Custom User Agents for Browser apps; @flavioislima </li><li> [Linux] Fixed Epic Login and the download of Wine, Proton and other tools on the Linux Snap Package; @flavioislima </li><li> [General] Heroic will now remember the last visited URL for all stores, making navigation a lot better. @arielj </li><li> [General] A warning will be shown when using non-supported commands or env variables on their inputs; @arielj </li><li> [General] Fixed How long to beat information; @CommandMC </li><li> [General] Added a new experimental frameless window option @0xCmdrKeen;</li><li> [General] Added a new experimental feature to use a redesigned GamePage;</li><li> [Linux] Several fixes and improvements on the DXVK, VKD3D, Anti-Cheat runtimes @Etaash-mathamsetty and @arielj </li><li> [General] Several UI fixes and performance improvements @arielj </li><li> [General] GOG fixes and other improvements @imLinguin </li></ul><p>
+				</p><ul><li> [Linux] Added a new Gamescope Setting to the game settings @Nocccer 
+</li><li> [General] Changed the Game Settings UI to use Tabs instead of collapsible elements. The latest used tab will be remembered as well
+</li><li> [General] It is now possible to use Custom User Agents for Browser apps
+</li><li> [General] Heroic will now remember the last visited URL for all stores, making navigation a lot better
+</li><li> [General] A warning will be shown when using non-supported commands or env variables on their inputs
+</li><li> [General] Fixed How long to beat information
+</li><li> [General] Added a new experimental frameless window option
+</li><li> [General] Added a new experimental feature to use a redesigned GamePage
+</li><li> [Linux] Several fixes and improvements on the DXVK, VKD3D, Anti-Cheat runtimes
+</li><li> [General] Several UI fixes and performance improvements
+</li><li> [General] GOG fixes and other improvements
+</li></ul><p>
 					BugFixes
 				</p><ul><li>
 						Fixed installation of EOS Overlay
