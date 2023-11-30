@@ -20,6 +20,7 @@ finish-args:
   - --allow=multiarch
   - --device=all
   - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/usr/lib/extensions/vulkan/gamescope/bin:/usr/lib/extensions/vulkan/OBSVkCapture/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
+  - --env=LD_LIBRARY_PATH=/usr/lib/extensions/vulkan/gamescope/lib
   - --filesystem=~/.local/share/lutris:rw
   - --filesystem=~/.steam/steam:rw
   - --filesystem=~/.local/share/applications:rw
