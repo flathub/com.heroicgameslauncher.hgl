@@ -171,6 +171,23 @@
 			</li>
 		</ul>
 	</description>
+	<content_rating type="oars-1.1">
+		<content_attribute id="violence-cartoon">
+			moderate
+		</content_attribute>
+		<content_attribute id="violence-fantasy">
+			moderate
+		</content_attribute>
+		<content_attribute id="violence-realistic">
+			moderate
+		</content_attribute>
+		<content_attribute id="violence-bloodshed">
+			moderate
+		</content_attribute>
+		<content_attribute id="money-purchasing">
+			moderate
+		</content_attribute>
+	</content_rating>
 	<launchable type="desktop-id">
 		com.heroicgameslauncher.hgl.desktop
 	</launchable>
@@ -190,14 +207,14 @@
 			<image>
 				https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/95e199d5-24de-4a23-a8b8-657afd657390
 			</image>
-		<screenshot>
-			<caption>
-				Wine/Proton Download Manager
-			</caption>
-			<image>
-				https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/07e76bdb-e794-41fd-9028-062fa22f15b6
-			</image>
-		</screenshot>
+			<screenshot>
+				<caption>
+					Wine/Proton Download Manager
+				</caption>
+				<image>
+					https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/07e76bdb-e794-41fd-9028-062fa22f15b6
+				</image>
+			</screenshot>
 		</screenshot>
 		<screenshot>
 			<caption>
@@ -228,7 +245,8 @@
 				Install Screen
 			</caption>
 			<image>
-				https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/61467411-f518-4d10-b859-9c2adef3302e			</image>
+				https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/61467411-f518-4d10-b859-9c2adef3302e
+			</image>
 		</screenshot>
 	</screenshots>
 	<releases>
