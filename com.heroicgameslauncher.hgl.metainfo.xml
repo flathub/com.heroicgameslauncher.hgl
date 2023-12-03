@@ -207,14 +207,14 @@
 			<image>
 				https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/95e199d5-24de-4a23-a8b8-657afd657390
 			</image>
-			<screenshot>
-				<caption>
-					Wine/Proton Download Manager
-				</caption>
-				<image>
-					https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/07e76bdb-e794-41fd-9028-062fa22f15b6
-				</image>
-			</screenshot>
+		</screenshot>
+		<screenshot>
+			<caption>
+				Wine/Proton Download Manager
+			</caption>
+			<image>
+				https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/07e76bdb-e794-41fd-9028-062fa22f15b6
+			</image>
 		</screenshot>
 		<screenshot>
 			<caption>
@@ -265,7 +265,9 @@
 					<li>
 						Add Show only installed games filter
 					</li>
-					<li>Performance improvements</li>
+					<li>
+						Performance improvements
+					</li>
 				</ul>
 				<p>
 					BugFixes
