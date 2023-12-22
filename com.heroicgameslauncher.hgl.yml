@@ -20,9 +20,9 @@ finish-args:
   - --allow=multiarch
   - --device=all
   - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/usr/lib/extensions/vulkan/gamescope/bin:/usr/lib/extensions/vulkan/OBSVkCapture/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
-  - --filesystem=xdg-data/lutris:rw
-  - --filesystem=xdg-data/Steam:rw
-  - --filesystem=xdg-data/applications:rw
+  - --filesystem=~/.local/share/lutris:rw
+  - --filesystem=~/.steam/steam:rw
+  - --filesystem=~/.local/share/applications:rw
   - --filesystem=~/.steam:rw
   - --filesystem=~/Games/Heroic:create
   - --filesystem=~/.var/app/com.valvesoftware.Steam:rw
