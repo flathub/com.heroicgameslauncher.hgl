@@ -263,7 +263,8 @@
 						Added automatic installations of redistributables for Epic Games
 					</li>
 					<li>
-						Added automatic winetricks fixes for some games (enable on Settings - Advanced - Experimental)
+						Added automatic winetricks fixes for some games (enable on Settings -
+						Advanced - Experimental)
 					</li>
 					<li>
 						Automatic installation of the Epic Overlay
@@ -271,7 +272,7 @@
 					<li>
 						Added Genre and Release date to the game page
 					</li>
-					</ul>
+				</ul>
 				<p>
 					BugFixes
 				</p>
