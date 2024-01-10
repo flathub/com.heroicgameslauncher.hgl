@@ -250,23 +250,27 @@
 		</screenshot>
 	</screenshots>
 	<releases>
-		<release version="v2.11.0" date="2023-11-30">
+		<release version="v2.12.0" date="2024-01-07">
 			<description>
 				<p>
 					General
 				</p>
 				<ul>
 					<li>
-						Add support for custom user-defined game categories
+						Improved the filters for the library
 					</li>
 					<li>
-						Improve the Filters to a dropdown in Library.
+						Added automatic installations of redistributables for Epic Games
 					</li>
 					<li>
-						Add Show only installed games filter
+						Added automatic winetricks fixes for some games (enable on Settings -
+						Advanced - Experimental)
 					</li>
 					<li>
-						Performance improvements
+						Automatic installation of the Epic Overlay
+					</li>
+					<li>
+						Added Genre and Release date to the game page
 					</li>
 				</ul>
 				<p>
@@ -274,13 +278,13 @@
 				</p>
 				<ul>
 					<li>
-						Prevent storing external urls for stores
+						Fixes some issues with GOG games not loading
 					</li>
 					<li>
-						Fix some visual issues related to logs, dialogs, and RTL layout
+						Fix DXVK-NVAPI not being installed
 					</li>
 					<li>
-						Wine Stuck sometimes at adding registry key
+						Fix status after aborting wine installation
 					</li>
 					<li>
 						Several other fixes and improvements
