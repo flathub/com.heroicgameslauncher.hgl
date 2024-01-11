@@ -29,6 +29,7 @@ finish-args:
   - --filesystem=~/.var/app/com.valvesoftware.Steam:rw
   - --filesystem=xdg-documents
   - --filesystem=xdg-desktop
+  - --filesystem=xdg-run/gamescope-0:rw
   # should fix access to SD card on the deck
   - --filesystem=/run/media
   # There are still quite a few users using /mnt/ for external drives
