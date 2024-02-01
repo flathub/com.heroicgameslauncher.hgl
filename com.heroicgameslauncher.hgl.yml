@@ -119,7 +119,7 @@ modules:
     sources: &gamemode_sources
       - type: git
         url: https://github.com/FeralInteractive/gamemode.git
-        tag: '1.8.1'
+        tag: 1.8.1
         commit: 5180d89e66830d87f69687b95fb86f622552b94b
         x-checker-data:
           type: git
@@ -270,8 +270,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: https://www.rarlab.com/rar/unrarsrc-7.0.2.tar.gz
-        sha256: 596a61a66e138b08c68382982eeb5f2a8efa2bbd05969edfb7d0e5d8b4bcf23e
+        url: https://www.rarlab.com/rar/unrarsrc-6.2.12.tar.gz
+        sha256: a008b5f949bca9bb4ffa1bebbfc8b3c14b89df10a10354809b845232d5f582e5
         x-checker-data:
           type: anitya
           project-id: 13306
