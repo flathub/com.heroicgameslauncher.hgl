@@ -2,7 +2,9 @@
 		com.heroicgameslauncher.hgl
 	</id><name>
 		Heroic Games Launcher
-	</name><summary>
+	</name>
+	<developer_name>Heroic Games Launcher</developer_name>
+	<summary>
 		An Open Source Epic Games, GOG and Amazon Prime Games Launcher.
 	</summary><summary xml:lang="de">
 		Ein Open Source Epic Games, GOG und Amazon Prime Games Launcher.
