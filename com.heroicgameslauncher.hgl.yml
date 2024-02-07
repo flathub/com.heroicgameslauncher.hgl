@@ -45,6 +45,11 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --talk-name=org.kde.StatusNotifierWatcher
+  - --talk-name=com.canonical.Unity
+  # Electron checks if it's running on Unity or KDE before using the UnityLauncherAPI. To make it work on other Desktops too, we need to pretend we are on KDE.
+  - --env=XDG_CURRENT_SESSION=KDE
+  # Make moving files to trash work because it chooses which to use based on XDG_CURRENT_SESSION.
+  - --env=ELECTRON_TRASH=gio
 
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
@@ -164,6 +169,7 @@ modules:
       - ./Heroic-*.AppImage --appimage-extract
       - mv squashfs-root /app/bin/heroic
       - install -D heroic-run -t /app/bin
+      - patch-desktop-filename ${FLATPAK_DEST}/bin/heroic/resources/app.asar
     sources:
       - type: script
         dest-filename: heroic-run
