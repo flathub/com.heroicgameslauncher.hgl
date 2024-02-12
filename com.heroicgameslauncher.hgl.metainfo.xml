@@ -2,9 +2,7 @@
 		com.heroicgameslauncher.hgl
 	</id><name>
 		Heroic Games Launcher
-	</name>
-	<developer_name>Heroic Games Launcher</developer_name>
-	<summary>
+	</name><developer_name>Heroic Games Launcher</developer_name><summary>
 		An Open Source Epic Games, GOG and Amazon Prime Games Launcher.
 	</summary><summary xml:lang="de">
 		Ein Open Source Epic Games, GOG und Amazon Prime Games Launcher.
@@ -158,7 +156,7 @@
 				Install Screen
 			</caption><image>
 				https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/61467411-f518-4d10-b859-9c2adef3302e
-			</image></screenshot></screenshots><releases><release version="v2.12.1" date="2024-02-01"><description><p>
+			</image></screenshot></screenshots><releases><release version="v2.13.0" date="2024-02-12"><description><p>
 					General
 				</p><ul/><p>
 					BugFixes
