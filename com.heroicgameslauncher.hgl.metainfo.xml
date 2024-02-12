@@ -156,16 +156,32 @@
 				Install Screen
 			</caption><image>
 				https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/61467411-f518-4d10-b859-9c2adef3302e
-			</image></screenshot></screenshots><releases><release version="v2.13.0" date="2024-02-12"><description><p>
+			</image></screenshot></screenshots><releases><release version="v2.13.0" date="2024-02-12"><description>
+			<p>
 					General
-				</p><ul/><p>
+				</p>
+				<ul>
+					<li>
+						GOG side was totally refactored and brings tons of new features like DLC Manager, Modify installation, private channels and more
+						</li>
+						<li>
+						Added explanation for Wine and Proton on Wine manager
+						</li>
+						<li>
+						Simplified Wine management on install dialog 
+						</li>
+												<li>
+						Several performance and UI/UX improvements
+						</li>
+						</ul>
+				<p>
 					BugFixes
 				</p><ul><li>
-						Fixes some issues with GOG games not loading
+						Fixes several issues with GOG downloading and launching
 					</li><li>
-						Fix DXVK-NVAPI not being installed
+						Fix the width of the image in the Add Game dialog
 					</li><li>
-						Fix status after aborting wine installation
+						Pass --skip-sdl when updating/repairing Epic games
 					</li><li>
 						Several other fixes and improvements
 					</li></ul></description></release></releases></component>
