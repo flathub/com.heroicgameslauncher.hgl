@@ -20,6 +20,7 @@ finish-args:
   - --allow=multiarch
   - --device=all
   - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/usr/lib/extensions/vulkan/gamescope/bin:/usr/lib/extensions/vulkan/OBSVkCapture/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
+  - --env=LD_LIBRARY_PATH=/usr/lib/extensions/vulkan/gamescope/lib
   - --filesystem=~/.local/share/lutris:rw
   - --filesystem=~/.steam/steam:rw
   - --filesystem=~/.local/share/applications:rw
@@ -28,6 +29,7 @@ finish-args:
   - --filesystem=~/.var/app/com.valvesoftware.Steam:rw
   - --filesystem=xdg-documents
   - --filesystem=xdg-desktop
+  - --filesystem=xdg-run/gamescope-0:rw
   # should fix access to SD card on the deck
   - --filesystem=/run/media
   # There are still quite a few users using /mnt/ and /media/ for external drives
@@ -44,6 +46,12 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --talk-name=org.kde.StatusNotifierWatcher
+  - --talk-name=com.canonical.Unity
+  # Electron checks if it's running on Unity or KDE before using the UnityLauncherAPI. To make it work on other Desktops too, we need to pretend we are on KDE.
+  - --env=XDG_CURRENT_SESSION=KDE
+  - --env=XDG_CURRENT_DESKTOP=KDE
+  # Make moving files to trash work because it chooses which to use based on XDG_CURRENT_SESSION.
+  - --env=ELECTRON_TRASH=gio
 
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
@@ -163,6 +171,7 @@ modules:
       - ./Heroic-*.AppImage --appimage-extract
       - mv squashfs-root /app/bin/heroic
       - install -D heroic-run -t /app/bin
+      - patch-desktop-filename ${FLATPAK_DEST}/bin/heroic/resources/app.asar
     sources:
       - type: script
         dest-filename: heroic-run
@@ -174,8 +183,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.11.0/Heroic-2.11.0.AppImage
-        sha512: ab00907c5fce727c67b5c9a8bf29860623959feb9d33ef452f14c1259cfe3221c74f185d89a938e93ce1da83d2173c57058f7e19c9407a29eb49d3782081077e
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.14.0/Heroic-2.14.0.AppImage
+        sha512: 965c1ae8b471cd77a84a32c765128cbd0748b16b5fad05589395ea246b982270be0e1a65049349d066ac2fb7dfabb485e28fb34b220ae814dfef9fca0ae84dd2
 
   - name: platform-bootstrap
     buildsystem: simple
