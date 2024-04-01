@@ -32,8 +32,9 @@ finish-args:
   - --filesystem=xdg-run/gamescope-0:rw
   # should fix access to SD card on the deck
   - --filesystem=/run/media
-  # There are still quite a few users using /mnt/ for external drives
+  # There are still quite a few users using /mnt/ and /media/ for external drives
   - --filesystem=/mnt
+  - --filesystem=/media
   # should fix steamdeck controler navigation
   - --filesystem=/run/udev:ro
   # should fix discord rich presence
