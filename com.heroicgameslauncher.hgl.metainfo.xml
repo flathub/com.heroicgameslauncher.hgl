@@ -117,14 +117,10 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.14.1" date="2024-04-06">
+    <release version="v2.15.0" date="2024-08-11">
       <description>
         <p>General</p>
-        <ul>       
-          <li>Configure scripts to run before and after a game is launched</li>
-          <li>Add option to add/edit/delete categories from categories dropdown</li>
-          <li>Updated Electron, Legendary, Gogdl and Nile to latest versions</li>
-        </ul>      
+        <ul></ul>
         <p>BugFixes</p>
         <ul>
           <li>(2.14.1) Fix an issue with playing games on Linux and SteamDeck when using Proton</li>
