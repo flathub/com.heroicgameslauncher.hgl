@@ -129,15 +129,6 @@
           <li>[macOS] GPTK (Gaming Port Toolkit) is now available to download from Wine Manager (Works better with Apple Silicon and with macOS Sonoma or higher).</li>
           <li>Several other improvements and fixes all around Heroic</li>
         </ul>
-        <p>BugFixes</p>
-        <ul>
-          <li>(2.14.1) Fix an issue with playing games on Linux and SteamDeck when using Proton</li>
-          <li>Fix GOG Store not loading for some people using adblockers</li>
-          <li>Fix the width of the image in the Add Game dialog</li>
-          <li>Amazon filters not displaying when the username is empty</li>
-          <li>Wine/Proton-GE-latest not updating automaticaly</li>
-          <li>Several other fixes and improvements</li>
-        </ul>
       </description>
     </release>
   </releases>
