@@ -117,17 +117,13 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.15.1" date="2024-08-11">
+    <release version="v2.15.2" date="2024-09-20">
       <description>
         <p>General</p>
         <ul>
-          <li>Added support for EA games from Epic Games Store</li>
-          <li>Fixed issues with downloading from Amazon Games</li>
-          <li>Added (legacy) DRM support for Amazon Games - Devil May Cry 1 is now playable</li>
-          <li>Discord rich presence overhaul</li>
-          <li>[Linux] It is now possible to install and uninstall DLC for Native Linux games.</li>
-          <li>[macOS] GPTK (Gaming Port Toolkit) is now available to download from Wine Manager (Works better with Apple Silicon and with macOS Sonoma or higher).</li>
-          <li>Several other improvements and fixes all around Heroic</li>
+          <li>Fixed Amazon Games library synchronization failure</li>
+          <li>Fixed issues with `CYGNI: All Guns Blazing` and `Black Myth: Wukong` from Epic Games</li>
+          <li>Fixed GOG cloud saves issues, when files were removed using utility on GOG&apos;s website</li>
         </ul>
       </description>
     </release>
