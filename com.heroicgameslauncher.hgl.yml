@@ -53,7 +53,7 @@ finish-args:
   # Make moving files to trash work because it chooses which to use based on XDG_CURRENT_SESSION.
   - --env=ELECTRON_TRASH=gio
   # umu
-  - --filesystem=~/.var/app/org.openwinecomponents.umu.umu-launcher/data/umu
+  - --filesystem=xdg-data/umu
   - --env=XDG_DATA_DIRS=/app/share:/usr/lib/extensions/vulkan/share:/usr/share:/usr/share/runtime/share:/run/host/user-share:/run/host/share:/usr/lib/pressure-vessel/overrides/share
 
 add-extensions:
