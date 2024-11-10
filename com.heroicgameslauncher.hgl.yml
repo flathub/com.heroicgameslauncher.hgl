@@ -1,9 +1,9 @@
 id: com.heroicgameslauncher.hgl
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 base: org.electronjs.Electron2.BaseApp
-base-version: '23.08'
+base-version: '24.08'
 command: heroic-run
 separate-locales: false
 
@@ -18,6 +18,8 @@ sdk-extensions:
 finish-args:
   - --allow=devel
   - --allow=multiarch
+  # pressure vessel
+  - --allow=per-app-dev-shm
   - --device=all
   - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/usr/lib/extensions/vulkan/gamescope/bin:/usr/lib/extensions/vulkan/OBSVkCapture/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
   - --env=LD_LIBRARY_PATH=/usr/lib/extensions/vulkan/gamescope/lib
@@ -27,6 +29,7 @@ finish-args:
   - --filesystem=~/.steam:rw
   - --filesystem=~/Games/Heroic:create
   - --filesystem=~/.var/app/com.valvesoftware.Steam:rw
+  - --filesystem=~/.config/MangoHud:ro
   - --filesystem=xdg-documents
   - --filesystem=xdg-desktop
   - --filesystem=xdg-run/gamescope-0:rw
@@ -39,6 +42,8 @@ finish-args:
   - --filesystem=/run/udev:ro
   # should fix discord rich presence
   - --filesystem=xdg-run/app/com.discordapp.Discord:create
+  # umu
+  - --filesystem=xdg-data/umu:create
   - --persist=.
   - --share=ipc
   - --share=network
@@ -47,29 +52,25 @@ finish-args:
   - --socket=pulseaudio
   - --talk-name=org.kde.StatusNotifierWatcher
   - --talk-name=com.canonical.Unity
-  # Electron checks if it's running on Unity or KDE before using the UnityLauncherAPI. To make it work on other Desktops too, we need to pretend we are on KDE.
-  - --env=XDG_CURRENT_SESSION=KDE
-  - --env=XDG_CURRENT_DESKTOP=KDE
-  # Make moving files to trash work because it chooses which to use based on XDG_CURRENT_SESSION.
-  - --env=ELECTRON_TRASH=gio
-  # umu
-  - --filesystem=xdg-data/umu
+  - --talk-name=org.freedesktop.ScreenSaver
+  # wine uses this for disk drives (mountmgr.sys)
+  - --system-talk-name=org.freedesktop.UDisks2
   - --env=XDG_DATA_DIRS=/app/share:/usr/lib/extensions/vulkan/share:/usr/share:/usr/share/runtime/share:/run/host/user-share:/run/host/share:/usr/lib/pressure-vessel/overrides/share
 
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
-    version: '23.08'
+    version: '24.08'
 
   org.freedesktop.Platform.Compat.i386.Debug:
     directory: lib/debug/lib/i386-linux-gnu
-    version: '23.08'
+    version: '24.08'
     no-autodownload: true
 
   org.freedesktop.Platform.GL32:
     directory: lib/i386-linux-gnu/GL
     version: '1.4'
-    versions: 23.08;1.4
+    versions: 24.08;1.4
     subdirectories: true
     no-autodownload: true
     autodelete: false
@@ -89,8 +90,8 @@ add-extensions:
 
   org.freedesktop.Platform.VAAPI.Intel.i386:
     directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
-    version: '23.08'
-    versions: '23.08'
+    version: '24.08'
+    versions: '24.08'
     autodelete: false
     no-autodownload: true
     add-ld-path: lib
@@ -116,9 +117,25 @@ modules:
       - -DVULKAN_HEADERS_INSTALL_DIR=/app
       - -DCMAKE_BUILD_TYPE=Release
     sources:
-      - type: git
-        url: https://github.com/KhronosGroup/Vulkan-Tools.git
-        tag: sdk-1.3.261.1
+      - type: archive
+        url: https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.3.297/Vulkan-Tools-1.3.297.tar.gz
+        sha256: 95bffa39d90f3ec81d8e3a0fa6c846ac1a10442152cc0b6d0d6567ce48932f89
+    modules:
+      - name: volk
+        buildsystem: cmake-ninja
+        config-opts:
+          - -DVOLK_INSTALL=ON
+        sources:
+          - type: archive
+            url: https://github.com/zeux/volk/archive/vulkan-sdk-1.3.296.0.tar.gz
+            sha256: 8ffd0e81e29688f4abaa39e598937160b098228f37503903b10d481d4862ab85
+        modules:
+          - name: vulkan-headers
+            buildsystem: cmake-ninja
+            sources:
+              - type: archive
+                url: https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.3.297/Vulkan-Headers-v1.3.297.tar.gz
+                sha256: 1d679e2edc43cb7ad818b81dea960e374f1d6dd082325eb9b4c6113e76263c02
 
   - name: gamemode
     buildsystem: meson
@@ -236,11 +253,8 @@ modules:
       - DEST_MAN=$(FLATPAK_DEST)/share/man
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/p7zip/p7zip_16.02_src_all.tar.bz2
-        sha256: 5eb20ac0e2944f6cb9c2d51dd6c4518941c185347d4089ea89087ffdd6e2341f
-      - type: patch
-        paths:
-          - patches/p7zip/gcc10-conversion.patch
+        url: https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.05.tar.gz
+        sha256: d2788f892571058c08d27095c22154579dfefb807ebe357d145ab2ddddefb1a6
       - type: shell
         only-arches:
           - x86_64
@@ -303,10 +317,8 @@ modules:
       - --without-sqlite3
     sources:
       - type: archive
-        sha256: 58d1e7608c12404f0229a3d9a4953d0d00c18040504498b483305bcb3de907a5
-        url: https://github.com/aria2/aria2/releases/download/release-1.36.0/aria2-1.36.0.tar.xz
-      - type: patch
-        path: patches/aria2/working-build.patch
+        sha256: 60a420ad7085eb616cb6e2bdf0a7206d68ff3d37fb5a956dc44242eb2f79b66b
+        url: https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0.tar.xz
 
   - name: libcaca
     config-opts: &libcaca_config_opts
