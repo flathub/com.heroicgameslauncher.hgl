@@ -1,11 +1,12 @@
 [Desktop Entry]
 Name=Heroic Games Launcher
-Exec=heroic-run %u
+Exec=heroic-run %u --ozone-platform-hint=auto
 Terminal=false
 Type=Application
 Icon=com.heroicgameslauncher.hgl
 StartupWMClass=Heroic
 Comment=An Open Source GOG and Epic Games launcher
 Comment[de]=Ein Open Source Spielelauncher for GOG und Epic Games
+Comment[tr]=Açık Kaynaklı GOG ve Epic Games başlatıcısı
 MimeType=x-scheme-handler/heroic;
 Categories=Game;
