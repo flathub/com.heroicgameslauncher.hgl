@@ -73,7 +73,7 @@
       <li xml:lang="de">Heroic sollte Proton Versionen von Steam (Nativ und Flatpak) finden, sofern sie
 				innerhalb der Bibliothek des Benutzerordners installiert sind.</li>
       <li>Heroic cannot access /usr/bin so it won&apos;t be able to find any wine or proton
-				isntalled there for now.</li>
+				installed there for now.</li>
       <li xml:lang="de">Heroic hat keinen Zugriff auf /usr/bin, weshalb es dort installierte Wine oder
 				Proton Versionen nicht finden kann.</li>
     </ul>
