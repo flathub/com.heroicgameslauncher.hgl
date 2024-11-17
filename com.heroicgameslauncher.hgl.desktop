@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Heroic Games Launcher
+Name[ca]=Llançador de jocs Heroic
 Exec=heroic-run %u
 Terminal=false
 Type=Application
@@ -7,5 +8,6 @@ Icon=com.heroicgameslauncher.hgl
 StartupWMClass=Heroic
 Comment=An Open Source GOG and Epic Games launcher
 Comment[de]=Ein Open Source Spielelauncher for GOG und Epic Games
+Comment[ca]=Un llançador de jocs de l'Epic Games i del GOG de codi obert
 MimeType=x-scheme-handler/heroic;
 Categories=Game;

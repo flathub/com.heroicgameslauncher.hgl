@@ -2,8 +2,11 @@
 <component type="desktop-application">
   <id>com.heroicgameslauncher.hgl</id>
   <name>Heroic Games Launcher</name>
+  <name xml:lang="ca">Llançador de jocs Heroic</name>
   <developer_name>Heroic Games Launcher</developer_name>
+  <developer_name xml:lang="ca">Equip de l'Heroic Games Launcher</developer_name>
   <summary>An Open Source Epic Games, GOG and Amazon Prime Games Launcher.</summary>
+  <summary xml:lang="ca">Un llançador de jocs de l'Epic Games i del GOG de codi obert.</summary>
   <summary xml:lang="de">Ein Open Source Epic Games, GOG und Amazon Prime Games Launcher.</summary>
   <url type="homepage">https://heroicgameslauncher.com</url>
   <url type="bugtracker">https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/issues</url>
@@ -17,76 +20,107 @@
     <p>Heroic is an Open Source Games Launcher. Right now it supports launching games from the
 			Epic Games Store using Legendary, GOG Games using our custom implementation with gogdl
 			and Amazon Games using Nile.</p>
+    <p xml:lang="ca">L'Heroic és un llançador de jocs de codi obert. Ara mateix, suporta els jocs de
+			l'Epic Games Store que fan servir Legendary i els jocs de GOG Games amb la implementació
+			de gogdl de l'Heroic.</p>
     <p xml:lang="de">Heroic ist ein Open Source Spielelauncher. Aktuell unterstützt er das Starten von
 			Spielen aus dem Epic Games Store mit Legendary, GOG Spielen mit unserer eigenen
 			Implementierung mit gogdl und Amazon Games mit Nile.</p>
 
     <p>Main Features:</p>
+    <p xml:lang="ca">Característiques principals:</p>
     <p xml:lang="de">Hauptfeatures:</p>
 
     <ul>
       <li>Have access to your Epic, GOG and Amazon Games in a intuitive User Interface.</li>
+      <li xml:lang="ca">Accés als vostres jocs de l'Epic i del GOG amb una interfície intuïtitva.</li>
       <li xml:lang="de">Zugriff auf deine Spielebibliothek von Epic Games, GOG und Amazon Games durch eine
 				intuitive Benutzeroberfläche.</li>
 
       <li>Add Games outside GOG, Amazon or Epic Games Store native or not. Even Browser apps
 				are supported</li>
+      <li xml:lang="ca">També es poden afegir a l'Heroic els vostres jocs que no pertanyin a aquestes
+				botigues, tant si són aplicacions natives com si no ho són.</li>
       <li xml:lang="de">Spiele können hinzugefügt werden, die nicht von Epic Games, GOG oder Amazon Games
 				sind. Sogar Browser Apps werden unterstützt.</li>
 
       <li>A Download queue to download multiple games at once.</li>
+      <li xml:lang="ca">Cua de descàrregues per a descarregar diversos jocs a la vegada.</li>
       <li xml:lang="de">Eine Download-Warteschlange, um mehrere Spiele gleichzeitig herunterzuladen.</li>
 
       <li>Install and launch your Windows Games using Wine or Proton. Or Launch your Native
 				GOG Games.</li>
+      <li xml:lang="ca">Instal·lació i execució de jocs nadius i també de jocs de Windows amb el Wine
+				o el Proton.</li>
       <li xml:lang="de">Windows Spiele könne mithilfe von Wine oder Proton gestartet werden. Native Spiele
 				von GOG können direkt gestartet werden.</li>
 
       <li>Cloud Saves support for GOG and Epic Games.</li>
+      <li xml:lang="ca">Suport per a desades al núvol per als jocs de l'Epic i del GOG.</li>
       <li xml:lang="de">Cloud Saves werden für GOG und Epic Games unterstützt.</li>
 
       <li>Import Games installed through the Epic Store or GOG Galaxy.</li>
+      <li xml:lang="ca">Importeu jocs instal·lats a través de l'Epic Store o del Galaxy del GOG.</li>
       <li xml:lang="de">Installierte Spiele können aus dem Epic Games Sore oder aus GOG Galaxy importiert
 				werden.</li>
 
       <li>Verify and Repair corrupted installations or even move your installation to
 				different folders.</li>
+      <li xml:lang="ca">Verifiqueu i repareu instal·lacions defectuoses o moveu la instal·lació a
+				altres carpetes.</li>
       <li xml:lang="de">Installationen können auf Beschädigungen überprüft und repariert werden, sowie in
 				andere Ordner verschoben werden.</li>
 
       <li>Access the Epic and GOG store and also Heroic Wiki directly from the App.</li>
+      <li xml:lang="ca">Accediu a les botigues d'Epic i GOG i a la Wiki de l'Heroic directament des de
+				l'aplicació.</li>
       <li xml:lang="de">Der Epic Games Store sowie der GOG Store können direkt aus der App aufgerufen
 				werden.</li>
 
       <li>Check HowLongtoBeat database to see how long it will take to finish a game. And also
 				check the Metacritic, IGCB or OpenCritic score for the game.</li>
+      <li xml:lang="ca">Consulteu la base de dades HowLongtoBeat per a veure quant de temps es triga a
+				arribar al final d'un joc. I mireu les puntuacions del Metacritic, IGCB o de l'OpenCritic
+				del joc.</li>
       <li xml:lang="de">Die HowLongtoBeat Datenbank kann genutzt werden, um zu sehen, wie lange es dauert,
 				ein Spiel durchzuspielen. Außerdem kann der Metacritic, IGCB oder OpenCritic Score
 				für ein Spiel abgerufen werden.</li>
 
       <li>And many more features</li>
+      <li xml:lang="ca">I moltes altres funcions.</li>
       <li xml:lang="de">Und viele weitere Features</li>
     </ul>
+
     <p>Current Limitations on the Flatpak:</p>
+    <p xml:lang="ca">Limitacions actuals del Flatpak:</p>
     <p xml:lang="de">Aktuelle Einschränkungen des Flatpaks:</p>
 
     <ul>
       <li>Heroic will not find or use Wine and Proton Flatpak versions. At least for now.</li>
+      <li xml:lang="ca">L'Heroic no trobarà ni farà servir les versions Flatpak del Wine i del Proton.
+				Almenys, per ara no.</li>
       <li xml:lang="de">Heroic findet aktuell keine Wine oder Proton Versionen, die per Flatpak installiert
 				sind</li>
 
       <li>For now would be better to use the Built-in Wine Manager to download and install
 				Wine and Proton Versions.</li>
+      <li xml:lang="ca">De moment, és millor fer servir el gestor intern del Wine per a descarregar i
+				instal·lar les versions del Wine i del Proton.</li>
       <li xml:lang="de">Momentan ist es am besten, den eingebauten Wine Manager zu benutzen, um Wine und
 				Proton Versionen zu downloaden und zu installieren.</li>
 
       <li>It should find Proton from the Steam folder for both Steam Flatpak and non-Flatpak
 				if they are on installed on the library inside your $HOME folder</li>
+      <li xml:lang="ca">Hauria de trobar la carpeta del Proton de l'Steam, tant per a versions Flatpak
+				com no Flatpak de l'Steam, si estan instal·lades a la biblioteca a dins de la vostra
+				carpeta $HOME.</li>
       <li xml:lang="de">Heroic sollte Proton Versionen von Steam (Nativ und Flatpak) finden, sofern sie
 				innerhalb der Bibliothek des Benutzerordners installiert sind.</li>
 
       <li>Heroic cannot access /usr/bin so it won&apos;t be able to find any wine or proton
 				installed there for now.</li>
+      <li xml:lang="ca">L'Heroic no pot accedir a /usr/bin i, per això, per ara no podrà trobar-hi cap
+				instal·lació del Wine o del Proton.</li>
       <li xml:lang="de">Heroic hat keinen Zugriff auf /usr/bin, weshalb es dort installierte Wine oder
 				Proton Versionen nicht finden kann.</li>
     </ul>
