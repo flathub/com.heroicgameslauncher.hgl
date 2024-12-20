@@ -1,3 +1,5 @@
+# HGL Flatpak 
+
 This repository contains the Flatpak package for the Heroic Games Launcher.
 
 # Bug reports
