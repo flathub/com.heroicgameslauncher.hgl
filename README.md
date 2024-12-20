@@ -11,3 +11,6 @@ Please note that the Wayland backend is disabled by default due to compatibility
 
 To enable the Wayland backend, set the following environment variable
 `ELECTRON_OZONE_PLATFORM_HINT=auto`
+
+For GPU related issues use the following flag
+`--disable-gpu`
