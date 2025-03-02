@@ -120,7 +120,13 @@
     <release version="v2.16.0" date="2025-03-02">
       <description>
         <p>General</p>
-        <ul></ul>
+        <ul>Add New Gamescope options</ul>
+        <ul>UMU as Default on Linux/Steam Deck</ul>
+        <ul>DXVK-NVAPI as Default on Linux/Steam Deck</ul>
+        <ul>GOG v1 Game Setup Fix</ul>
+        <ul>Epic Library Cleanup: Hide unnecessary UE-related items cluttering your library</ul>
+        <ul>Comet v0.2.0 Update</ul>
+        <ul>Several other Fixes and Improvements</ul>
       </description>
     </release>
   </releases>
