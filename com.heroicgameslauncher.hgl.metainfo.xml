@@ -117,14 +117,10 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.15.2" date="2024-09-20">
+    <release version="v2.16.0" date="2025-03-02">
       <description>
         <p>General</p>
-        <ul>
-          <li>Fixed Amazon Games library synchronization failure</li>
-          <li>Fixed issues with `CYGNI: All Guns Blazing` and `Black Myth: Wukong` from Epic Games</li>
-          <li>Fixed GOG cloud saves issues, when files were removed using utility on GOG&apos;s website</li>
-        </ul>
+        <ul></ul>
       </description>
     </release>
   </releases>
