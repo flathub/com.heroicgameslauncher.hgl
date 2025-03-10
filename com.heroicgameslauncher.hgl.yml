@@ -205,8 +205,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.16.0/Heroic-2.16.0-linux-x86_64.AppImage
-        sha512: d4324248b991afc4d0a1bddf2737cd7ae3cf8e0681a2260e084e2eee9a233d269c61895cc5bfadb3160aadfed2aec1f7dd85ca2bfeb1d41419c6eca2c74fc525
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.16.1/Heroic-2.16.1-linux-x86_64.AppImage
+        sha512: 5bf1dc026f0b4c0cc24af33f750fc80e837b5f682b44b52051d47575d390d975b0bf2609e38c203be978a50edb8366a58af528ab32e8560613b63200979a6cae
 
   - name: platform-bootstrap
     buildsystem: simple
