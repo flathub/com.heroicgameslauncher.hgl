@@ -117,10 +117,10 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.16.0" date="2025-03-02">
+    <release version="v2.16.1" date="2025-03-10">
       <description>
         <p>General</p>
-        <ul>Add New Gamescope options</ul>
+        <ul></ul>
         <ul>UMU as Default on Linux/Steam Deck</ul>
         <ul>DXVK-NVAPI as Default on Linux/Steam Deck</ul>
         <ul>GOG v1 Game Setup Fix</ul>
