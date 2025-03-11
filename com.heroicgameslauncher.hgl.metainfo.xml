@@ -124,13 +124,15 @@
     <release version="v2.16.1" date="2025-03-10">
       <description>
         <p>General</p>
-        <ul></ul>
-        <ul>UMU as Default on Linux/Steam Deck</ul>
-        <ul>DXVK-NVAPI as Default on Linux/Steam Deck</ul>
-        <ul>GOG v1 Game Setup Fix</ul>
-        <ul>Epic Library Cleanup: Hide unnecessary UE-related items cluttering your library</ul>
-        <ul>Comet v0.2.0 Update</ul>
-        <ul>Several other Fixes and Improvements</ul>
+        <ul>
+        
+          <li>UMU as Defalit on Linux/Steam Deck</li>
+          <li>DXVK-NVAPI as Default on Linux/Steam Deck</li>
+          <li>GOG v1 Game Setup Fix</li>
+          <li>Epic Library Cleanup: Hide unnecessary UE-related items cluttering your library</li>
+          <li>Comet v0.2.0 Update</li>
+          <li>Several other Fixes and Improvements</li>
+        </ul>
       </description>
     </release>
   </releases>
