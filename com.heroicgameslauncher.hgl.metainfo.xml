@@ -78,6 +78,10 @@
 				Proton Versionen nicht finden kann.</li>
     </ul>
   </description>
+  <categories>
+    <category>Game</category>
+    <category>PackageManager</category>
+  </categories>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">moderate</content_attribute>
     <content_attribute id="violence-fantasy">moderate</content_attribute>
