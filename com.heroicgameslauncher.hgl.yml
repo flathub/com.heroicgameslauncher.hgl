@@ -177,8 +177,8 @@ modules:
       - --disable-md2man
     sources:
       - type: archive
-        url: https://download.samba.org/pub/rsync/src/rsync-3.3.0.tar.gz
-        sha256: 7399e9a6708c32d678a72a63219e96f23be0be2336e50fd1348498d07041df90
+        url: https://download.samba.org/pub/rsync/src/rsync-3.4.1.tar.gz
+        sha256: 2924bcb3a1ed8b551fc101f740b9f0fe0a202b115027647cf69850d65fd88c52
         x-checker-data:
           type: anitya
           project-id: 4217
@@ -297,8 +297,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: https://www.rarlab.com/rar/unrarsrc-6.2.12.tar.gz
-        sha256: a008b5f949bca9bb4ffa1bebbfc8b3c14b89df10a10354809b845232d5f582e5
+        url: https://www.rarlab.com/rar/unrarsrc-7.1.4.tar.gz
+        sha256: 7f3decbcbf71704ffb3726b9c4e2222f055953310042a9ba0f96b3fb2209971f
         x-checker-data:
           type: anitya
           project-id: 13306
