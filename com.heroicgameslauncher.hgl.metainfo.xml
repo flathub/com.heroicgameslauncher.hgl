@@ -78,6 +78,10 @@
 				Proton Versionen nicht finden kann.</li>
     </ul>
   </description>
+  <categories>
+    <category>Game</category>
+    <category>PackageManager</category>
+  </categories>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">moderate</content_attribute>
     <content_attribute id="violence-fantasy">moderate</content_attribute>
@@ -117,13 +121,17 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.15.2" date="2024-09-20">
+    <release version="v2.16.1" date="2025-03-10">
       <description>
         <p>General</p>
         <ul>
-          <li>Fixed Amazon Games library synchronization failure</li>
-          <li>Fixed issues with `CYGNI: All Guns Blazing` and `Black Myth: Wukong` from Epic Games</li>
-          <li>Fixed GOG cloud saves issues, when files were removed using utility on GOG&apos;s website</li>
+        
+          <li>UMU as Defalit on Linux/Steam Deck</li>
+          <li>DXVK-NVAPI as Default on Linux/Steam Deck</li>
+          <li>GOG v1 Game Setup Fix</li>
+          <li>Epic Library Cleanup: Hide unnecessary UE-related items cluttering your library</li>
+          <li>Comet v0.2.0 Update</li>
+          <li>Several other Fixes and Improvements</li>
         </ul>
       </description>
     </release>
