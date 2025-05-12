@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>com.heroicgameslauncher.hgl</id>
-  <name>Heroic Games Launcher</name>
+  <name>Heroic</name>
   <developer_name>Heroic Games Launcher</developer_name>
-  <summary>An Open Source Epic Games, GOG and Amazon Prime Games Launcher.</summary>
-  <summary xml:lang="de">Ein Open Source Epic Games, GOG und Amazon Prime Games Launcher.</summary>
+  <summary>Play Epic, GOG and Amazon Games</summary>
+  <summary xml:lang="de">Ein Open Source Epic Games, GOG und Amazon Prime Games Launcher</summary>
   <url type="homepage">https://heroicgameslauncher.com</url>
   <url type="bugtracker">https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/issues</url>
   <url type="donation">https://ko-fi.com/heroicgames</url>
@@ -13,6 +13,10 @@
   <url type="vcs-browser">https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
+  <branding>
+     <color type="primary" scheme_preference="light">#ac9aac</color>
+     <color type="primary" scheme_preference="dark">#1c202c</color>
+  </branding>
   <description>
     <p>Heroic is an Open Source Games Launcher. Right now it supports launching games from the
 			Epic Games Store using Legendary, GOG Games using our custom implementation with gogdl
