@@ -23,27 +23,7 @@ finish-args:
   - --device=all
   - --env=PATH=/app/bin:/app/utils/bin:/usr/bin:/usr/lib/extensions/vulkan/MangoHud/bin:/usr/lib/extensions/vulkan/gamescope/bin:/usr/lib/extensions/vulkan/OBSVkCapture/bin:/app/bin/heroic/resources/app.asar.unpacked/build/bin/linux
   - --env=LD_LIBRARY_PATH=/usr/lib/extensions/vulkan/gamescope/lib
-  - --filesystem=~/.local/share/lutris:rw
-  - --filesystem=~/.steam/steam:rw
-  - --filesystem=~/.local/share/applications:rw
-  - --filesystem=~/.steam:rw
-  - --filesystem=~/Games/Heroic:create
-  - --filesystem=~/.var/app/com.valvesoftware.Steam:rw
-  - --filesystem=xdg-documents
-  - --filesystem=xdg-desktop
-  - --filesystem=xdg-run/gamescope-0:rw
-  # should fix access to SD card on the deck
-  - --filesystem=/run/media
-  # There are still quite a few users using /mnt/ and /media/ for external drives
-  - --filesystem=/mnt
-  - --filesystem=/media
-  # should fix steamdeck controler navigation
-  - --filesystem=/run/udev:ro
-  # should fix discord rich presence
-  - --filesystem=xdg-run/app/com.discordapp.Discord:create
   # umu
-  - --filesystem=xdg-data/umu:create
-  - --filesystem=xdg-config/MangoHud:ro
   - --persist=.
   - --share=ipc
   - --share=network
@@ -58,6 +38,24 @@ finish-args:
   - --env=XDG_DATA_DIRS=/app/share:/usr/lib/extensions/vulkan/share:/usr/share:/usr/share/runtime/share:/run/host/user-share:/run/host/share:/usr/lib/pressure-vessel/overrides/share
   # Ensure that custom mouse cursors are used
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
+  # Filesystem permissions
+  ## Steam Deck fixes
+  - --filesystem=xdg-run/gamescope-0:ro                         # Needed for GameScope integration on the Steam Deck
+  - --filesystem=/run/udev:ro                                   # Should fix Steam Deck controller navigation
+  ## Integration with applications, launchers and desktops
+  - --filesystem=~/.local/share/lutris                          # Lutris default installation path
+  - --filesystem=~/.local/share/Steam                           # Steam default installation path
+  - --filesystem=~/.steam                                       # Legacy Steam installation path; not a duplicate
+  - --filesystem=~/.var/app/com.valvesoftware.Steam             # Flatpak Steam
+  - --filesystem=~/snap/steam                                   # Steam Snap package
+  - --filesystem=~/.snap/data/steam                             # Steam Snap package (for the flag "experimental.hidden-snap-folder")
+  - --filesystem=xdg-data/umu:create                            # Required for umu-launcher
+  - --filesystem=~/.local/share/applications                    # Desktop integration
+  - --filesystem=xdg-run/app/com.discordapp.Discord:create      # Required for Discord Rich Presence
+  ## Games installation paths
+  - --filesystem=~/Games/Heroic:create                          # Default HGL installation path
+  - --filesystem=/media                                         # External drives path 1
+  - --filesystem=/run/media                                     # External drives path 2 (should fix access to SD card on the Steam Deck)
 
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
