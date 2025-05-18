@@ -54,17 +54,12 @@ finish-args:
   - --talk-name=com.canonical.Unity
   - --talk-name=org.freedesktop.ScreenSaver
 
- # copy from steam (wip)
+  # copy from steam (wip)
   # wine uses this for disk drives (mountmgr.sys)
   - --system-talk-name=org.freedesktop.UDisks2
   - --env=XDG_DATA_DIRS=/app/share:/usr/lib/extensions/vulkan/share:/usr/share:/usr/share/runtime/share:/run/host/user-share:/run/host/share:/usr/lib/pressure-vessel/overrides/share
   # Ensure that custom mouse cursors are used
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
-  - --share=ipc
-  - --socket=wayland
-  - --socket=x11
-  - --socket=pulseaudio
-  - --share=network
   - --own-name=com.steampowered.*
   - --talk-name=org.gnome.SettingsDaemon.MediaKeys
   # Wine uses UDisks2 to enumerate disk drives
@@ -78,7 +73,6 @@ finish-args:
   - --filesystem=xdg-pictures:ro
   - --filesystem=xdg-run/app/com.discordapp.Discord:create
   - --allow=bluetooth
-  - --allow=per-app-dev-shm
   - --env=TZ=
   - --unset-env=TZ
   - --env=LC_ADDRESS=C
