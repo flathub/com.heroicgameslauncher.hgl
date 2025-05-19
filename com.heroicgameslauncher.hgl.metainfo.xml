@@ -190,55 +190,43 @@
   <screenshots>
     <screenshot type="default">
       <caption>Library</caption>
-      <image>https://github.com/user-attachments/assets/81fd0fb2-7588-4399-b814-dd120d6eb4a5</image>
+      <image>https://github.com/user-attachments/assets/ec391f3e-9820-4c31-9909-f298965b8003</image>
     </screenshot>
     <screenshot>
       <caption>GamePage</caption>
-      <image>https://github.com/user-attachments/assets/417ecc5d-608a-4497-9742-ffbce382fab4</image>
+      <image>https://github.com/user-attachments/assets/c46cbbec-ff2e-4378-88d6-25c6d8651c39</image>
     </screenshot>
     <screenshot>
       <caption>Stores</caption>
-      <image>https://github.com/user-attachments/assets/0819fc77-1a0a-44e6-acc4-ae787431c6ad</image>
-    </screenshot>
-    <screenshot>
-      <caption>Install Dialog</caption>
-      <image>https://github.com/user-attachments/assets/f2781345-373f-4b50-9d7d-3ae39b328d68</image>
-    </screenshot>
-    <screenshot>
-      <caption>Download Manager</caption>
-      <image>https://github.com/user-attachments/assets/27671f7f-63fa-44f8-939b-c141edda3835</image>
+      <image>https://github.com/user-attachments/assets/84d800de-51f5-44d1-9530-0d529613714f</image>
     </screenshot>
     <screenshot>
       <caption>Sideload Dialog</caption>
-      <image>https://github.com/user-attachments/assets/cbe580e7-3ac0-40a0-a34e-a26cf857d9b0</image>
+      <image>https://github.com/user-attachments/assets/8c4f0f79-ec45-4f48-a947-8d250204ad60</image>
     </screenshot>
     <screenshot>
-      <caption>Game Settings</caption>
-      <image>https://github.com/user-attachments/assets/d4df7471-b329-4c3e-be34-c3657a88eebf</image>
+      <caption>Download Manager</caption>
+      <image>https://github.com/user-attachments/assets/b99f0482-953f-4528-a432-10aded523bb4</image>
     </screenshot>
     <screenshot>
       <caption>Wine Manager</caption>
-      <image>https://github.com/user-attachments/assets/34c8039d-992f-4659-8fb7-aae2c4327a7b</image>
+      <image>https://github.com/user-attachments/assets/8c2e6c44-68ef-42cc-9dc1-ddec6989a8b2</image>
+    </screenshot>
+    <screenshot>
+      <caption>Game Settings</caption>
+      <image>https://github.com/user-attachments/assets/5f10d3f1-a918-411c-93b9-48a9f67fb5fd</image>
+    </screenshot>
+    <screenshot>
+      <caption>Install Dialog</caption>
+      <image>https://github.com/user-attachments/assets/3c61fe93-a1a3-45fb-86ec-e87cfe3c290a</image>
     </screenshot>
     <screenshot>
       <caption>Winetricks</caption>
-      <image>https://github.com/user-attachments/assets/f1ff62f8-5e97-40be-8cb6-50eed2253275</image>
+      <image>https://github.com/user-attachments/assets/40b8f9e0-36cc-491a-9745-e3693c2f9af0</image>
     </screenshot>
     <screenshot>
       <caption>Modify Installation</caption>
-      <image>https://github.com/user-attachments/assets/ffacc7e4-d2dd-452e-9af3-9ea5a698f116</image>
-    </screenshot>
-    <screenshot>
-      <caption>Filters</caption>
-      <image>https://github.com/user-attachments/assets/6e080d1c-f901-4335-a0fc-17e8d6aa3298</image>
-    </screenshot>
-    <screenshot>
-      <caption>Global Settings</caption>
-      <image>https://github.com/user-attachments/assets/e2b06b4b-3cd1-4d6d-8f9b-51c0ea13dbfc</image>
-    </screenshot>
-    <screenshot>
-      <caption>Sideload Windows</caption>
-      <image>https://github.com/user-attachments/assets/09cc7e31-35d1-4c85-98f7-b2c0391b622a</image>
+      <image>https://github.com/user-attachments/assets/14a2346c-fcad-479f-bddb-45b740a97a39</image>
     </screenshot>
   </screenshots>
   <releases>
