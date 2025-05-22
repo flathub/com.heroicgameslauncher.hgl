@@ -233,7 +233,18 @@
     <release version="v2.17.0" date="2025-05-22">
       <description>
         <p>General</p>
-        <ul></ul>
+        <ul>
+          <li>New GamePage Design</li>
+          <li>Adds a setting to download Proton versions directly to the Steam compatibility folder</li>
+          <li>It is now possible to select an image file on the sideload dialog</li>
+          <li>Update electron to latest version v36.2.1</li>
+          <li>Fixes Issues with Epic Login and Checkout</li>
+          <li>Several fixes for UMU and DXVK </li>
+          <li>Fixes HowLongToBeat not working</li>
+          <li>Update Legendary and added a EpicGamesLauncher.exe to fix issues with Rockstar games</li>
+          <li>Fixed an issue with RemotePlay not working with Steam</li>
+          <li>Several refactors and improvements</li>                                                                                                    
+        </ul>
       </description>
     </release>
   </releases>
