@@ -362,3 +362,41 @@ modules:
         x86_64: *compat_i386_opts
     sources: *libbsd_sources
   #END --- Winetricks Deps ---
+
+  # --- MIDI Support (TiMidity++ with FluidR3_GM) ---
+  - name: timidity
+    buildsystem: autotools
+    config-opts:
+      - --enable-alsa
+      - --enable-alsaseq
+    cleanup: ["*.la", "*.a", "/include", "/lib/pkgconfig", "/share/man", "/share/doc"]
+    sources:
+      - type: archive
+        url: https://sourceforge.net/projects/timidity/files/TiMidity++/TiMidity++-2.15.0/TiMidity++-2.15.0.tar.bz2
+        sha256: 161fc0395af16b51f7117ad007c3e434c825a308fa29ad44b626ee8f9bb1c8f5
+      - type: inline
+        dest-filename: custom-timidity.cfg
+        contents: |
+          dir /app/share/soundfonts
+          source /app/share/soundfonts/fluid3gm.cfg
+          opt EFresamp=d
+          opt EFvlpf=d
+          opt EFreverb=d
+      - type: patch
+        path: patches/0001-timidity-fix-missing-includes.patch
+    post-install:
+      - install -d ${FLATPAK_DEST}/share/timidity
+      - install -Dm644 custom-timidity.cfg ${FLATPAK_DEST}/share/timidity/timidity.cfg
+
+  - name: fluidr3-soundfont
+    buildsystem: simple
+    build-commands:
+      - tar -xzf fluid-soundfont.tar.gz -C . "FluidR3 GM2-2.SF2"
+      - install -d ${FLATPAK_DEST}/share/soundfonts
+      - install -Dm644 "FluidR3 GM2-2.SF2" ${FLATPAK_DEST}/share/soundfonts/FluidR3_GM.sf2
+      - echo "soundfont FluidR3_GM.sf2" > fluid3gm.cfg
+      - install -Dm644 fluid3gm.cfg ${FLATPAK_DEST}/share/soundfonts/fluid3gm.cfg
+    sources:
+      - type: file
+        url: https://ftp.osuosl.org/pub/musescore/soundfont/fluid-soundfont.tar.gz
+        sha256: c815769e44d86f1507b946a6c48c997c7f650699aea1ec4b11ba66e3415c26b9
