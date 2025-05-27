@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>com.heroicgameslauncher.hgl</id>
-  <name>Heroic Games Launcher</name>
+  <name>Heroic</name>
   <developer_name>Heroic Games Launcher</developer_name>
-  <summary>An Open Source Epic Games, GOG and Amazon Prime Games Launcher.</summary>
-  <summary xml:lang="de">Ein Open Source Epic Games, GOG und Amazon Prime Games Launcher.</summary>
+  <summary>Play Epic, GOG and Amazon Games</summary>
+  <summary xml:lang="de">Spiele Epic-, GOG- und Amazon-Spiele</summary>
+  <summary xml:lang="pt">Jogue jogos da Epic, GOG e Amazon</summary>
+  <summary xml:lang="es">Juega juegos de Epic, GOG y Amazon</summary>
+  <summary xml:lang="fr">Lancez des jeux Epic, GOG et Amazon</summary>
+  <summary xml:lang="zh">游玩 Epic、GOG 和 Amazon 游戏</summary>
+  <summary xml:lang="ja">Epic、GOG、Amazonのゲームをプレイ</summary>
   <url type="homepage">https://heroicgameslauncher.com</url>
   <url type="bugtracker">https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/issues</url>
   <url type="donation">https://ko-fi.com/heroicgames</url>
@@ -13,69 +18,161 @@
   <url type="vcs-browser">https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
+  <branding>
+    <color type="primary" scheme_preference="light">#ac9aac</color>
+    <color type="primary" scheme_preference="dark">#1c202c</color>
+  </branding>
   <description>
     <p>Heroic is an Open Source Games Launcher. Right now it supports launching games from the
-			Epic Games Store using Legendary, GOG Games using our custom implementation with gogdl
-			and Amazon Games using Nile.</p>
-    <p xml:lang="de">Heroic ist ein Open Source Spielelauncher. Aktuell unterstützt er das Starten von
-			Spielen aus dem Epic Games Store mit Legendary, GOG Spielen mit unserer eigenen
-			Implementierung mit gogdl und Amazon Games mit Nile.</p>
+      Epic Games Store using Legendary, GOG Games using our custom implementation with gogdl
+      and Amazon Games using Nile.</p>
+    <p xml:lang="de">Heroic ist ein Open-Source-Spielelauncher. Aktuell unterstützt er das Starten von
+      Spielen aus dem Epic Games Store mit Legendary, GOG-Spielen mit unserer eigenen
+      Implementierung gogdl und Amazon Games mit Nile.</p>
+    <p xml:lang="pt">Heroic é um lançador de jogos de código aberto. Atualmente suporta iniciar jogos da
+      Epic Games Store usando Legendary, jogos da GOG com nossa implementação personalizada gogdl
+      e jogos da Amazon usando Nile.</p>
+    <p xml:lang="es">Heroic es un lanzador de juegos de código abierto. Actualmente admite iniciar juegos de la
+      Epic Games Store con Legendary, juegos de GOG con nuestra implementación personalizada gogdl
+      y juegos de Amazon con Nile.</p>
+    <p xml:lang="fr">Heroic est un lanceur de jeux open source. Il prend actuellement en charge le lancement de
+      jeux depuis l&apos;Epic Games Store avec Legendary, de jeux GOG avec notre implémentation personnalisée gogdl
+      et de jeux Amazon avec Nile.</p>
+    <p xml:lang="zh">Heroic 是一个开源游戏启动器。目前支持使用 Legendary 启动 Epic 游戏商城中的游戏，
+      使用我们自定义的 gogdl 实现启动 GOG 游戏，以及使用 Nile 启动 Amazon 游戏。</p>
+    <p xml:lang="ja">Heroic はオープンソースのゲームランチャーです。現在 Legendary を使って Epic Games Store の
+      ゲームを起動し、カスタム実装の gogdl を使用して GOG のゲームを起動し、Nile を使用して Amazon のゲームを起動できます。</p>
     <p>Main Features:</p>
-    <p xml:lang="de">Hauptfeatures:</p>
+    <p xml:lang="de">Hauptfunktionen:</p>
+    <p xml:lang="pt">Principais recursos:</p>
+    <p xml:lang="es">Funciones principales:</p>
+    <p xml:lang="fr">Principales fonctionnalités :</p>
+    <p xml:lang="zh">主要功能：</p>
+    <p xml:lang="ja">主な機能：</p>
     <ul>
       <li>Have access to your Epic, GOG and Amazon Games in a intuitive User Interface.</li>
+      <li xml:lang="pt">Acesse seus jogos da Epic, GOG e Amazon em uma interface de usuário intuitiva.</li>
+      <li xml:lang="es">Accede a tus juegos de Epic, GOG y Amazon en una interfaz de usuario intuitiva.</li>
+      <li xml:lang="fr">Accédez à vos jeux Epic, GOG et Amazon via une interface utilisateur intuitive.</li>
+      <li xml:lang="zh">通过直观的用户界面访问您的 Epic、GOG 和 Amazon 游戏。</li>
+      <li xml:lang="ja">直感的なユーザーインターフェイスで Epic、GOG、Amazon のゲームにアクセスできます。</li>
       <li xml:lang="de">Zugriff auf deine Spielebibliothek von Epic Games, GOG und Amazon Games durch eine
-				intuitive Benutzeroberfläche.</li>
+        intuitive Benutzeroberfläche.</li>
       <li>Add Games outside GOG, Amazon or Epic Games Store native or not. Even Browser apps
-				are supported</li>
+        are supported</li>
+      <li xml:lang="pt">Adicione jogos fora da GOG, Amazon ou Epic Games Store, nativos ou não. Até aplicativos de navegador são suportados.</li>
+      <li xml:lang="es">Agrega juegos fuera de GOG, Amazon o Epic Games Store, nativos o no. Incluso se admiten aplicaciones de navegador.</li>
+      <li xml:lang="fr">Ajoutez des jeux en dehors des boutiques GOG, Amazon ou Epic, qu&apos;ils soient natifs ou non. Les applications Web sont également prises en charge.</li>
+      <li xml:lang="zh">添加 GOG、Amazon 或 Epic 游戏商店之外的游戏，无论是否原生。甚至支持浏览器应用。</li>
+      <li xml:lang="ja">GOG、Amazon、Epic Games Store 以外のゲーム（ネイティブ・非ネイティブ）を追加できます。ブラウザアプリもサポートされています。</li>
       <li xml:lang="de">Spiele können hinzugefügt werden, die nicht von Epic Games, GOG oder Amazon Games
-				sind. Sogar Browser Apps werden unterstützt.</li>
+        sind. Sogar Browser Apps werden unterstützt.</li>
       <li>A Download queue to download multiple games at once.</li>
+      <li xml:lang="pt">Uma fila de download para baixar vários jogos de uma vez.</li>
+      <li xml:lang="es">Una cola de descarga para descargar varios juegos a la vez.</li>
+      <li xml:lang="fr">Une file de téléchargement pour télécharger plusieurs jeux en une seule fois.</li>
+      <li xml:lang="zh">下载队列，可一次下载多个游戏。</li>
+      <li xml:lang="ja">複数のゲームを同時にダウンロードできるダウンロードキュー。</li>
       <li xml:lang="de">Eine Download-Warteschlange, um mehrere Spiele gleichzeitig herunterzuladen.</li>
       <li xml:lang="de">Zugriff auf deine Spielebibliothek von Epic Games und GOG durch eine intuitive
-				Benutzeroberfläche.</li>
+        Benutzeroberfläche.</li>
       <li>Install and launch your Windows Games using Wine or Proton. Or Launch your Native
-				GOG Games.</li>
+        GOG Games.</li>
+      <li xml:lang="pt">Instale e inicie seus jogos do Windows usando Wine ou Proton. Ou inicie seus jogos nativos da GOG.</li>
+      <li xml:lang="es">Instala y lanza tus juegos de Windows usando Wine o Proton. O lanza tus juegos nativos de GOG.</li>
+      <li xml:lang="fr">Installez et lancez vos jeux Windows avec Wine ou Proton. Ou lancez vos jeux GOG natifs.</li>
+      <li xml:lang="zh">使用 Wine 或 Proton 安装并启动您的 Windows 游戏。或启动原生 GOG 游戏。</li>
+      <li xml:lang="ja">Wine または Proton を使用して Windows ゲームをインストールおよび起動します。またはネイティブな GOG ゲームを起動します。</li>
       <li xml:lang="de">Windows Spiele könne mithilfe von Wine oder Proton gestartet werden. Native Spiele
-				von GOG können direkt gestartet werden.</li>
+        von GOG können direkt gestartet werden.</li>
       <li>Cloud Saves support for GOG and Epic Games.</li>
+      <li xml:lang="pt">Suporte a salvamentos em nuvem para GOG e Epic Games.</li>
+      <li xml:lang="es">Soporte de guardado en la nube para GOG y Epic Games.</li>
+      <li xml:lang="fr">Prise en charge des sauvegardes dans le cloud pour GOG et Epic Games.</li>
+      <li xml:lang="zh">支持 GOG 和 Epic Games 的云存档。</li>
+      <li xml:lang="ja">GOG と Epic Games のクラウドセーブをサポート。</li>
       <li xml:lang="de">Cloud Saves werden für GOG und Epic Games unterstützt.</li>
       <li>Import Games installed through the Epic Store or GOG Galaxy.</li>
+      <li xml:lang="pt">Importe jogos instalados através da Epic Store ou GOG Galaxy.</li>
+      <li xml:lang="es">Importa juegos instalados desde Epic Store o GOG Galaxy.</li>
+      <li xml:lang="fr">Importez les jeux installés via Epic Store ou GOG Galaxy.</li>
+      <li xml:lang="zh">导入通过 Epic 商店或 GOG Galaxy 安装的游戏。</li>
+      <li xml:lang="ja">Epic Store または GOG Galaxy からインストールされたゲームをインポートします。</li>
       <li xml:lang="de">Installierte Spiele können aus dem Epic Games Sore oder aus GOG Galaxy importiert
-				werden.</li>
+        werden.</li>
       <li>Verify and Repair corrupted installations or even move your installation to
-				different folders.</li>
+        different folders.</li>
+      <li xml:lang="pt">Verifique e repare instalações corrompidas ou até mesmo mova sua instalação para pastas diferentes.</li>
+      <li xml:lang="es">Verifica y repara instalaciones corruptas o incluso mueve tu instalación a diferentes carpetas.</li>
+      <li xml:lang="fr">Vérifiez et réparez les installations corrompues ou déplacez votre installation vers différents dossiers.</li>
+      <li xml:lang="zh">验证并修复损坏的安装，或将安装移动到不同的文件夹。</li>
+      <li xml:lang="ja">破損したインストールを検証および修復し、インストール先を別のフォルダに移動することもできます。</li>
+      <li>Integrated Proton/Wine Manager for easy installation of new and updated ones</li>
+      <li xml:lang="pt">Gerenciador Proton/Wine integrado para fácil instalação de versões novas e atualizadas.</li>
+      <li xml:lang="es">Administrador Proton/Wine integrado para una instalación sencilla de nuevas y actualizaciones.</li>
+      <li xml:lang="fr">Gestionnaire Proton/Wine intégré pour faciliter l&apos;installation de nouvelles versions et mises à jour.</li>
+      <li xml:lang="zh">集成的 Proton/Wine 管理器，轻松安装新版本和更新。</li>
+      <li xml:lang="ja">新規および更新された Proton/Wine バージョンを簡単にインストールできる統合 Proton/Wine マネージャー。</li>
+      <li>Integrated Winetricks</li>
+      <li xml:lang="pt">Winetricks integrado</li>
+      <li xml:lang="es">Winetricks integrado</li>
+      <li xml:lang="fr">Winetricks intégré</li>
+      <li xml:lang="zh">集成 Winetricks</li>
+      <li xml:lang="ja">統合 Winetricks</li>
+      <li>Support for install and uninstall of Games DLCs</li>
+      <li xml:lang="pt">Suporte para instalação e desinstalação de DLCs de jogos</li>
+      <li xml:lang="es">Soporte para instalación y desinstalación de DLCs de juegos</li>
+      <li xml:lang="fr">Prise en charge de l&apos;installation et de la désinstallation des DLC de jeux</li>
+      <li xml:lang="zh">支持游戏 DLC 的安装和卸载</li>
+      <li xml:lang="ja">ゲームの DLC のインストールとアンインストールをサポート</li>
       <li xml:lang="de">Installationen können auf Beschädigungen überprüft und repariert werden, sowie in
-				andere Ordner verschoben werden.</li>
+        andere Ordner verschoben werden.</li>
       <li>Access the Epic and GOG store and also Heroic Wiki directly from the App.</li>
+      <li xml:lang="pt">Acesse a loja da Epic e da GOG, além da Wiki do Heroic diretamente no aplicativo.</li>
+      <li xml:lang="es">Accede a la tienda de Epic y GOG, así como a la Wiki de Heroic directamente desde la aplicación.</li>
+      <li xml:lang="fr">Accédez directement à la boutique Epic et GOG ainsi qu&apos;au Wiki Heroic depuis l&apos;application.</li>
+      <li xml:lang="zh">可直接从应用程序访问 Epic 和 GOG 商店，以及 Heroic Wiki。</li>
+      <li xml:lang="ja">アプリから直接 Epic ストア、GOG ストア、Heroic Wiki にアクセスできます。</li>
       <li xml:lang="de">Der Epic Games Store sowie der GOG Store können direkt aus der App aufgerufen
-				werden.</li>
-      <li>Check HowLongtoBeat database to see how long it will take to finish a game. And also
-				check the Metacritic, IGCB or OpenCritc score for the game.</li>
-      <li xml:lang="de">Die HowLongtoBeat Datenbank kann genutzt werden, um zu sehen, wie lange es dauert,
-				ein Spiel durchzuspielen. Außerdem kann der Metacritic, IGCB oder OpenCritc Score
-				für ein Spiel abgerufen werden.</li>
+        werden.</li>
+      <li>Check Metacritic, IGCB or OpenCritic score for the game.</li>
+      <li xml:lang="pt">Verifique a pontuação do Metacritic, IGCB ou OpenCritic para o jogo.</li>
+      <li xml:lang="es">Consulta la puntuación en Metacritic, IGCB u OpenCritic para el juego.</li>
+      <li xml:lang="fr">Vérifiez le score Metacritic, IGCB ou OpenCritic du jeu.</li>
+      <li xml:lang="zh">查看游戏在 Metacritic、IGCB 或 OpenCritic 上的评分。</li>
+      <li xml:lang="ja">ゲームの Metacritic、IGCB、OpenCritic のスコアを確認します。</li>
+      <li xml:lang="de">Überprüfen Sie den Metacritic-, IGCB- oder OpenCritic-Score des Spiels.</li>
       <li>And many more features</li>
+      <li xml:lang="pt">E muitas outras funcionalidades</li>
+      <li xml:lang="es">Y muchas más funciones</li>
+      <li xml:lang="fr">Et bien d&apos;autres fonctionnalités</li>
+      <li xml:lang="zh">以及更多功能</li>
+      <li xml:lang="ja">その他多数の機能</li>
       <li xml:lang="de">Und viele weitere Features</li>
     </ul>
     <p>Current Limitations on the Flatpak:</p>
     <p xml:lang="de">Aktuelle Einschränkungen des Flatpaks:</p>
+    <p xml:lang="pt">Limitações atuais no Flatpak:</p>
+    <p xml:lang="es">Limitaciones actuales en Flatpak:</p>
+    <p xml:lang="fr">Limitations actuelles du Flatpak :</p>
+    <p xml:lang="zh">Flatpak 的当前限制：</p>
+    <p xml:lang="ja">Flatpak の現在の制限：</p>
     <ul>
       <li>Heroic will not find or use Wine and Proton Flatpak versions. At least for now.</li>
       <li xml:lang="de">Heroic findet aktuell keine Wine oder Proton Versionen, die per Flatpak installiert
-				sind</li>
+        sind</li>
       <li>For now would be better to use the Built-in Wine Manager to download and install
-				Wine and Proton Versions.</li>
+        Wine and Proton Versions.</li>
       <li xml:lang="de">Momentan ist es am besten, den eingebauten Wine Manager zu benutzen, um Wine und
-				Proton Versionen zu downloaden und zu installieren.</li>
+        Proton Versionen zu downloaden und zu installieren.</li>
       <li>It should find Proton from the Steam folder for both Steam Flatpak and non-Flatpak
-				if they are on installed on the library inside your $HOME folder</li>
+        if they are on installed on the library inside your $HOME folder</li>
       <li xml:lang="de">Heroic sollte Proton Versionen von Steam (Nativ und Flatpak) finden, sofern sie
-				innerhalb der Bibliothek des Benutzerordners installiert sind.</li>
+        innerhalb der Bibliothek des Benutzerordners installiert sind.</li>
       <li>Heroic cannot access /usr/bin so it won&apos;t be able to find any wine or proton
-				isntalled there for now.</li>
+        isntalled there for now.</li>
       <li xml:lang="de">Heroic hat keinen Zugriff auf /usr/bin, weshalb es dort installierte Wine oder
-				Proton Versionen nicht finden kann.</li>
+        Proton Versionen nicht finden kann.</li>
     </ul>
   </description>
   <categories>
@@ -92,46 +189,61 @@
   <launchable type="desktop-id">com.heroicgameslauncher.hgl.desktop</launchable>
   <screenshots>
     <screenshot type="default">
-      <caption>Library Grid</caption>
-      <image>https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/70c9e0f2-3fa8-4e56-9bb0-0e5f8713c968</image>
+      <caption>Library</caption>
+      <image>https://github.com/user-attachments/assets/ec391f3e-9820-4c31-9909-f298965b8003</image>
     </screenshot>
     <screenshot>
-      <caption>Game Screen</caption>
-      <image>https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/95e199d5-24de-4a23-a8b8-657afd657390</image>
-    </screenshot>
-    <screenshot>
-      <caption>Wine/Proton Download Manager</caption>
-      <image>https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/07e76bdb-e794-41fd-9028-062fa22f15b6</image>
-    </screenshot>
-    <screenshot>
-      <caption>Downloads Screen</caption>
-      <image>https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/e190ddce-b16c-40c6-a509-b1337669b65a</image>
+      <caption>GamePage</caption>
+      <image>https://github.com/user-attachments/assets/c46cbbec-ff2e-4378-88d6-25c6d8651c39</image>
     </screenshot>
     <screenshot>
       <caption>Stores</caption>
-      <image>https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/9868d9eb-c141-4b46-874d-e13f668480cb</image>
+      <image>https://github.com/user-attachments/assets/84d800de-51f5-44d1-9530-0d529613714f</image>
     </screenshot>
     <screenshot>
-      <caption>Library With Filters</caption>
-      <image>https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/8daf7035-4f30-4dcd-a7ef-412ef690a286</image>
+      <caption>Sideload Dialog</caption>
+      <image>https://github.com/user-attachments/assets/8c4f0f79-ec45-4f48-a947-8d250204ad60</image>
     </screenshot>
     <screenshot>
-      <caption>Install Screen</caption>
-      <image>https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/assets/26871415/61467411-f518-4d10-b859-9c2adef3302e</image>
+      <caption>Download Manager</caption>
+      <image>https://github.com/user-attachments/assets/b99f0482-953f-4528-a432-10aded523bb4</image>
+    </screenshot>
+    <screenshot>
+      <caption>Wine Manager</caption>
+      <image>https://github.com/user-attachments/assets/8c2e6c44-68ef-42cc-9dc1-ddec6989a8b2</image>
+    </screenshot>
+    <screenshot>
+      <caption>Game Settings</caption>
+      <image>https://github.com/user-attachments/assets/5f10d3f1-a918-411c-93b9-48a9f67fb5fd</image>
+    </screenshot>
+    <screenshot>
+      <caption>Install Dialog</caption>
+      <image>https://github.com/user-attachments/assets/3c61fe93-a1a3-45fb-86ec-e87cfe3c290a</image>
+    </screenshot>
+    <screenshot>
+      <caption>Winetricks</caption>
+      <image>https://github.com/user-attachments/assets/40b8f9e0-36cc-491a-9745-e3693c2f9af0</image>
+    </screenshot>
+    <screenshot>
+      <caption>Modify Installation</caption>
+      <image>https://github.com/user-attachments/assets/14a2346c-fcad-479f-bddb-45b740a97a39</image>
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.16.1" date="2025-03-10">
+    <release version="v2.17.0" date="2025-05-22">
       <description>
         <p>General</p>
         <ul>
-        
-          <li>UMU as Defalit on Linux/Steam Deck</li>
-          <li>DXVK-NVAPI as Default on Linux/Steam Deck</li>
-          <li>GOG v1 Game Setup Fix</li>
-          <li>Epic Library Cleanup: Hide unnecessary UE-related items cluttering your library</li>
-          <li>Comet v0.2.0 Update</li>
-          <li>Several other Fixes and Improvements</li>
+          <li>New GamePage Design</li>
+          <li>Adds a setting to download Proton versions directly to the Steam compatibility folder</li>
+          <li>It is now possible to select an image file on the sideload dialog</li>
+          <li>Update electron to latest version v36.2.1</li>
+          <li>Fixes Issues with Epic Login and Checkout</li>
+          <li>Several fixes for UMU and DXVK </li>
+          <li>Fixes HowLongToBeat not working</li>
+          <li>Update Legendary and added a EpicGamesLauncher.exe to fix issues with Rockstar games</li>
+          <li>Fixed an issue with RemotePlay not working with Steam</li>
+          <li>Several refactors and improvements</li>                                                                                                    
         </ul>
       </description>
     </release>
