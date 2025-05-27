@@ -230,20 +230,11 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.17.0" date="2025-05-22">
+    <release version="v2.17.1-beta.0" date="2025-05-27">
       <description>
         <p>General</p>
         <ul>
-          <li>New GamePage Design</li>
-          <li>Adds a setting to download Proton versions directly to the Steam compatibility folder</li>
-          <li>It is now possible to select an image file on the sideload dialog</li>
-          <li>Update electron to latest version v36.2.1</li>
-          <li>Fixes Issues with Epic Login and Checkout</li>
-          <li>Several fixes for UMU and DXVK </li>
-          <li>Fixes HowLongToBeat not working</li>
-          <li>Update Legendary and added a EpicGamesLauncher.exe to fix issues with Rockstar games</li>
-          <li>Fixed an issue with RemotePlay not working with Steam</li>
-          <li>Several refactors and improvements</li>                                                                                                    
+          <li>[FIX] Show warning if Steam Pre-Cache is enabled when using UMU, otherwise launch without it to avoid Black Screens on SteamDeck Gaming Mode.</li>
         </ul>
       </description>
     </release>
