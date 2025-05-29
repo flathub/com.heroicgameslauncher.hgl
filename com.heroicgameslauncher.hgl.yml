@@ -369,6 +369,8 @@ modules:
     config-opts:
       - --enable-alsa
       - --enable-alsaseq
+      - --enable-audio=alsa,pulse
+      - --enable-interface=server,alsaseq
     cleanup: ["*.la", "*.a", "/include", "/lib/pkgconfig", "/share/man", "/share/doc"]
     sources:
       - type: archive
@@ -387,6 +389,29 @@ modules:
     post-install:
       - install -d ${FLATPAK_DEST}/share/timidity
       - install -Dm644 custom-timidity.cfg ${FLATPAK_DEST}/share/timidity/timidity.cfg
+      
+      # Copy ALSA configuration files
+      - install -d ${FLATPAK_DEST}/share/alsa
+      - cp -ar /usr/share/alsa/* ${FLATPAK_DEST}/share/alsa/
+      - install -d ${FLATPAK_DEST}/etc
+      - ln -sf /app/share/alsa/alsa.conf ${FLATPAK_DEST}/etc/asound.conf
+
+      # Copy ALSA plugins (both x86_62 and i386 for multilib support)
+      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib
+      - cp -a /usr/lib/x86_64-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib/
+      - install -d ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib
+      - cp -a /usr/lib/i386-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib/
+
+      # Copy PulseAudio client libraries
+      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu
+      - cp -a /usr/lib/x86_64-linux-gnu/libpulse.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libsndfile.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libogg.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libvorbis*.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libFLAC.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libopus.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio
+      - cp -a /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio/
 
   - name: fluidr3-soundfont
     buildsystem: simple
