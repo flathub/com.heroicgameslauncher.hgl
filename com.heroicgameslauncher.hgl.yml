@@ -386,42 +386,97 @@ modules:
           opt EFreverb=d
       - type: patch
         path: patches/0001-timidity-fix-missing-includes.patch
+      - type: inline
+        dest-filename: heroic-midi-wrapper
+        contents: |
+          #!/bin/bash
+        
+          detect_midi_game() {
+            local game_dir="$1"
+          
+            if [[ ! -d "$game_dir" ]]; then
+              return 1  # No game directory found
+            fi
+          
+            if find "$game_dir" -iname "*.mid" -o -iname "*.midi" | grep -q .; then
+              echo "Found MIDI files in game directory"
+              return 0
+            fi
+          
+            if find "$game_dir" -name "*.cfg" -o -name "*.conf" -o -name "*.ini" | \
+               xargs grep -l -i "midi\|timidity\|mpu-401\|sound.*midi" 2>/dev/null | grep -q .; then
+              echo "Found MIDI configuration references"
+              return 0
+            fi
+          
+            if find "$game_dir" -name "*.exe" | \
+               xargs grep -l "MIDI\|MPU\|SoundBlaster" 2>/dev/null | grep -q .; then
+              echo "Found MIDI-related strings in executables"
+              return 0
+            fi
+          
+            return 1  # No MIDI indicators found
+          }
+        
+          start_timidity() {
+            if ! pgrep -f "timidity.*-iA" > /dev/null; then
+              echo "Auto-starting TiMidity++ for MIDI-enabled game"
+              /app/bin/timidity -iA &
+              sleep 2
+              echo "TiMidity++ ready for MIDI playback"
+            fi
+          }
+        
+          if [[ -n "$STEAM_COMPAT_INSTALL_PATH" ]]; then
+            if detect_midi_game "$STEAM_COMPAT_INSTALL_PATH"; then
+              start_timidity
+            fi
+          fi
+        
+          exec /app/bin/gamemoderun-original "$@"
+          GAME_EXIT_CODE=$?
+
+          cleanup
+          exit $GAME_EXIT_CODE
+       
     post-install:
-      - install -d ${FLATPAK_DEST}/share/timidity
-      - install -Dm644 custom-timidity.cfg ${FLATPAK_DEST}/share/timidity/timidity.cfg
-      
+        - install -d ${FLATPAK_DEST}/share/timidity
+        - install -Dm644 custom-timidity.cfg ${FLATPAK_DEST}/share/timidity/timidity.cfg
+        - mv ${FLATPAK_DEST}/bin/gamemoderun ${FLATPAK_DEST}/bin/gamemoderun-original
+        - install -Dm755 heroic-midi-wrapper ${FLATPAK_DEST}/bin/gamemoderun      
+
       # Copy ALSA configuration files
-      - install -d ${FLATPAK_DEST}/share/alsa
-      - cp -ar /usr/share/alsa/* ${FLATPAK_DEST}/share/alsa/
-      - install -d ${FLATPAK_DEST}/etc
-      - ln -sf /app/share/alsa/alsa.conf ${FLATPAK_DEST}/etc/asound.conf
+        - install -d ${FLATPAK_DEST}/share/alsa
+        - cp -ar /usr/share/alsa/* ${FLATPAK_DEST}/share/alsa/
+        - install -d ${FLATPAK_DEST}/etc
+        - ln -sf /app/share/alsa/alsa.conf ${FLATPAK_DEST}/etc/asound.conf
 
-      # Copy ALSA plugins (both x86_62 and i386 for multilib support)
-      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib
-      - cp -a /usr/lib/x86_64-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib/
-      - install -d ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib
-      - cp -a /usr/lib/i386-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib/
+        # Copy ALSA plugins (both x86_62 and i386 for multilib support)
+        - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib
+        - cp -a /usr/lib/x86_64-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib/
+        - install -d ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib
+        - cp -a /usr/lib/i386-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib/
 
-      # Copy PulseAudio client libraries
-      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu
-      - cp -a /usr/lib/x86_64-linux-gnu/libpulse.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - cp -a /usr/lib/x86_64-linux-gnu/libsndfile.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - cp -a /usr/lib/x86_64-linux-gnu/libogg.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - cp -a /usr/lib/x86_64-linux-gnu/libvorbis*.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - cp -a /usr/lib/x86_64-linux-gnu/libFLAC.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - cp -a /usr/lib/x86_64-linux-gnu/libopus.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio
-      - cp -a /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio/
+        # Copy PulseAudio client libraries
+        - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu
+        - cp -a /usr/lib/x86_64-linux-gnu/libpulse.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+        - cp -a /usr/lib/x86_64-linux-gnu/libsndfile.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+        - cp -a /usr/lib/x86_64-linux-gnu/libogg.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+        - cp -a /usr/lib/x86_64-linux-gnu/libvorbis*.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+        - cp -a /usr/lib/x86_64-linux-gnu/libFLAC.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+        - cp -a /usr/lib/x86_64-linux-gnu/libopus.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+        - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio
+        - cp -a /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio/
 
   - name: fluidr3-soundfont
     buildsystem: simple
     build-commands:
-      - tar -xzf fluid-soundfont.tar.gz -C . "FluidR3 GM2-2.SF2"
-      - install -d ${FLATPAK_DEST}/share/soundfonts
-      - install -Dm644 "FluidR3 GM2-2.SF2" ${FLATPAK_DEST}/share/soundfonts/FluidR3_GM.sf2
-      - echo "soundfont FluidR3_GM.sf2" > fluid3gm.cfg
-      - install -Dm644 fluid3gm.cfg ${FLATPAK_DEST}/share/soundfonts/fluid3gm.cfg
+        - tar -xzf fluid-soundfont.tar.gz -C . "FluidR3 GM2-2.SF2"
+        - install -d ${FLATPAK_DEST}/share/soundfonts
+        - install -Dm644 "FluidR3 GM2-2.SF2" ${FLATPAK_DEST}/share/soundfonts/FluidR3_GM.sf2
+        - echo "soundfont FluidR3_GM.sf2" > fluid3gm.cfg
+        - install -Dm644 fluid3gm.cfg ${FLATPAK_DEST}/share/soundfonts/fluid3gm.cfg
     sources:
-      - type: file
-        url: https://ftp.osuosl.org/pub/musescore/soundfont/fluid-soundfont.tar.gz
-        sha256: c815769e44d86f1507b946a6c48c997c7f650699aea1ec4b11ba66e3415c26b9
+        - type: file
+          url: https://ftp.osuosl.org/pub/musescore/soundfont/fluid-soundfont.tar.gz
+          sha256: c815769e44d86f1507b946a6c48c997c7f650699aea1ec4b11ba66e3415c26b9
