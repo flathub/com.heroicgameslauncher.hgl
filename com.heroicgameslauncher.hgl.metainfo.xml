@@ -233,7 +233,11 @@
     <release version="v2.17.1" date="2025-06-04">
       <description>
         <p>General</p>
-        <ul></ul>
+        <ul>
+          <li>UI Fixes for the new Game page and Nord Light Theme</li>
+          <li>Fixes for DXVK and UMU</li>
+          <li>Several other fixes and improvements</li>
+        </ul>
       </description>
     </release>
   </releases>
