@@ -1,13 +1,17 @@
 [Desktop Entry]
 Name=Heroic Games Launcher
-Exec=heroic-run %u
+Exec=heroic-run --enable-features=UseOzonePlatform --ozone-platform-hint=auto %u
 Terminal=false
 SingleMainWindow=true
 Type=Application
 Icon=com.heroicgameslauncher.hgl
 StartupWMClass=heroic
-Comment=An Open Source GOG and Epic Games launcher
-Comment[de]=Ein Open Source Spielelauncher for GOG und Epic Games
-Comment[tr]=Açık Kaynaklı GOG ve Epic Games başlatıcısı
+Comment=Play Games from Epic, GOG and Amazon
+Comment[de]=Spiele Spiele von Epic, GOG und Amazon
+Comment[tr]=Epic, GOG ve Amazon oyunlarını oynayın
+Comment[pt]=Jogue jogos da Epic, GOG e Amazon
+Comment[pl]=Graj w gry z Epic, GOG i Amazon
+Comment[es]=Juega juegos de Epic, GOG y Amazon
+Comment[zh_CN]=畅玩 Epic、GOG 和 Amazon 的游戏
 MimeType=x-scheme-handler/heroic;
 Categories=Game;PackageManager;
