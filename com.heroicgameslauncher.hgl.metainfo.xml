@@ -233,7 +233,14 @@
     <release version="v2.17.2" date="2025-06-10">
       <description>
         <p>General</p>
-        <ul></ul>
+        <ul>
+          <li>Add warning dialog for disabled Shader Pre-caching on SteamDeck</li>
+          <li>Fixed app Icon</li>
+          <li>Some UMU fixes</li>
+          <li>Improved logs</li>
+          <li>Several other fixes and improvements</li>
+          <li>Translations improvements</li>
+        </ul>
       </description>
     </release>
   </releases>
