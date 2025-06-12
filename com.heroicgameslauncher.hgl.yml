@@ -390,50 +390,51 @@ modules:
         dest-filename: heroic-midi-wrapper
         contents: |
           #!/bin/bash
-        
+
           detect_midi_game() {
             local game_dir="$1"
-          
-            if [[ ! -d "$game_dir" ]]; then
-              return 1  # No game directory found
-            fi
-          
+            if [[ ! -d "$game_dir" ]]; then return 1; fi
             if find "$game_dir" -iname "*.mid" -o -iname "*.midi" | grep -q .; then
               echo "Found MIDI files in game directory"
               return 0
             fi
-          
             if find "$game_dir" -name "*.cfg" -o -name "*.conf" -o -name "*.ini" | \
-               xargs grep -l -i "midi\|timidity\|mpu-401\|sound.*midi" 2>/dev/null | grep -q .; then
-              echo "Found MIDI configuration references"
+              xargs grep -l -i "midi\|timidity\|mpu-401\|sound.*midi" 2>/dev/null | grep -q .; then
+              echo "Found MIDI configuration references"  
               return 0
             fi
-          
-            if find "$game_dir" -name "*.exe" | \
-               xargs grep -l "MIDI\|MPU\|SoundBlaster" 2>/dev/null | grep -q .; then
-              echo "Found MIDI-related strings in executables"
-              return 0
-            fi
-          
-            return 1  # No MIDI indicators found
+            return 1
           }
-        
+
           start_timidity() {
             if ! pgrep -f "timidity.*-iA" > /dev/null; then
               echo "Auto-starting TiMidity++ for MIDI-enabled game"
               /app/bin/timidity -iA &
+              TIMIDITY_PID=$!
               sleep 2
               echo "TiMidity++ ready for MIDI playback"
             fi
           }
-        
+
+          cleanup() {
+            if [[ -n "$TIMIDITY_PID" ]] && kill -0 "$TIMIDITY_PID" 2>/dev/null; then
+              echo "Stopping TiMidity++ (PID: $TIMIDITY_PID)"
+              kill "$TIMIDITY_PID" 2>/dev/null
+            fi
+          }
+
+          trap cleanup EXIT INT TERM
+
           if [[ -n "$STEAM_COMPAT_INSTALL_PATH" ]]; then
             if detect_midi_game "$STEAM_COMPAT_INSTALL_PATH"; then
               start_timidity
             fi
           fi
-        
-          exec /app/bin/gamemoderun-original "$@"
+
+          /app/bin/gamemoderun-original "$@" &
+          GAME_PID=$!
+
+          wait $GAME_PID
           GAME_EXIT_CODE=$?
 
           cleanup
