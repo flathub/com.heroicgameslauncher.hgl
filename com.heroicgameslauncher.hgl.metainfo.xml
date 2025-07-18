@@ -234,6 +234,7 @@
       <description>
         <p>General</p>
         <ul>
+          <li>This version uses Flatpak Runtime 23.08. If you need 24.08 install Heroic from the beta branch</li>
           <li>Add warning dialog for disabled Shader Pre-caching on SteamDeck</li>
           <li>Fixed app Icon</li>
           <li>Some UMU fixes</li>
