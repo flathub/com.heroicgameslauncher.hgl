@@ -230,16 +230,16 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.17.2" date="2025-06-10">
+    <release version="v2.18.0" date="2025-07-23">
       <description>
         <p>General</p>
         <ul>
-          <li>Add warning dialog for disabled Shader Pre-caching on SteamDeck</li>
-          <li>Fixed app Icon</li>
-          <li>Some UMU fixes</li>
-          <li>Improved logs</li>
+          <li>[Linux] Prioritize GE-Proton Versions and adds a setting to show/hide non-GE version on Wine List</li>
+          <li>[UX] Several improvements to Joystick and Keyboard navigation</li>
+          <li>[UX] Adds a new option to launch games with or without logs from the game page</li>
+          <li>[macOS] Adds Wine-Staging back to Wine Manager and Fix an issue with picking up the wrong wine binary when using GPTK</li>
+          <li>[General] Adds Opt-in Anonymous analytics</li>
           <li>Several other fixes and improvements</li>
-          <li>Translations improvements</li>
         </ul>
       </description>
     </release>
