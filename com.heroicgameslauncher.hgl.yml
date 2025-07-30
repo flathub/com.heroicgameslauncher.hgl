@@ -49,7 +49,7 @@ finish-args:
   - --persist=.
   - --share=ipc
   - --share=network
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=wayland
   - --socket=pulseaudio
   - --talk-name=org.kde.StatusNotifierWatcher
