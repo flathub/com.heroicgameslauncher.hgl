@@ -240,7 +240,13 @@
     <release version="v2.18.1" date="2025-08-04">
       <description>
         <p>General</p>
-        <ul></ul>
+        <ul>
+          <li>Fix other Proton versions not showing on list</li>
+          <li>Adds new Wine setting for using WoW64 for 32 Bits games</li>
+          <li>Fix Environmetal variables table</li>
+          <li>Updated translations</li>
+          <li>Several other fixes and improvements</li>
+        </ul>
       </description>
     </release>
   </releases>
