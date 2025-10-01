@@ -300,15 +300,6 @@ modules:
           - i386
         commands:
           - ln -sf makefile.linux_x86_asm_gcc_4.X makefile.machine
-    modules:
-      - name: yasm
-        buildsystem: cmake-ninja
-        sources:
-          - type: archive
-            url: https://github.com/yasm/yasm/archive/v1.3.0.tar.gz
-            sha256: f708be0b7b8c59bc1dbe7134153cd2f31faeebaa8eec48676c10f972a1f13df3
-        cleanup:
-          - '*'
 
   - name: cabextract
     build-options:
