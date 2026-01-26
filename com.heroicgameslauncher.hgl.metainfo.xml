@@ -237,15 +237,20 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.18.1" date="2025-08-04">
+    <release version="v2.19.0" date="2026-01-26">
       <description>
         <p>General</p>
         <ul>
-          <li>Fix other Proton versions not showing on list</li>
-          <li>Adds new Wine setting for using WoW64 for 32 Bits games</li>
-          <li>Fix Environmetal variables table</li>
-          <li>Updated translations</li>
-          <li>Several other fixes and improvements</li>
+          <li>Added experimental integration for games from the Zoom platform, Linux only for now. Next release we will bring it to the others.</li>
+          <li>macOS - Added support for DXMT</li>
+          <li>Added Import button to the game page so its easier to find it.</li>
+          <li>Added some Sync-Saves options to the Game page as well.</li>
+          <li>macOS - Removed the ability to install Steam with a button since it is not working anymore, we are investigating other ways of automate that, but for now we preferred to remove it.</li>
+          <li>Cleaned up several options that are not relevant for Linux and macOS anymore.</li>
+          <li>Improved gamepad navigation in general</li>
+          <li>Updated Electron to v39</li>
+          <li>Updated gogdl and legendary with fixes for a few bugs related with game listing, updates and more.</li>
+          <li>Several other fixes and improvements.</li>
         </ul>
       </description>
     </release>
