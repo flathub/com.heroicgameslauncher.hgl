@@ -237,17 +237,16 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.18.1" date="2025-08-04">
+    <release version="v2.20.0-beta.1" date="2026-02-18">
       <description>
         <p>General</p>
-        <ul>
-          <li>Fix other Proton versions not showing on list</li>
-          <li>Adds new Wine setting for using WoW64 for 32 Bits games</li>
-          <li>Fix Environmetal variables table</li>
-          <li>Updated translations</li>
-          <li>Several other fixes and improvements</li>
-        </ul>
+        <ul></ul>
       </description>
     </release>
   </releases>
+  <keywords>
+    <keyword>play epic games launcher</keyword>
+    <keyword>epic games store launcher</keyword>
+    <keyword>amazon prime games launcher</keyword>
+  </keywords>
 </component>
