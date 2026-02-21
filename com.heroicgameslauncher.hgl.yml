@@ -49,7 +49,7 @@ finish-args:
   - --persist=.
   - --share=ipc
   - --share=network
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=wayland
   - --socket=pulseaudio
   - --talk-name=org.kde.StatusNotifierWatcher
@@ -90,6 +90,7 @@ finish-args:
   - --env=XDG_CONFIG_DIRS=/etc/xdg:/usr/lib/x86_64-linux-gnu/GL:/usr/lib/i386-linux-gnu/GL
   - --env=XDG_DATA_DIRS=/app/share:/usr/lib/extensions/vulkan/share:/usr/share:/usr/share/runtime/share:/run/host/user-share:/run/host/share:/usr/lib/pressure-vessel/overrides/share
   - --env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0:/app/lib32/gstreamer-1.0:/usr/lib/extensions/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0:/usr/lib/i386-linux-gnu/gstreamer-1.0
+  - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
 
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
@@ -235,7 +236,7 @@ modules:
           - test -S $XDG_RUNTIME_DIR/discord-ipc-$i || ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
           - done
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - zypak-wrapper /app/bin/heroic/heroic "$@"
+          - zypak-wrapper /app/bin/heroic/heroic --ozone-platform-hint=auto "$@"
 
       - type: file
         url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.20.0-beta.1/Heroic-2.20.0-beta.1-linux-x86_64.AppImage
