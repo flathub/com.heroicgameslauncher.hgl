@@ -237,19 +237,20 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.19.1" date="2026-01-27">
+    <release version="v2.20.0" date="2026-02-20">
       <description>
         <p>General</p>
         <ul>
-          <li>Added experimental integration for games from the Zoom platform, Linux only for now. Next release we will bring it to the others.</li>
-          <li>Added new Launch Options setting for games that supports it.</li>
-          <li>Added Import button to the game page so its easier to find it.</li>
-          <li>Added some Sync-Saves options to the Game page as well.</li>
-          <li>Cleaned up several options that are not relevant for Linux and macOS anymore.</li>
-          <li>Improved gamepad navigation in general</li>
-          <li>Updated Electron to v39</li>
-          <li>Updated gogdl and legendary with fixes for a few bugs related with game listing, updates and more.</li>
-          <li>Several other fixes and improvements.</li>
+        <li>Move FPS limit option to new "Legacy" Game Settings Tab</li>
+        <li>Fix How Long To Beat implementation</li>
+        <li>Hide the Saves-Sync Quick on the game page menu behind a setting</li>
+        <li>Launch options fixes</li>
+        <li>Fix Launching Epic Games while offline for games that supports i</li>
+        <li>Show update message to game cards</li>
+        <li>Only use fake epic exe when turned on with env variable</li>
+        <li>Fix conditionals to show zoom platform</li>
+        <li>Better GOG errors handling</li>
+        <li>Show update message to game cards</li>
         </ul>
       </description>
     </release>
