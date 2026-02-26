@@ -237,21 +237,10 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.20.0" date="2026-02-20">
+    <release version="v2.20.1" date="2026-02-26">
       <description>
         <p>General</p>
-        <ul>
-        <li>Move FPS limit option to new "Legacy" Game Settings Tab</li>
-        <li>Fix How Long To Beat implementation</li>
-        <li>Hide the Saves-Sync Quick on the game page menu behind a setting</li>
-        <li>Launch options fixes</li>
-        <li>Fix Launching Epic Games while offline for games that supports i</li>
-        <li>Show update message to game cards</li>
-        <li>Only use fake epic exe when turned on with env variable</li>
-        <li>Fix conditionals to show zoom platform</li>
-        <li>Better GOG errors handling</li>
-        <li>Show update message to game cards</li>
-        </ul>
+        <ul></ul>
       </description>
     </release>
   </releases>
