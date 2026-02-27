@@ -237,17 +237,26 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.18.1" date="2025-08-04">
+    <release version="v2.20.1" date="2026-02-26">
       <description>
         <p>General</p>
         <ul>
-          <li>Fix other Proton versions not showing on list</li>
-          <li>Adds new Wine setting for using WoW64 for 32 Bits games</li>
-          <li>Fix Environmetal variables table</li>
-          <li>Updated translations</li>
-          <li>Several other fixes and improvements</li>
+          <li>[UI] Show update badge on gamecard only if controller is connected</li>
+          <li>[FIX] False positive "an error has occurred" messages on bleeding-edge Linux distros</li>
+          <li>[Feat] Automatically pause and resume downloads based connectivity status</li>
+          <li>[FIX] Use correct partition and clear data on epic logout</li>
+          <li>[FIX] Add a launch default option when none is available besides DLCs</li>
+          <li>[UX] Fix PATH on mac for intel homebrew and macports when checking winetricks deps</li>
+          <li>[UX] Show link to instructions to install winetricks deps on macos</li>
+          <li>[i18n] Updated Translations</li>
+          <li>[UX] Hide main window when quitting</li>
         </ul>
       </description>
     </release>
   </releases>
+  <keywords>
+    <keyword>play epic games launcher</keyword>
+    <keyword>epic games store launcher</keyword>
+    <keyword>amazon prime games launcher</keyword>
+  </keywords>
 </component>

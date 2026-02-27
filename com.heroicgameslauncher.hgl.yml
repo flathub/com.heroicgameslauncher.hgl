@@ -238,8 +238,8 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.18.1/Heroic-2.18.1-linux-x86_64.AppImage
-        sha512: 71423a742954d79227be3f3fe8294248ce69d646cefb3acbec57a73d8c4add27063f9c930c05d9afbd6f332970fe25c8d37a67d24ad8f6f13a31a057f3910bbe
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.20.1/Heroic-2.20.1-linux-x86_64.AppImage
+        sha512: 751adbb718a0e3818fa98b4f66882e2e08a25cfde0931eeeeb9b50c870c3ad6336beebd91d1079433a23c38cd130cb39acc15d9678957a6dedda322b54219fc4
 
   - name: platform-bootstrap
     buildsystem: simple
@@ -280,8 +280,8 @@ modules:
       - ln -s /app/bin/7zz /app/bin/7z
     sources:
       - type: archive
-        url: https://github.com/ip7z/7zip/archive/refs/tags/25.01.tar.gz
-        sha256: 8772e4ef86540c98bf4c23a6d9e13b3a25794d4bb30986ef0b1b9f20075b34c9
+        url: https://github.com/ip7z/7zip/archive/refs/tags/26.00.tar.gz
+        sha256: 07eafed75d661282d402dc2a3edf17e1dbb36fb813f4fbf5a2bad4f6b722aed5
         x-checker-data:
           type: anitya
           project-id: 372314
@@ -307,8 +307,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: https://www.rarlab.com/rar/unrarsrc-7.1.6.tar.gz
-        sha256: ca5e1da37dd6fa1b78bb5ed675486413f79e4a917709744aa04b6f93dfd914f0
+        url: https://www.rarlab.com/rar/unrarsrc-7.2.4.tar.gz
+        sha256: b02e571a33af7711cd803080500370dc1d28eea82b2032480819d27462ad8b31
         x-checker-data:
           type: anitya
           project-id: 13306
