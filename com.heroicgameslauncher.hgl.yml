@@ -366,16 +366,22 @@ modules:
   # --- MIDI Support (TiMidity++ with FluidR3_GM) ---
   - name: timidity
     buildsystem: autotools
+    build-options:
+      cflags: "-Wno-error=incompatible-pointer-types -Wno-error=implicit-function-declaration"
     config-opts:
       - --enable-alsa
       - --enable-alsaseq
       - --enable-audio=alsa,pulse
       - --enable-interface=server,alsaseq
     cleanup: ["*.la", "*.a", "/include", "/lib/pkgconfig", "/share/man", "/share/doc"]
+
     sources:
       - type: archive
         url: https://sourceforge.net/projects/timidity/files/TiMidity++/TiMidity++-2.15.0/TiMidity++-2.15.0.tar.bz2
         sha256: 161fc0395af16b51f7117ad007c3e434c825a308fa29ad44b626ee8f9bb1c8f5
+      - type: shell
+        commands:
+          - sed -i '/int line_fold();/d' utils/nkflib.c
       - type: inline
         dest-filename: custom-timidity.cfg
         contents: |
