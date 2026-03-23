@@ -307,8 +307,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: https://www.rarlab.com/rar/unrarsrc-7.2.4.tar.gz
-        sha256: b02e571a33af7711cd803080500370dc1d28eea82b2032480819d27462ad8b31
+        url: https://www.rarlab.com/rar/unrarsrc-7.2.5.tar.gz
+        sha256: 3d7b402ce7b9825af32a5f593379269e742c883d9d276527be19d0e9f6a114f9
         x-checker-data:
           type: anitya
           project-id: 13306
@@ -367,13 +367,13 @@ modules:
   - name: timidity
     buildsystem: autotools
     build-options:
-      cflags: "-Wno-error=incompatible-pointer-types -Wno-error=implicit-function-declaration"
+      cflags: -Wno-error=incompatible-pointer-types -Wno-error=implicit-function-declaration
     config-opts:
       - --enable-alsa
       - --enable-alsaseq
       - --enable-audio=alsa,pulse
       - --enable-interface=server,alsaseq
-    cleanup: ["*.la", "*.a", "/include", "/lib/pkgconfig", "/share/man", "/share/doc"]
+    cleanup: ['*.la', '*.a', /include, /lib/pkgconfig, /share/man, /share/doc]
 
     sources:
       - type: archive
@@ -445,45 +445,45 @@ modules:
 
           cleanup
           exit $GAME_EXIT_CODE
-       
+
     post-install:
-        - install -d ${FLATPAK_DEST}/share/timidity
-        - install -Dm644 custom-timidity.cfg ${FLATPAK_DEST}/share/timidity/timidity.cfg
-        - mv ${FLATPAK_DEST}/bin/gamemoderun ${FLATPAK_DEST}/bin/gamemoderun-original
-        - install -Dm755 heroic-midi-wrapper ${FLATPAK_DEST}/bin/gamemoderun      
+      - install -d ${FLATPAK_DEST}/share/timidity
+      - install -Dm644 custom-timidity.cfg ${FLATPAK_DEST}/share/timidity/timidity.cfg
+      - mv ${FLATPAK_DEST}/bin/gamemoderun ${FLATPAK_DEST}/bin/gamemoderun-original
+      - install -Dm755 heroic-midi-wrapper ${FLATPAK_DEST}/bin/gamemoderun
 
       # Copy ALSA configuration files
-        - install -d ${FLATPAK_DEST}/share/alsa
-        - cp -ar /usr/share/alsa/* ${FLATPAK_DEST}/share/alsa/
-        - install -d ${FLATPAK_DEST}/etc
-        - ln -sf /app/share/alsa/alsa.conf ${FLATPAK_DEST}/etc/asound.conf
+      - install -d ${FLATPAK_DEST}/share/alsa
+      - cp -ar /usr/share/alsa/* ${FLATPAK_DEST}/share/alsa/
+      - install -d ${FLATPAK_DEST}/etc
+      - ln -sf /app/share/alsa/alsa.conf ${FLATPAK_DEST}/etc/asound.conf
 
         # Copy ALSA plugins (both x86_62 and i386 for multilib support)
-        - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib
-        - cp -a /usr/lib/x86_64-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib/
-        - install -d ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib
-        - cp -a /usr/lib/i386-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib/
+      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib
+      - cp -a /usr/lib/x86_64-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib/
+      - install -d ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib
+      - cp -a /usr/lib/i386-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib/
 
         # Copy PulseAudio client libraries
-        - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu
-        - cp -a /usr/lib/x86_64-linux-gnu/libpulse.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-        - cp -a /usr/lib/x86_64-linux-gnu/libsndfile.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-        - cp -a /usr/lib/x86_64-linux-gnu/libogg.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-        - cp -a /usr/lib/x86_64-linux-gnu/libvorbis*.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-        - cp -a /usr/lib/x86_64-linux-gnu/libFLAC.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-        - cp -a /usr/lib/x86_64-linux-gnu/libopus.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-        - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio
-        - cp -a /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio/
+      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu
+      - cp -a /usr/lib/x86_64-linux-gnu/libpulse.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libsndfile.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libogg.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libvorbis*.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libFLAC.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libopus.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio
+      - cp -a /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio/
 
   - name: fluidr3-soundfont
     buildsystem: simple
     build-commands:
-        - tar -xzf fluid-soundfont.tar.gz -C . "FluidR3 GM2-2.SF2"
-        - install -d ${FLATPAK_DEST}/share/soundfonts
-        - install -Dm644 "FluidR3 GM2-2.SF2" ${FLATPAK_DEST}/share/soundfonts/FluidR3_GM.sf2
-        - echo "soundfont FluidR3_GM.sf2" > fluid3gm.cfg
-        - install -Dm644 fluid3gm.cfg ${FLATPAK_DEST}/share/soundfonts/fluid3gm.cfg
+      - tar -xzf fluid-soundfont.tar.gz -C . "FluidR3 GM2-2.SF2"
+      - install -d ${FLATPAK_DEST}/share/soundfonts
+      - install -Dm644 "FluidR3 GM2-2.SF2" ${FLATPAK_DEST}/share/soundfonts/FluidR3_GM.sf2
+      - echo "soundfont FluidR3_GM.sf2" > fluid3gm.cfg
+      - install -Dm644 fluid3gm.cfg ${FLATPAK_DEST}/share/soundfonts/fluid3gm.cfg
     sources:
-        - type: file
-          url: https://ftp.osuosl.org/pub/musescore/soundfont/fluid-soundfont.tar.gz
-          sha256: c815769e44d86f1507b946a6c48c997c7f650699aea1ec4b11ba66e3415c26b9
+      - type: file
+        url: https://ftp.osuosl.org/pub/musescore/soundfont/fluid-soundfont.tar.gz
+        sha256: c815769e44d86f1507b946a6c48c997c7f650699aea1ec4b11ba66e3415c26b9
