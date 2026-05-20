@@ -210,8 +210,8 @@ modules:
       - --disable-md2man
     sources:
       - type: archive
-        url: https://download.samba.org/pub/rsync/src/rsync-3.4.1.tar.gz
-        sha256: 2924bcb3a1ed8b551fc101f740b9f0fe0a202b115027647cf69850d65fd88c52
+        url: https://download.samba.org/pub/rsync/src/rsync-3.4.3.tar.gz
+        sha256: c72e63ca3021cbc80ba86ec30102773f4c5631fbc492b52e773b3958f82a53d3
         x-checker-data:
           type: anitya
           project-id: 4217
@@ -280,8 +280,8 @@ modules:
       - ln -s /app/bin/7zz /app/bin/7z
     sources:
       - type: archive
-        url: https://github.com/ip7z/7zip/archive/refs/tags/26.00.tar.gz
-        sha256: 07eafed75d661282d402dc2a3edf17e1dbb36fb813f4fbf5a2bad4f6b722aed5
+        url: https://github.com/ip7z/7zip/archive/refs/tags/26.01.tar.gz
+        sha256: f4212b508641b3584f7089ab67bc0aba028c631f049b4dd603ff07853e72e749
         x-checker-data:
           type: anitya
           project-id: 372314
@@ -307,8 +307,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: https://www.rarlab.com/rar/unrarsrc-7.2.5.tar.gz
-        sha256: 3d7b402ce7b9825af32a5f593379269e742c883d9d276527be19d0e9f6a114f9
+        url: https://www.rarlab.com/rar/unrarsrc-7.2.6.tar.gz
+        sha256: d1afa67ef4121ebc5986815699e05db0ce8648499e5dca854f282a4c3f72c003
         x-checker-data:
           type: anitya
           project-id: 13306
