@@ -1,0 +1,365 @@
+name: modules
+buildsystem: simple
+build-commands: []
+modules:
+
+  - name: zlib-ng
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DZLIB_ENABLE_TESTS=false
+      - -DZLIB_COMPAT=true
+    sources:
+      - type: archive
+        url: https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.3.3.tar.gz
+        sha256: f9c65aa9c852eb8255b636fd9f07ce1c406f061ec19a2e7d508b318ca0c907d1
+        x-checker-data:
+          type: anitya
+          project-id: 115592
+          url-template: https://github.com/zlib-ng/zlib-ng/archive/refs/tags/$version.tar.gz
+
+# -- controllers --
+
+  - name: hwdata
+    config-opts:
+      - --datarootdir=/app/share
+    sources:
+      - type: git
+        url: https://github.com/vcrhonek/hwdata
+        tag: v0.406
+        commit: 9ae3b9da5cbb93eed30f812aa7edb4b9ad3e3868
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/vcrhonek/hwdata/releases/latest
+          tag-query: .tag_name
+
+  - name: usbutils
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/gregkh/usbutils
+        commit: d0c76b601b4b3ab9b2ab2647d604a8e3cce6d666
+        tag: v019
+        x-checker-data:
+          type: anitya
+          project-id: 5061
+          stable-only: true
+          tag-template: v$version
+
+  - name: lsof
+    buildsystem: simple
+    build-commands:
+      - ./Configure -n linux
+      - make CC="cc ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}"
+      - install -Dm755 lsof -t ${FLATPAK_DEST}/bin
+    sources:
+      - type: git
+        url: https://github.com/lsof-org/lsof
+        commit: b173315c8f94bf61d52094857ea3fe7d0f5aaff9
+        tag: 4.99.6
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/lsof-org/lsof/releases/latest
+          tag-query: .tag_name
+
+# -- end controllers --
+
+  - name: xrandr
+    sources:
+      - type: archive
+        url: https://xorg.freedesktop.org/archive/individual/app/xrandr-1.5.4.tar.xz
+        sha256: 2cafccb2aaf2491a4068676117a0d4f90ab307724b96fffc54cd1da953779400
+        x-checker-data:
+          type: anitya
+          project-id: 14957
+          stable-only: true
+          url-template: https://xorg.freedesktop.org/archive/individual/app/xrandr-$version.tar.xz
+
+  - name: libmd
+    sources:
+      - type: archive
+        url: https://libbsd.freedesktop.org/releases/libmd-1.1.0.tar.xz
+        sha256: 1bd6aa42275313af3141c7cf2e5b964e8b1fd488025caf2f971f43b00776b332
+        x-checker-data:
+          type: anitya
+          project-id: 15525
+          stable-only: true
+          url-template: https://libbsd.freedesktop.org/releases/libmd-$version.tar.xz
+
+  - name: libbsd
+    sources:
+      - type: archive
+        url: https://libbsd.freedesktop.org/releases/libbsd-0.12.2.tar.xz
+        sha256: b88cc9163d0c652aaf39a99991d974ddba1c3a9711db8f1b5838af2a14731014
+        x-checker-data:
+          type: anitya
+          project-id: 1567
+          stable-only: true
+          url-template: https://libbsd.freedesktop.org/releases/libbsd-$version.tar.xz
+
+#START --- Winetricks Deps ---
+  - name: 7zip
+    buildsystem: simple
+    subdir: CPP/7zip/Bundles/Alone2
+    build-commands:
+      - make -j $FLATPAK_BUILDER_N_JOBS -f makefile.gcc
+      - install -Dm755 ./_o/7zz -t ${FLATPAK_DEST}/bin
+      - ln -s ${FLATPAK_DEST}/bin/7zz ${FLATPAK_DEST}/bin/7za
+      - ln -s ${FLATPAK_DEST}/bin/7zz ${FLATPAK_DEST}/bin/7z
+    sources:
+      - type: archive
+        url: https://github.com/ip7z/7zip/archive/refs/tags/26.01.tar.gz
+        sha256: f4212b508641b3584f7089ab67bc0aba028c631f049b4dd603ff07853e72e749
+        x-checker-data:
+          type: anitya
+          project-id: 372314
+          url-template: https://github.com/ip7z/7zip/archive/refs/tags/$version.tar.gz
+
+  - name: cabextract
+    build-options:
+      strip: true
+    sources:
+      - type: archive
+        url: https://www.cabextract.org.uk/cabextract-1.11.tar.gz
+        sha256: b5546db1155e4c718ff3d4b278573604f30dd64c3c5bfd4657cd089b823a3ac6
+        x-checker-data:
+          type: anitya
+          project-id: 245
+          url-template: https://www.cabextract.org.uk/cabextract-$version.tar.gz
+
+  - name: unrar
+    no-autogen: true
+    build-options:
+      strip: true
+    make-install-args:
+      - DESTDIR=$(FLATPAK_DEST)
+    sources:
+      - type: archive
+        url: https://www.rarlab.com/rar/unrarsrc-7.2.6.tar.gz
+        sha256: d1afa67ef4121ebc5986815699e05db0ce8648499e5dca854f282a4c3f72c003
+        x-checker-data:
+          type: anitya
+          project-id: 13306
+          url-template: https://www.rarlab.com/rar/unrarsrc-$version.tar.gz
+
+  - name: binutils-ar
+    buildsystem: simple
+    build-options:
+      strip: true
+    build-commands:
+      - install -Dm755 /usr/bin/ar -t ${FLATPAK_DEST}/bin/
+      - install -Dm755 /usr/lib/$(gcc -print-multiarch)/libbfd-*.so -t ${FLATPAK_DEST}/lib/
+
+  - name: aria2
+    config-opts:
+      - --disable-libaria2
+      - --disable-websocket
+      - --without-sqlite3
+    sources:
+      - type: archive
+        sha256: 60a420ad7085eb616cb6e2bdf0a7206d68ff3d37fb5a956dc44242eb2f79b66b
+        url: https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0.tar.xz
+
+  - name: libjpeg # with libjpeg.so.8
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_SKIP_RPATH:BOOL=YES
+      - -DENABLE_STATIC:BOOL=NO
+      - -DWITH_JPEG8:BOOL=YES
+      - -DCMAKE_INSTALL_LIBDIR=/app/lib # uses lib64 by default
+    sources:
+      - type: archive
+        url: https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.90/libjpeg-turbo-3.1.90.tar.gz
+        sha256: 1d0e86ee45bf435dc57f8744763ba62410294b0f5312cb87962214ac1f7fb78b
+
+#END --- Winetricks Deps ---
+
+  - name: rsync
+    config-opts:
+      - --prefix=${FLATPAK_DEST}
+      - --with-included-popt
+      - --with-included-zlib
+      - --host=x86
+      - --disable-xxhash
+      - --disable-md2man
+    sources:
+      - type: archive
+        url: https://download.samba.org/pub/rsync/src/rsync-3.4.2.tar.gz
+        sha256: ff10aa2c151cd4b2dbbe6135126dbc854046113d2dfb49572a348233267eb315
+        x-checker-data:
+          type: anitya
+          project-id: 4217
+          stable-only: true
+          url-template: https://download.samba.org/pub/rsync/src/rsync-$version.tar.gz
+
+  - name: gamemode
+    buildsystem: meson
+    config-opts:
+      - -Dwith-examples=false
+      - -Dwith-util=false
+      - -Dwith-sd-bus-provider=no-daemon
+    sources: &gamemode_sources
+      - type: git
+        url: https://github.com/FeralInteractive/gamemode.git
+        commit: f0a569a5199974751a4a75ebdc41c8f0b8e4c909
+        x-checker-data:
+          type: git
+  
+  - name: gamemoderun
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 data/gamemoderun -t ${FLATPAK_DEST}/bin
+    sources: *gamemode_sources
+
+# --- Vulkan Tools ---
+  - name: vulkan-tools
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DVULKAN_HEADERS_INSTALL_DIR=/app
+      - -DCMAKE_BUILD_TYPE=Release
+    sources:
+      - type: archive
+        url: https://github.com/KhronosGroup/Vulkan-Tools/archive/v1.4.350/Vulkan-Tools-1.4.350.tar.gz
+        sha256: c7c11c72549bf48d1e7190b7143f5710d576cd687eb2efc4a3ae9cdd77209a7b
+    modules:
+      - name: volk
+        buildsystem: cmake-ninja
+        config-opts:
+          - -DVOLK_INSTALL=ON
+        sources:
+          - type: archive
+            url: https://github.com/zeux/volk/archive/refs/tags/1.4.350.tar.gz
+            sha256: e47c6efe5294bb03729a976b385864bba5daf46ec60f0bdea11e1d1446345f9a
+        modules:
+          - name: vulkan-headers
+            buildsystem: cmake-ninja
+            sources:
+              - type: archive
+                url: https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.4.350/Vulkan-Headers-v1.4.350.tar.gz
+                sha256: 6dd105e5cc7ddab6e7b611ae2c1872740d1727557cc8bf9daf13d6de1e4b3999
+# --- end Tools ---
+
+# --- MIDI Support (TiMidity++ with FluidR3_GM) ---
+  - name: timidity
+    buildsystem: autotools
+    build-options:
+      cflags: -Wno-error=incompatible-pointer-types -Wno-error=implicit-function-declaration
+    config-opts:
+      - --enable-alsa
+      - --enable-alsaseq
+      - --enable-audio=alsa,pulse
+      - --enable-interface=server,alsaseq
+    cleanup: ['*.la', '*.a', /include, /lib/pkgconfig, /share/man, /share/doc]
+
+    sources:
+      - type: archive
+        url: https://sourceforge.net/projects/timidity/files/TiMidity++/TiMidity++-2.15.0/TiMidity++-2.15.0.tar.bz2
+        sha256: 161fc0395af16b51f7117ad007c3e434c825a308fa29ad44b626ee8f9bb1c8f5
+      - type: shell
+        commands:
+          - sed -i '/int line_fold();/d' utils/nkflib.c
+      - type: inline
+        dest-filename: custom-timidity.cfg
+        contents: |
+          dir /app/share/soundfonts
+          source /app/share/soundfonts/fluid3gm.cfg
+          opt EFresamp=d
+          opt EFvlpf=d
+          opt EFreverb=d
+      - type: patch
+        path: patches/0001-timidity-fix-missing-includes.patch
+      - type: inline
+        dest-filename: heroic-midi-wrapper
+        contents: |
+          #!/bin/bash
+
+          detect_midi_game() {
+            local game_dir="$1"
+            if [[ ! -d "$game_dir" ]]; then return 1; fi
+            if find "$game_dir" -iname "*.mid" -o -iname "*.midi" | grep -q .; then
+              echo "Found MIDI files in game directory"
+              return 0
+            fi
+            if find "$game_dir" -name "*.cfg" -o -name "*.conf" -o -name "*.ini" | \
+              xargs grep -l -i "midi\|timidity\|mpu-401\|sound.*midi" 2>/dev/null | grep -q .; then
+              echo "Found MIDI configuration references"  
+              return 0
+            fi
+            return 1
+          }
+
+          start_timidity() {
+            if ! pgrep -f "timidity.*-iA" > /dev/null; then
+              echo "Auto-starting TiMidity++ for MIDI-enabled game"
+              ${FLATPAK_DEST}/bin/timidity -iA &
+              TIMIDITY_PID=$!
+              sleep 2
+              echo "TiMidity++ ready for MIDI playback"
+            fi
+          }
+
+          cleanup() {
+            if [[ -n "$TIMIDITY_PID" ]] && kill -0 "$TIMIDITY_PID" 2>/dev/null; then
+              echo "Stopping TiMidity++ (PID: $TIMIDITY_PID)"
+              kill "$TIMIDITY_PID" 2>/dev/null
+            fi
+          }
+
+          trap cleanup EXIT INT TERM
+
+          if [[ -n "$STEAM_COMPAT_INSTALL_PATH" ]]; then
+            if detect_midi_game "$STEAM_COMPAT_INSTALL_PATH"; then
+              start_timidity
+            fi
+          fi
+
+          ${FLATPAK_DEST}/bin/gamemoderun-original "$@" &
+          GAME_PID=$!
+
+          wait $GAME_PID
+          GAME_EXIT_CODE=$?
+
+          cleanup
+          exit $GAME_EXIT_CODE
+
+    post-install:
+      - install -d ${FLATPAK_DEST}/share/timidity
+      - install -Dm644 custom-timidity.cfg ${FLATPAK_DEST}/share/timidity/timidity.cfg
+      - mv ${FLATPAK_DEST}/bin/gamemoderun ${FLATPAK_DEST}/bin/gamemoderun-original
+      - install -Dm755 heroic-midi-wrapper ${FLATPAK_DEST}/bin/gamemoderun
+
+      # Copy ALSA configuration files
+      - install -d ${FLATPAK_DEST}/share/alsa
+      - cp -ar /usr/share/alsa/* ${FLATPAK_DEST}/share/alsa/
+      - install -d ${FLATPAK_DEST}/etc
+      - ln -sf /app/share/alsa/alsa.conf ${FLATPAK_DEST}/etc/asound.conf
+
+        # Copy ALSA plugins (both x86_62 and i386 for multilib support)
+      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib
+      - cp -a /usr/lib/x86_64-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib/
+      - install -d ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib
+      - cp -a /usr/lib/i386-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib/
+
+        # Copy PulseAudio client libraries
+      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu
+      - cp -a /usr/lib/x86_64-linux-gnu/libpulse.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libsndfile.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libogg.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libvorbis*.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libFLAC.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - cp -a /usr/lib/x86_64-linux-gnu/libopus.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
+      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio
+      - cp -a /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio/
+
+  - name: fluidr3-soundfont
+    buildsystem: simple
+    build-commands:
+      - tar -xzf fluid-soundfont.tar.gz -C . "FluidR3 GM2-2.SF2"
+      - install -d ${FLATPAK_DEST}/share/soundfonts
+      - install -Dm644 "FluidR3 GM2-2.SF2" ${FLATPAK_DEST}/share/soundfonts/FluidR3_GM.sf2
+      - echo "soundfont FluidR3_GM.sf2" > fluid3gm.cfg
+      - install -Dm644 fluid3gm.cfg ${FLATPAK_DEST}/share/soundfonts/fluid3gm.cfg
+    sources:
+      - type: file
+        url: https://ftp.osuosl.org/pub/musescore/soundfont/fluid-soundfont.tar.gz
+        sha256: c815769e44d86f1507b946a6c48c997c7f650699aea1ec4b11ba66e3415c26b9
+# --- end MIDI Support ---
