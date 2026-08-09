@@ -237,30 +237,51 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.22.0" date="2026-05-16">
+    <release version="v2.22.1" date="2026-08-09">
       <description>
         <p>General</p>
         <ul>
-          <li>Feat: add owned game filter on GOG Deals screen  in</li>
-          <li>Feat: tray icon acts as toggle  in</li>
-          <li>[Fix] &quot;Copy to clipboard&quot; button in system info page  in</li>
-          <li>Feat: add wishlist only filter on GOG Deals screen  in</li>
-          <li>Bump system requirements  in</li>
-          <li>Fix: stop button on game page  in</li>
-          <li>feat: support ubisoftconnect managed titles  in</li>
-          <li>[FIX] GOG Links from Deals screen  in</li>
-          <li>[UX] Add back prime check with more information  in</li>
-          <li>feat: separate ps5 and &lt;ps4 icons  in</li>
-          <li>[Chore] Check if Arm or x86 on plausible analytics  in</li>
-          <li>[Console] Add ability to install games from console mode  in</li>
+          <li>[Fix] &quot;Add Game&quot; dialog resetting the Wineprefix if SteamGridDB API is used  in</li>
+          <li>[Tech] Make LibraryManagers and GameManagers actual classes  in</li>
+          <li>[Tech]  No longer use GameManagers as singletons  in</li>
           <li>[i18n] Updated Translations  in</li>
-          <li>[Feat] Support for videos on changelog modal  in</li>
-          <li>[UI] Console mode Improvements  in</li>
-          <li>[Feat] Option to hide Heroic window on heroic:// launches (#5154)  in</li>
-          <li>[Feat] Add ability to Edit game title and images from any store.  in</li>
+          <li>Re-add `rehype-raw` dependency  in</li>
+          <li>[UX] Add proton-cachyos to the wine manager  in</li>
+          <li>Update Flatpak manifest to fix build  in</li>
+          <li>Add missing `encodeURIComponent` in log uploader  in</li>
+          <li>Create `compatibilitytools.d` if it does not exist  in</li>
+          <li>Make Proton-CachyOS the default Proton version  in</li>
+          <li>Move &quot;Disable umu&quot; into the &quot;Legacy&quot; section  in</li>
+          <li>Switch GOG user APIs  in</li>
+          <li>[TECH] Remove Wine-GE from the wine manager options  in</li>
+          <li>Update to latest v41 of Electron  in</li>
+          <li>[Tech] Point Plausible analytics to the self-hosted instance  in</li>
+          <li>Add Green Man Gaming deals to the Discounts screen  in</li>
+          <li>update Spanish language code to es-ES for Epic API requests  in</li>
+          <li>tech: update nile to 1.2.0  in</li>
+          <li>Update to Electron 43 and re-add React Dev Tools extension  in</li>
+          <li>Fix various typos  in</li>
+          <li>[Feat] Add Humble Bundle deals to the Discounts screen  in</li>
+          <li>[Tech] Don&apos;t minify main, and add source maps  in</li>
+          <li>Make GE-Proton downloads deterministic  in</li>
+          <li>Hide `ProgressDialog`&apos;s indeterminate progress bar if it does not make sense  in</li>
+          <li>fix: unify webview session partitions so login credentials carry over to stores  in</li>
+          <li>Added new currencies from GOG.  in</li>
+          <li>[Feat] Resolve GOG Deals region from the user&apos;s GOG account  in</li>
+          <li>[Feat] Make the Store Pages controllable with Joystick  in</li>
+          <li>[Tech] Add Zoom runner to Plausible analytics  in</li>
+          <li>Fix: show Rosetta warning when Rosetta is not installed  in</li>
+          <li>[Fix] Respect hidden games in Console mode  in</li>
+          <li>[Feat] Update legendary and gogdl  in</li>
+          <li>[Fix] Description of &quot;Game Arguments&quot; option  in</li>
+          <li>[Fix] Correct reversed A/B and X/Y buttons on Nintendo controllers  in</li>
+          <li>[Input] Improved gamepad key repeat to make navigation snappier  in</li>
           <li>[i18n] Updated Translations  in</li>
-          <li>[Fix] Controler tweaks for console mode  in</li>
-          <li>@Ishidawg made their first contribution in</li>
+          <li>@mglourido made their first contribution in</li>
+          <li>@upriver4 made their first contribution in</li>
+          <li>@kairosci made their first contribution in</li>
+          <li>@Moon-yungg made their first contribution in</li>
+          <li>@adamcolwell made their first contribution in</li>
           <li>*Full Changelog**:</li>
         </ul>
       </description>
