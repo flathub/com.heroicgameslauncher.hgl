@@ -185,6 +185,16 @@ modules:
           - test -S $XDG_RUNTIME_DIR/discord-ipc-$i || ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
           - done
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
+          - |
+            if [ -n "$HEROIC_CONFIG_HOME" ]; then
+                export XDG_CONFIG_HOME="$HEROIC_CONFIG_HOME"
+            elif [ -n "$HEROIC_CONFIG_PROFILE" ]; then
+                export XDG_CONFIG_HOME="${XDG_CONFIG_HOME}-profile_${HEROIC_CONFIG_PROFILE}"
+            elif [ -n "$SteamUser" ]; then
+                if [ -f ~/use_steamuser_env ]; then
+                    export XDG_CONFIG_HOME="${XDG_CONFIG_HOME}-profile_${SteamUser}"
+                fi
+            fi
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
