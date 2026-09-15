@@ -134,8 +134,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/KhronosGroup/Vulkan-Tools.git
-        tag: v1.4.359
-        commit: 572d10d787b74601ea09b696521c950c259ae815
+        tag: v1.4.362
+        commit: 532e2c0e1bce627c5188ed2c90819af2f52a12e1
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -145,8 +145,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/KhronosGroup/Vulkan-Headers.git
-            tag: v1.4.359
-            commit: f9973cd97e6f3584707e7ef1c425e336f1b92a5b
+            tag: v1.4.362
+            commit: ee2ec5fd83dafce291024683b50dc89219333076
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -162,8 +162,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/RsyncProject/rsync.git
-        tag: v3.4.4
-        commit: f26f747b8017b321d3776becc69f330dd889fa21
+        tag: v3.5.0
+        commit: 471e17dc0d68233db84db11be82c9f62f4661214
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -230,8 +230,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/ip7z/7zip.git
-        tag: '26.02'
-        commit: f9d78aff31a5f2521ae7ddbdc97c4a8855808959
+        tag: '26.03'
+        commit: 0766b733fe3e06dd2a7f9a3cfbf2108ac73abd17
         x-checker-data:
           type: git
 
@@ -265,8 +265,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: https://www.rarlab.com/rar/unrarsrc-7.2.7.tar.gz
-        sha256: 01d903a7dcf413cb2925696d7796e48e38d471f79bfe7ef3ad2aebf6c12dbefd
+        url: https://www.rarlab.com/rar/unrarsrc-7.3.1.tar.gz
+        sha256: 634900842a3737d9cc15bbcc71d4c74cc713437e0bca296a573424fe5f2660ab
         x-checker-data:
           type: anitya
           project-id: 13306
