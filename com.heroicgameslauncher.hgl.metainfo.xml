@@ -237,51 +237,44 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.22.1" date="2026-08-09">
+    <release version="v2.22.2" date="2026-09-15">
       <description>
         <p>General</p>
         <ul>
-          <li>[Fix] &quot;Add Game&quot; dialog resetting the Wineprefix if SteamGridDB API is used  in</li>
-          <li>[Tech] Make LibraryManagers and GameManagers actual classes  in</li>
-          <li>[Tech]  No longer use GameManagers as singletons  in</li>
+          <li>fix: Search for a `heroic` executable on PATH if our executable is not called &quot;heroic&quot;  in</li>
+          <li>chore: Remove remnants of our Snap support  in</li>
+          <li>chore: Use CODEOWNERS to automatically request reviews on PRs  in</li>
+          <li>feat: Use umu to provide the Steam Runtime, and automatically enable it for native GOG games  in</li>
+          <li>fix: Set `LEGENDARY_CONFIG_PATH` again  in</li>
+          <li>fix: add default path for crossover on macOS  in</li>
+          <li>fix(macOS): quote generated shortcut launch URL  in</li>
+          <li>Fix #4699: Read no more than the last 1 MB of log files to be shown  in</li>
+          <li>feat: Update Legendary to 0.21.1  in</li>
+          <li>[UX] Do not allow moving a game inside itself  in</li>
+          <li>Fix sideload installer overwriting Wine prefix  in</li>
+          <li>fix: Make sure to set Wine-related options when adding a sideloaded game  in</li>
+          <li>fix: Stop calling `updateStatus` if there are no more gamepads  in</li>
+          <li>FIX: Sign Windows binaries during build via SignPath  in</li>
+          <li>[UI] fix: prevent play with logs popup from closing when moving mouse to it  in</li>
+          <li>[Fix] Wishlist filter on Deals screen leaves no way out (#5588)  in</li>
+          <li>[Feat] Manage Steam shortcuts via SteamClient API when Steam is running  in</li>
+          <li>[UX] Fix pausing/canceling a download from game details page  in</li>
+          <li>[UX] Print wiki links in logs  in</li>
+          <li>[FIX] Do not watch legendary file to refresh the lilbrary  in</li>
+          <li>[UX] Download known fixes even before downloading a game  in</li>
+          <li>fix: Use the current known-fixes helper during launch  in</li>
+          <li>[UX] Don&apos;t show Wine Manager settings on Mac  in</li>
           <li>[i18n] Updated Translations  in</li>
-          <li>Re-add `rehype-raw` dependency  in</li>
-          <li>[UX] Add proton-cachyos to the wine manager  in</li>
-          <li>Update Flatpak manifest to fix build  in</li>
-          <li>Add missing `encodeURIComponent` in log uploader  in</li>
-          <li>Create `compatibilitytools.d` if it does not exist  in</li>
-          <li>Make Proton-CachyOS the default Proton version  in</li>
-          <li>Move &quot;Disable umu&quot; into the &quot;Legacy&quot; section  in</li>
-          <li>Switch GOG user APIs  in</li>
-          <li>[TECH] Remove Wine-GE from the wine manager options  in</li>
-          <li>Update to latest v41 of Electron  in</li>
-          <li>[Tech] Point Plausible analytics to the self-hosted instance  in</li>
-          <li>Add Green Man Gaming deals to the Discounts screen  in</li>
-          <li>update Spanish language code to es-ES for Epic API requests  in</li>
-          <li>tech: update nile to 1.2.0  in</li>
-          <li>Update to Electron 43 and re-add React Dev Tools extension  in</li>
-          <li>Fix various typos  in</li>
-          <li>[Feat] Add Humble Bundle deals to the Discounts screen  in</li>
-          <li>[Tech] Don&apos;t minify main, and add source maps  in</li>
-          <li>Make GE-Proton downloads deterministic  in</li>
-          <li>Hide `ProgressDialog`&apos;s indeterminate progress bar if it does not make sense  in</li>
-          <li>fix: unify webview session partitions so login credentials carry over to stores  in</li>
-          <li>Added new currencies from GOG.  in</li>
-          <li>[Feat] Resolve GOG Deals region from the user&apos;s GOG account  in</li>
-          <li>[Feat] Make the Store Pages controllable with Joystick  in</li>
-          <li>[Tech] Add Zoom runner to Plausible analytics  in</li>
-          <li>Fix: show Rosetta warning when Rosetta is not installed  in</li>
-          <li>[Fix] Respect hidden games in Console mode  in</li>
-          <li>[Feat] Update legendary and gogdl  in</li>
-          <li>[Fix] Description of &quot;Game Arguments&quot; option  in</li>
-          <li>[Fix] Correct reversed A/B and X/Y buttons on Nintendo controllers  in</li>
-          <li>[Input] Improved gamepad key repeat to make navigation snappier  in</li>
-          <li>[i18n] Updated Translations  in</li>
-          <li>@mglourido made their first contribution in</li>
-          <li>@upriver4 made their first contribution in</li>
-          <li>@kairosci made their first contribution in</li>
-          <li>@Moon-yungg made their first contribution in</li>
-          <li>@adamcolwell made their first contribution in</li>
+          <li>fix(gog): fix steam wrapper crash by add galaxy registry key  in</li>
+          <li>[UI/UX] Improve Environmental Table settings and a few others  in</li>
+          <li>fix: use env to lookup the path variable  in</li>
+          <li>fix(gog): keep library entries when GamesDB is unavailable  in</li>
+          <li>feat: Various changes to improve the final build size  in</li>
+          <li>@marcodallagatta made their first contribution in</li>
+          <li>@thatguywiththekids made their first contribution in</li>
+          <li>@ocean-sudo made their first contribution in</li>
+          <li>@matte-schwartz made their first contribution in</li>
+          <li>@xianjianlf2 made their first contribution in</li>
           <li>*Full Changelog**:</li>
         </ul>
       </description>
