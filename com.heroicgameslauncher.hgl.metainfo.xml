@@ -57,7 +57,7 @@
       <li xml:lang="zh">通过直观的用户界面访问您的 Epic、GOG 和 Amazon 游戏。</li>
       <li xml:lang="ja">直感的なユーザーインターフェイスで Epic、GOG、Amazon のゲームにアクセスできます。</li>
       <li xml:lang="de">Zugriff auf deine Spielebibliothek von Epic Games, GOG und Amazon Games durch eine
-        intuitive Benutzeroberfläche.</li>
+      tuitive Benutzeroberfläche.</li>
       <li>Add Games outside GOG, Amazon or Epic Games Store native or not. Even Browser apps
         are supported</li>
       <li xml:lang="pt">Adicione jogos fora da GOG, Amazon ou Epic Games Store, nativos ou não. Até aplicativos de navegador são suportados.</li>
@@ -175,7 +175,7 @@
       <li>It should find Proton from the Steam folder for both Steam Flatpak and non-Flatpak
         if they are on installed on the library inside your $HOME folder</li>
       <li xml:lang="de">Heroic sollte Proton Versionen von Steam (Nativ und Flatpak) finden, sofern sie
-        innerhalb der Bibliothek des Benutzerordners installiert sind.</li>
+      nerhalb der Bibliothek des Benutzerordners installiert sind.</li>
       <li>Heroic cannot access /usr/bin so it won&apos;t be able to find any wine or proton
         isntalled there for now.</li>
       <li xml:lang="de">Heroic hat keinen Zugriff auf /usr/bin, weshalb es dort installierte Wine oder
@@ -241,41 +241,35 @@
       <description>
         <p>General</p>
         <ul>
-          <li>fix: Search for a `heroic` executable on PATH if our executable is not called &quot;heroic&quot;  in</li>
-          <li>chore: Remove remnants of our Snap support  in</li>
-          <li>chore: Use CODEOWNERS to automatically request reviews on PRs  in</li>
-          <li>feat: Use umu to provide the Steam Runtime, and automatically enable it for native GOG games  in</li>
-          <li>fix: Set `LEGENDARY_CONFIG_PATH` again  in</li>
-          <li>fix: add default path for crossover on macOS  in</li>
-          <li>fix(macOS): quote generated shortcut launch URL  in</li>
-          <li>Fix #4699: Read no more than the last 1 MB of log files to be shown  in</li>
-          <li>feat: Update Legendary to 0.21.1  in</li>
-          <li>[UX] Do not allow moving a game inside itself  in</li>
-          <li>Fix sideload installer overwriting Wine prefix  in</li>
-          <li>fix: Make sure to set Wine-related options when adding a sideloaded game  in</li>
-          <li>fix: Stop calling `updateStatus` if there are no more gamepads  in</li>
-          <li>FIX: Sign Windows binaries during build via SignPath  in</li>
-          <li>[UI] fix: prevent play with logs popup from closing when moving mouse to it  in</li>
-          <li>[Fix] Wishlist filter on Deals screen leaves no way out (#5588)  in</li>
-          <li>[Feat] Manage Steam shortcuts via SteamClient API when Steam is running  in</li>
-          <li>[UX] Fix pausing/canceling a download from game details page  in</li>
-          <li>[UX] Print wiki links in logs  in</li>
-          <li>[FIX] Do not watch legendary file to refresh the lilbrary  in</li>
-          <li>[UX] Download known fixes even before downloading a game  in</li>
-          <li>fix: Use the current known-fixes helper during launch  in</li>
-          <li>[UX] Don&apos;t show Wine Manager settings on Mac  in</li>
-          <li>[i18n] Updated Translations  in</li>
-          <li>fix(gog): fix steam wrapper crash by add galaxy registry key  in</li>
-          <li>[UI/UX] Improve Environmental Table settings and a few others  in</li>
-          <li>fix: use env to lookup the path variable  in</li>
-          <li>fix(gog): keep library entries when GamesDB is unavailable  in</li>
-          <li>feat: Various changes to improve the final build size  in</li>
-          <li>@marcodallagatta made their first contribution in</li>
-          <li>@thatguywiththekids made their first contribution in</li>
-          <li>@ocean-sudo made their first contribution in</li>
-          <li>@matte-schwartz made their first contribution in</li>
-          <li>@xianjianlf2 made their first contribution in</li>
-          <li>*Full Changelog**:</li>
+          <li>fix: Search for a `heroic` executable on PATH if our executable is not called &quot;heroic&quot;</li>
+          <li>chore: Remove remnants of our Snap support</li>
+          <li>chore: Use CODEOWNERS to automatically request reviews on PRs</li>
+          <li>feat: Use umu to provide the Steam Runtime, and automatically enable it for native GOG games</li>
+          <li>fix: Set `LEGENDARY_CONFIG_PATH` again</li>
+          <li>fix: add default path for crossover on macOS</li>
+          <li>fix(macOS): quote generated shortcut launch URL</li>
+          <li>Fix #4699: Read no more than the last 1 MB of log files to be shown</li>
+          <li>feat: Update Legendary to 0.21.1</li>
+          <li>[UX] Do not allow moving a game inside itself</li>
+          <li>Fix sideload installer overwriting Wine prefix</li>
+          <li>fix: Make sure to set Wine-related options when adding a sideloaded game</li>
+          <li>fix: Stop calling `updateStatus` if there are no more gamepads</li>
+          <li>FIX: Sign Windows binaries during build via SignPath</li>
+          <li>[UI] fix: prevent play with logs popup from closing when moving mouse to it</li>
+          <li>[Fix] Wishlist filter on Deals screen leaves no way out (#5588)</li>
+          <li>[Feat] Manage Steam shortcuts via SteamClient API when Steam is running</li>
+          <li>[UX] Fix pausing/canceling a download from game details page</li>
+          <li>[UX] Print wiki links in logs</li>
+          <li>[FIX] Do not watch legendary file to refresh the lilbrary</li>
+          <li>[UX] Download known fixes even before downloading a game</li>
+          <li>fix: Use the current known-fixes helper during launch</li>
+          <li>[UX] Don&apos;t show Wine Manager settings on Mac</li>
+          <li>[i18n] Updated Translations</li>
+          <li>fix(gog): fix steam wrapper crash by add galaxy registry key</li>
+          <li>[UI/UX] Improve Environmental Table settings and a few others</li>
+          <li>fix: use env to lookup the path variable</li>
+          <li>fix(gog): keep library entries when GamesDB is unavailable</li>
+          <li>feat: Various changes to improve the final build size </li>
         </ul>
       </description>
     </release>
