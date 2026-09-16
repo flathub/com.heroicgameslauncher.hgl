@@ -237,39 +237,11 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.22.2" date="2026-09-15">
+    <release version="v2.22.3" date="2026-09-16">
       <description>
         <p>General</p>
         <ul>
-          <li>fix: Search for a `heroic` executable on PATH if our executable is not called &quot;heroic&quot;</li>
-          <li>chore: Remove remnants of our Snap support</li>
-          <li>chore: Use CODEOWNERS to automatically request reviews on PRs</li>
-          <li>feat: Use umu to provide the Steam Runtime, and automatically enable it for native GOG games</li>
-          <li>fix: Set `LEGENDARY_CONFIG_PATH` again</li>
-          <li>fix: add default path for crossover on macOS</li>
-          <li>fix(macOS): quote generated shortcut launch URL</li>
-          <li>Fix #4699: Read no more than the last 1 MB of log files to be shown</li>
-          <li>feat: Update Legendary to 0.21.1</li>
-          <li>[UX] Do not allow moving a game inside itself</li>
-          <li>Fix sideload installer overwriting Wine prefix</li>
-          <li>fix: Make sure to set Wine-related options when adding a sideloaded game</li>
-          <li>fix: Stop calling `updateStatus` if there are no more gamepads</li>
-          <li>FIX: Sign Windows binaries during build via SignPath</li>
-          <li>[UI] fix: prevent play with logs popup from closing when moving mouse to it</li>
-          <li>[Fix] Wishlist filter on Deals screen leaves no way out (#5588)</li>
-          <li>[Feat] Manage Steam shortcuts via SteamClient API when Steam is running</li>
-          <li>[UX] Fix pausing/canceling a download from game details page</li>
-          <li>[UX] Print wiki links in logs</li>
-          <li>[FIX] Do not watch legendary file to refresh the lilbrary</li>
-          <li>[UX] Download known fixes even before downloading a game</li>
-          <li>fix: Use the current known-fixes helper during launch</li>
-          <li>[UX] Don&apos;t show Wine Manager settings on Mac</li>
-          <li>[i18n] Updated Translations</li>
-          <li>fix(gog): fix steam wrapper crash by add galaxy registry key</li>
-          <li>[UI/UX] Improve Environmental Table settings and a few others</li>
-          <li>fix: use env to lookup the path variable</li>
-          <li>fix(gog): keep library entries when GamesDB is unavailable</li>
-          <li>feat: Various changes to improve the final build size </li>
+          <li>fix: Don&apos;t nest umu if `steamRuntime` ends up enabled on a non-native game</li>
         </ul>
       </description>
     </release>
