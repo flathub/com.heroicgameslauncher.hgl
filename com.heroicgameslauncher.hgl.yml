@@ -134,8 +134,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/KhronosGroup/Vulkan-Tools.git
-        tag: v1.4.362
-        commit: 532e2c0e1bce627c5188ed2c90819af2f52a12e1
+        tag: v1.4.363
+        commit: 6fe2055cf2fa921d52a4c6a31528cfc279a6977f
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -145,8 +145,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/KhronosGroup/Vulkan-Headers.git
-            tag: v1.4.362
-            commit: ee2ec5fd83dafce291024683b50dc89219333076
+            tag: v1.4.363
+            commit: 6802bb4733b63ed5efd3adb308a6c885ef180ea1
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -162,8 +162,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/RsyncProject/rsync.git
-        tag: v3.5.0
-        commit: 471e17dc0d68233db84db11be82c9f62f4661214
+        tag: v3.5.1
+        commit: 04355d27b7386d7de0e6bd5e79c556223210f700
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
