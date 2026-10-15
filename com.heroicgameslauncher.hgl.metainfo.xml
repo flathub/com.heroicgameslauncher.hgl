@@ -237,11 +237,15 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.22.3" date="2026-09-16">
+    <release version="v2.22.4" date="2026-10-15">
       <description>
         <p>General</p>
         <ul>
-          <li>fix: Don&apos;t nest umu if `steamRuntime` ends up enabled on a non-native game</li>
+          <li>fix: Don&apos;t try to `chmod` native Linux/macOS binaries on exit</li>
+          <li>Add support for building ARM64 flatpak</li>
+          <li>[FIX] Unset custom user agent to fix GOG login cloudflare check</li>
+          <li>fix: Don&apos;t trust `isUmuSupported`&apos;s return value if we&apos;re running a native game</li>
+          <li>[i18n] Updated Translations</li>
         </ul>
       </description>
     </release>
