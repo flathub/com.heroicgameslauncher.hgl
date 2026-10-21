@@ -11,10 +11,6 @@ cleanup:
   - /share/docs
   - /share/man
 
-sdk-extensions:
-  - org.freedesktop.Sdk.Compat.i386
-  - org.freedesktop.Sdk.Extension.toolchain-i386
-
 finish-args:
   - --allow=devel
   - --allow=multiarch
@@ -87,9 +83,9 @@ finish-args:
   - --unset-env=SDL_VIDEODRIVER
   - --env=DBUS_FATAL_WARNINGS=0
   - --env=PROTON_DEBUG_DIR=/var/tmp
-  - --env=XDG_CONFIG_DIRS=/etc/xdg:/usr/lib/x86_64-linux-gnu/GL:/usr/lib/i386-linux-gnu/GL
+  - --env=XDG_CONFIG_DIRS=/etc/xdg:/usr/lib/x86_64-linux-gnu/GL:/usr/lib/i386-linux-gnu/GL:/usr/lib/aarch64-linux-gnu/GL
   - --env=XDG_DATA_DIRS=/app/share:/usr/lib/extensions/vulkan/share:/usr/share:/usr/share/runtime/share:/run/host/user-share:/run/host/share:/usr/lib/pressure-vessel/overrides/share
-  - --env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0:/app/lib32/gstreamer-1.0:/usr/lib/extensions/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0:/usr/lib/i386-linux-gnu/gstreamer-1.0
+  - --env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0:/app/lib32/gstreamer-1.0:/usr/lib/extensions/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0:/usr/lib/aarch64-linux-gnu/gstreamer-1.0:/usr/lib/i386-linux-gnu/gstreamer-1.0
 
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
@@ -188,8 +184,14 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
+        only-arches: [x86_64]
         url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.4/Heroic-2.22.4-linux-x86_64.AppImage
         sha512: ec3f6f3efd0b8a692beedd57be0da3565b69ed6ec996fa70a4c338ee47b3fd13503ad6994e64606422ce7e9fc479ed9f02b222a7bada95e29fab2fe66413a67b
+
+      - type: file
+        only-arches: [aarch64]
+        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.4/Heroic-2.22.4-linux-arm64.AppImage
+        sha512: 78555ee005d70838cbd0c0d8d72ff89384afbab7fc0be49e48028131324d6de9836c7df440b9b0c8c29da7ff87f911ba926a44a20319ca483461c41c3a2d7fdc
 
   - name: platform-bootstrap
     buildsystem: simple
@@ -368,22 +370,24 @@ modules:
       - install -d ${FLATPAK_DEST}/etc
       - ln -sf /app/share/alsa/alsa.conf ${FLATPAK_DEST}/etc/asound.conf
 
-        # Copy ALSA plugins (both x86_62 and i386 for multilib support)
-      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib
-      - cp -a /usr/lib/x86_64-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/alsa-lib/
-      - install -d ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib
-      - cp -a /usr/lib/i386-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib/
+        # Copy ALSA plugins (native arch, plus i386 for multilib when available on x86_64)
+      - install -d ${FLATPAK_DEST}/lib/$(uname -m)-linux-gnu/alsa-lib
+      - cp -a /usr/lib/$(uname -m)-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/$(uname -m)-linux-gnu/alsa-lib/
+      - |
+        if [ "$(uname -m)" = x86_64 ] && ls /usr/lib/i386-linux-gnu/alsa-lib/*.so >/dev/null 2>&1; then
+          install -d ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib
+          cp -a /usr/lib/i386-linux-gnu/alsa-lib/*.so ${FLATPAK_DEST}/lib/i386-linux-gnu/alsa-lib/
+        fi
 
         # Copy PulseAudio client libraries
-      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu
-      - cp -a /usr/lib/x86_64-linux-gnu/libpulse.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - cp -a /usr/lib/x86_64-linux-gnu/libsndfile.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - cp -a /usr/lib/x86_64-linux-gnu/libogg.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - cp -a /usr/lib/x86_64-linux-gnu/libvorbis*.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - cp -a /usr/lib/x86_64-linux-gnu/libFLAC.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - cp -a /usr/lib/x86_64-linux-gnu/libopus.so* ${FLATPAK_DEST}/lib/x86_64-linux-gnu/
-      - install -d ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio
-      - cp -a /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon*.so ${FLATPAK_DEST}/lib/x86_64-linux-gnu/pulseaudio/
+      - |
+        set -e
+        triplet=$(uname -m)-linux-gnu
+        install -d ${FLATPAK_DEST}/lib/$triplet/pulseaudio
+        for lib in libpulse.so* libsndfile.so* libogg.so* libvorbis*.so* libFLAC.so* libopus.so*; do
+          cp -a /usr/lib/$triplet/$lib ${FLATPAK_DEST}/lib/$triplet/
+        done
+        cp -a /usr/lib/$triplet/pulseaudio/libpulsecommon*.so ${FLATPAK_DEST}/lib/$triplet/pulseaudio/
 
   - name: fluidr3-soundfont
     buildsystem: simple
