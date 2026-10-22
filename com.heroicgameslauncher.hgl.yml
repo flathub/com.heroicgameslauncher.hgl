@@ -295,6 +295,11 @@ modules:
       - type: shell
         commands:
           - sed -i '/int line_fold();/d' utils/nkflib.c
+          - |
+            for f in config.guess config.sub; do
+              new=$(ls /usr/share/automake-*/$f | head -n1)
+              find . -name $f -exec cp -f "$new" {} \;
+            done
       - type: inline
         dest-filename: custom-timidity.cfg
         contents: |
