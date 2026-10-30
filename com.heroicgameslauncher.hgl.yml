@@ -109,7 +109,8 @@ add-extensions:
     no-autodownload: true
     autodelete: false
     add-ld-path: lib
-    merge-dirs: vulkan/icd.d;glvnd/egl_vendor.d;OpenCL/vendors;lib/dri;lib/d3d;vulkan/explicit_layer.d;vulkan/implicit_layer.d
+    merge-dirs: 
+      vulkan/icd.d;glvnd/egl_vendor.d;OpenCL/vendors;lib/dri;lib/d3d;vulkan/explicit_layer.d;vulkan/implicit_layer.d
     download-if: active-gl-driver
     enable-if: active-gl-driver
     autoprune-unless: active-gl-driver
@@ -134,8 +135,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/KhronosGroup/Vulkan-Tools.git
-        tag: v1.4.362
-        commit: 532e2c0e1bce627c5188ed2c90819af2f52a12e1
+        tag: v1.4.367
+        commit: bfac990e5eaed6acc4ba217e25d305cabd408740
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -145,8 +146,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/KhronosGroup/Vulkan-Headers.git
-            tag: v1.4.362
-            commit: ee2ec5fd83dafce291024683b50dc89219333076
+            tag: v1.4.367
+            commit: 9fbc2a782ee3f8a4db64e7d991e23da75e893f44
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -162,8 +163,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/RsyncProject/rsync.git
-        tag: v3.5.0
-        commit: 471e17dc0d68233db84db11be82c9f62f4661214
+        tag: v3.5.1
+        commit: 04355d27b7386d7de0e6bd5e79c556223210f700
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -188,8 +189,10 @@ modules:
           - zypak-wrapper /app/bin/heroic/heroic "$@"
 
       - type: file
-        url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.4/Heroic-2.22.4-linux-x86_64.AppImage
-        sha512: ec3f6f3efd0b8a692beedd57be0da3565b69ed6ec996fa70a4c338ee47b3fd13503ad6994e64606422ce7e9fc479ed9f02b222a7bada95e29fab2fe66413a67b
+        url: 
+          https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.4/Heroic-2.22.4-linux-x86_64.AppImage
+        sha512: 
+          ec3f6f3efd0b8a692beedd57be0da3565b69ed6ec996fa70a4c338ee47b3fd13503ad6994e64606422ce7e9fc479ed9f02b222a7bada95e29fab2fe66413a67b
 
   - name: platform-bootstrap
     buildsystem: simple
@@ -230,8 +233,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/ip7z/7zip.git
-        tag: '26.03'
-        commit: 0766b733fe3e06dd2a7f9a3cfbf2108ac73abd17
+        tag: '26.05'
+        commit: b88c6bc09339de32f7d18bbab900686b244f42ba
         x-checker-data:
           type: git
 
@@ -265,8 +268,8 @@ modules:
       - DESTDIR=$(FLATPAK_DEST)
     sources:
       - type: archive
-        url: https://www.rarlab.com/rar/unrarsrc-7.3.1.tar.gz
-        sha256: 634900842a3737d9cc15bbcc71d4c74cc713437e0bca296a573424fe5f2660ab
+        url: https://www.rarlab.com/rar/unrarsrc-7.3.2.tar.gz
+        sha256: f61a1160d6e2ebbda2ad353c8e82f62ab4312f97fde23c6c2c982d25e0014f99
         x-checker-data:
           type: anitya
           project-id: 13306
@@ -288,7 +291,8 @@ modules:
 
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/timidity/files/TiMidity++/TiMidity++-2.15.0/TiMidity++-2.15.0.tar.bz2
+        url: 
+          https://sourceforge.net/projects/timidity/files/TiMidity++/TiMidity++-2.15.0/TiMidity++-2.15.0.tar.bz2
         sha256: 161fc0395af16b51f7117ad007c3e434c825a308fa29ad44b626ee8f9bb1c8f5
       - type: shell
         commands:
