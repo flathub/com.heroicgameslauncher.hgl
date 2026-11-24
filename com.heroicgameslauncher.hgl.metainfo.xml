@@ -57,7 +57,7 @@
       <li xml:lang="zh">通过直观的用户界面访问您的 Epic、GOG 和 Amazon 游戏。</li>
       <li xml:lang="ja">直感的なユーザーインターフェイスで Epic、GOG、Amazon のゲームにアクセスできます。</li>
       <li xml:lang="de">Zugriff auf deine Spielebibliothek von Epic Games, GOG und Amazon Games durch eine
-        intuitive Benutzeroberfläche.</li>
+      tuitive Benutzeroberfläche.</li>
       <li>Add Games outside GOG, Amazon or Epic Games Store native or not. Even Browser apps
         are supported</li>
       <li xml:lang="pt">Adicione jogos fora da GOG, Amazon ou Epic Games Store, nativos ou não. Até aplicativos de navegador são suportados.</li>
@@ -175,7 +175,7 @@
       <li>It should find Proton from the Steam folder for both Steam Flatpak and non-Flatpak
         if they are on installed on the library inside your $HOME folder</li>
       <li xml:lang="de">Heroic sollte Proton Versionen von Steam (Nativ und Flatpak) finden, sofern sie
-        innerhalb der Bibliothek des Benutzerordners installiert sind.</li>
+      nerhalb der Bibliothek des Benutzerordners installiert sind.</li>
       <li>Heroic cannot access /usr/bin so it won&apos;t be able to find any wine or proton
         isntalled there for now.</li>
       <li xml:lang="de">Heroic hat keinen Zugriff auf /usr/bin, weshalb es dort installierte Wine oder
@@ -237,10 +237,16 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.20.0-beta.1" date="2026-02-18">
+    <release version="v2.22.4" date="2026-10-15">
       <description>
         <p>General</p>
-        <ul></ul>
+        <ul>
+          <li>fix: Don&apos;t try to `chmod` native Linux/macOS binaries on exit</li>
+          <li>Add support for building ARM64 flatpak</li>
+          <li>[FIX] Unset custom user agent to fix GOG login cloudflare check</li>
+          <li>fix: Don&apos;t trust `isUmuSupported`&apos;s return value if we&apos;re running a native game</li>
+          <li>[i18n] Updated Translations</li>
+        </ul>
       </description>
     </release>
   </releases>
