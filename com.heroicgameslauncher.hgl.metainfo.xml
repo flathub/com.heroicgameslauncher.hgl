@@ -237,15 +237,19 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="v2.22.4" date="2026-10-15">
+    <release version="v3.0.0-beta.1" date="2026-11-24">
       <description>
         <p>General</p>
         <ul>
-          <li>fix: Don&apos;t try to `chmod` native Linux/macOS binaries on exit</li>
-          <li>Add support for building ARM64 flatpak</li>
-          <li>[FIX] Unset custom user agent to fix GOG login cloudflare check</li>
-          <li>fix: Don&apos;t trust `isUmuSupported`&apos;s return value if we&apos;re running a native game</li>
-          <li>[i18n] Updated Translations</li>
+          <li>New design from scratch, Heroic Theme and Outfit font (#5489, #5932, #5964)</li>
+          <li>New themes, including One Piece (#6067)</li>
+          <li>Steam integration with Aurelia (#6045)</li>
+          <li>itch.io integration (#5706)</li>
+          <li>Cloud saves backup/restore (#6081) and new Backup Wizard (#5522)</li>
+          <li>Gamepad settings, settings search and new Add Game dialog (#6093, #6090, #6087)</li>
+          <li>Steam: some games won&apos;t start yet, and anti-cheat games probably won&apos;t work.</li>
+          <li>itch.io native Linux games are not supported yet.</li>
+          <li>Console mode still needs some polish for the new UI.</li>
         </ul>
       </description>
     </release>
