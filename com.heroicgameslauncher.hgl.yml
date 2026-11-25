@@ -55,6 +55,9 @@ finish-args:
   - --talk-name=org.kde.StatusNotifierWatcher
   - --talk-name=com.canonical.Unity
   - --talk-name=org.freedesktop.ScreenSaver
+  # power options on downloads (turn off screen, suspend or shutdown)
+  # uses flatpak-spawn --host with xset/kscreen-doctor/systemctl
+  - --talk-name=org.freedesktop.Flatpak
 
   # copied from steam (wip)
   # wine uses this for disk drives (mountmgr.sys)
