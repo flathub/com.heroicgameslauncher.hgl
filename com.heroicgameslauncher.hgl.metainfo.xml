@@ -60,43 +60,43 @@
   <screenshots>
     <screenshot type="default">
       <caption>Library</caption>
-      <image>https://github.com/user-attachments/assets/ec391f3e-9820-4c31-9909-f298965b8003</image>
+      <image>https://raw.githubusercontent.com/flathub/com.heroicgameslauncher.hgl/0991e9e7519062b35c1eb35d807aca2f13a4150e/screenshots/library.png</image>
     </screenshot>
     <screenshot>
-      <caption>GamePage</caption>
-      <image>https://github.com/user-attachments/assets/c46cbbec-ff2e-4378-88d6-25c6d8651c39</image>
+      <caption>Game page</caption>
+      <image>https://raw.githubusercontent.com/flathub/com.heroicgameslauncher.hgl/0991e9e7519062b35c1eb35d807aca2f13a4150e/screenshots/game-page.png</image>
     </screenshot>
     <screenshot>
       <caption>Stores</caption>
-      <image>https://github.com/user-attachments/assets/84d800de-51f5-44d1-9530-0d529613714f</image>
+      <image>https://raw.githubusercontent.com/flathub/com.heroicgameslauncher.hgl/0991e9e7519062b35c1eb35d807aca2f13a4150e/screenshots/stores.png</image>
     </screenshot>
     <screenshot>
-      <caption>Sideload Dialog</caption>
-      <image>https://github.com/user-attachments/assets/8c4f0f79-ec45-4f48-a947-8d250204ad60</image>
+      <caption>Deals</caption>
+      <image>https://raw.githubusercontent.com/flathub/com.heroicgameslauncher.hgl/0991e9e7519062b35c1eb35d807aca2f13a4150e/screenshots/deals.png</image>
     </screenshot>
     <screenshot>
-      <caption>Download Manager</caption>
-      <image>https://github.com/user-attachments/assets/b99f0482-953f-4528-a432-10aded523bb4</image>
+      <caption>Downloads</caption>
+      <image>https://raw.githubusercontent.com/flathub/com.heroicgameslauncher.hgl/0991e9e7519062b35c1eb35d807aca2f13a4150e/screenshots/downloads.png</image>
     </screenshot>
     <screenshot>
-      <caption>Wine Manager</caption>
-      <image>https://github.com/user-attachments/assets/8c2e6c44-68ef-42cc-9dc1-ddec6989a8b2</image>
+      <caption>Game settings</caption>
+      <image>https://raw.githubusercontent.com/flathub/com.heroicgameslauncher.hgl/0991e9e7519062b35c1eb35d807aca2f13a4150e/screenshots/game-settings.png</image>
     </screenshot>
     <screenshot>
-      <caption>Game Settings</caption>
-      <image>https://github.com/user-attachments/assets/5f10d3f1-a918-411c-93b9-48a9f67fb5fd</image>
+      <caption>Install game</caption>
+      <image>https://raw.githubusercontent.com/flathub/com.heroicgameslauncher.hgl/0991e9e7519062b35c1eb35d807aca2f13a4150e/screenshots/install-game.png</image>
     </screenshot>
     <screenshot>
-      <caption>Install Dialog</caption>
-      <image>https://github.com/user-attachments/assets/3c61fe93-a1a3-45fb-86ec-e87cfe3c290a</image>
+      <caption>Add game</caption>
+      <image>https://raw.githubusercontent.com/flathub/com.heroicgameslauncher.hgl/0991e9e7519062b35c1eb35d807aca2f13a4150e/screenshots/add-game.png</image>
     </screenshot>
     <screenshot>
-      <caption>Winetricks</caption>
-      <image>https://github.com/user-attachments/assets/40b8f9e0-36cc-491a-9745-e3693c2f9af0</image>
+      <caption>Wine manager</caption>
+      <image>https://raw.githubusercontent.com/flathub/com.heroicgameslauncher.hgl/0991e9e7519062b35c1eb35d807aca2f13a4150e/screenshots/wine-manager.png</image>
     </screenshot>
     <screenshot>
-      <caption>Modify Installation</caption>
-      <image>https://github.com/user-attachments/assets/14a2346c-fcad-479f-bddb-45b740a97a39</image>
+      <caption>Console mode</caption>
+      <image>https://raw.githubusercontent.com/flathub/com.heroicgameslauncher.hgl/0991e9e7519062b35c1eb35d807aca2f13a4150e/screenshots/console-mode.png</image>
     </screenshot>
   </screenshots>
   <releases>
